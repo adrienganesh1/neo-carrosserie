@@ -1,0 +1,33 @@
+# === Secrets : NE JAMAIS versionner ===
+wp-config.php
+
+# === Caches (regénérés automatiquement) ===
+wp-content/cache/
+wp-content/et-cache/
+wp-content/uploads/et_temp/
+*.log
+error_log
+error_log.*
+
+# === Fichiers temporaires de mise à jour WordPress ===
+wp-content/upgrade/
+wp-content/upgrade-temp-backup/
+wp-content/uploads/cache/
+
+# === Sauvegardes / exports éventuels ===
+*.sql
+*.sql.gz
+*.tar.gz
+*.zip
+wp-content/ai1wm-backups/
+wp-content/updraft/
+
+# === Système / éditeurs ===
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# === Dépendances (si jamais présentes) ===
+node_modules/
+vendor/
