@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the Limit Login Attempts Reloaded plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Limit Login Attempts Reloaded 3.3.1\n"
+"Project-Id-Version: Limit Login Attempts Reloaded 3.3.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/limit-login-attempts-reloaded\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-06-16T07:19:22+00:00\n"
+"POT-Creation-Date: 2026-06-24T14:05:17+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: limit-login-attempts-reloaded\n"
@@ -1866,7 +1866,7 @@ msgstr ""
 
 #: views/chart-failed-attempts.php:44
 #: views/chart-failed-attempts.php:147
-#: views/chart-failed-attempts.php:244
+#: views/chart-failed-attempts.php:267
 msgid "Requests"
 msgstr ""
 
@@ -1874,11 +1874,23 @@ msgstr ""
 msgid "A request is utilized when the cloud validates whether an IP address is allowed to attempt a login, which also includes denied logins."
 msgstr ""
 
-#: views/chart-failed-attempts.php:162
-msgid "Monthly Usage: "
+#: views/chart-failed-attempts.php:166
+msgid "Monthly Usage:"
 msgstr ""
 
-#: views/chart-failed-attempts.php:227
+#: views/chart-failed-attempts.php:171
+msgid "Requests used by this site since the first day of the month."
+msgstr ""
+
+#: views/chart-failed-attempts.php:176
+msgid "Requests used by all sites in your account since the first day of the month."
+msgstr ""
+
+#: views/chart-failed-attempts.php:183
+msgid "Total shared request quota for your account."
+msgstr ""
+
+#: views/chart-failed-attempts.php:250
 #: views/emails/digest-daily-content.php:31
 #: views/emails/digest-monthly-content.php:31
 #: views/emails/digest-weekly-content.php:31
