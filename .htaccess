@@ -23,6 +23,39 @@
 </IfModule>
 # END Neo Performance
 
+# BEGIN Neo Security
+# En-têtes de sécurité (toutes réponses)
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+  Header always set Strict-Transport-Security "max-age=15768000"
+</IfModule>
+# Fichiers sensibles : accès web interdit
+<FilesMatch "^(\.git.*|readme\.html|license\.txt|wp-config(-sample)?\.php|xmlrpc\.php)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>
+# Dumps de base et archives : accès web interdit
+<FilesMatch "\.(sql|gz|tar|tgz|bak|log)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>
+# Pas de listing de répertoire
+Options -Indexes
+# END Neo Security
+
 
 # BEGIN WordPress
 # Les directives (lignes) entre « BEGIN WordPress » et « END WordPress » sont générées
