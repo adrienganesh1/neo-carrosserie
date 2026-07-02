@@ -1,0 +1,9 @@
+# Interdit tout accès web à ce dossier (dumps de base de données).
+# Le contenu ne doit JAMAIS être téléchargeable depuis Internet.
+<IfModule mod_authz_core.c>
+    Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+</IfModule>
