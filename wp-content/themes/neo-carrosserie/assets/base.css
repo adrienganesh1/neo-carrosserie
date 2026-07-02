@@ -1,0 +1,309 @@
+  *{box-sizing:border-box}
+  body{margin:0;background:#FEFEFE}
+  ::selection{background:#F26A12;color:#fff}
+  /*om-fx*/
+  a[href^="tel:"],a[href*="wa.me"],a[href^="mailto:"],button{transition:transform .18s cubic-bezier(.2,.7,.3,1),box-shadow .22s ease,filter .22s ease,background-color .2s ease,color .2s ease}
+  a[href^="tel:"]:hover,a[href*="wa.me"]:hover,a[href^="mailto:"]:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(242,106,18,.55);filter:saturate(1.08) brightness(1.03)}
+  a[href^="tel:"]:active,a[href*="wa.me"]:active,button:active{transform:translateY(0) scale(.985)}
+  button:not([disabled]):hover{transform:translateY(-2px);filter:brightness(1.04)}
+  header nav a,header a[data-i18n^="nav"]{transition:color .18s ease}
+  header nav a:hover,header a[data-i18n^="nav"]:hover{color:#F26A12}
+  a[href$=".dc.html"]{transition:transform .2s cubic-bezier(.2,.7,.3,1),box-shadow .25s ease}
+
+/* FluentForm — charte Neo */
+.fluentform .ff-el-group{margin-bottom:14px}
+.fluentform .ff-el-input--content input[type=text],
+.fluentform .ff-el-input--content input[type=tel],
+.fluentform .ff-el-input--content input[type=email],
+.fluentform .ff-el-input--content input[type=number],
+.fluentform .ff-el-input--content textarea,
+.fluentform .ff-el-input--content select{
+  border:1px solid #e7e3db !important;border-radius:11px !important;font:500 15px Manrope !important;padding:12px 15px !important;background:#fff !important;color:#15140F}
+.fluentform .ff-el-input--label label{font:600 13px Manrope !important;color:#3d3b36}
+.fluentform .ff-btn-submit,.fluentform button[type=submit]{
+  background:linear-gradient(120deg,#FBB615,#F26A12 55%,#E5390B) !important;color:#fff !important;border:0 !important;border-radius:11px !important;
+  font:800 16px Manrope !important;padding:14px 26px !important;box-shadow:0 10px 26px rgba(229,57,11,.3);cursor:pointer;transition:transform .18s ease,filter .2s ease}
+.fluentform .ff-btn-submit:hover{transform:translateY(-2px);filter:brightness(1.05)}
+
+.neo-hasdrop:hover .neo-drop{display:block!important}
+.neo-drop a:hover{background:#faf6ef}
+
+/* Footer en grille : 5 colonnes desktop, responsive */
+.neo-foot-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr 1fr;gap:44px 30px;align-items:start}
+@media(max-width:1000px){.neo-foot-grid{grid-template-columns:1fr 1fr 1fr}}
+@media(max-width:640px){.neo-foot-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:430px){.neo-foot-grid{grid-template-columns:1fr}}
+
+/* Masquer les tuiles de catégories sur la page boutique (navigation via le méga-menu) */
+.woocommerce-shop ul.products li.product-category{display:none!important}
+.woocommerce-shop ul.products:has(li.product-category){display:none!important}
+
+/* Footer centré en responsive (mobile) */
+@media(max-width:640px){
+  .neo-foot-grid{text-align:center}
+  .neo-foot-grid img{margin-left:auto;margin-right:auto}
+  .neo-foot-grid p{margin-left:auto;margin-right:auto}
+  .neo-foot-grid div[style*="flex-direction:column"]{align-items:center}
+  .neo-soc-row{justify-content:center}
+  footer#contact [data-i18n="foot.copy"]{text-align:center}
+}
+
+/* Badge E-Shop dans le menu */
+.neo-eshop-badge:hover{background:linear-gradient(120deg,#FBB615,#F26A12 55%,#E5390B) !important;border-color:transparent !important;color:#fff !important;box-shadow:0 10px 22px -8px rgba(229,57,11,.6)}
+
+/* Communes — zone d'intervention */
+.neo-ville{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1px solid #e7e2d8;color:#15140F;padding:9px 13px 9px 11px;border-radius:14px;text-decoration:none;font:700 14px Manrope;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease,background .2s ease}
+.neo-ville svg{color:#F26A12;flex:none;transition:color .2s ease}
+.neo-ville .km{font:700 11px Manrope;background:rgba(242,106,18,.12);color:#F26A12;padding:3px 8px;border-radius:999px;transition:background .2s ease,color .2s ease}
+.neo-ville:hover{transform:translateY(-3px);border-color:transparent;background:linear-gradient(120deg,#05192b,#0a3050 60%,#114061);color:#fff;box-shadow:0 16px 28px -16px rgba(5,25,43,.55)}
+.neo-ville:hover svg{color:#FBB615}
+.neo-ville:hover .km{background:rgba(255,255,255,.18);color:#fff}
+
+/* Réseaux sociaux (footer) */
+.neo-soc{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:#fff;transition:transform .2s ease,background .2s ease,border-color .2s ease}
+.neo-soc:hover{transform:translateY(-3px);background:linear-gradient(120deg,#FBB615,#F26A12 55%,#E5390B);border-color:transparent;color:#fff}
+
+/* Pages légales : sommaire sticky + carte */
+html{scroll-behavior:smooth}
+.neo-toc{flex:0 0 210px;position:sticky;top:24px;font-family:Manrope}
+.neo-toc:empty{display:none}
+.neo-toc .neo-toc-title{font:800 11px Manrope;letter-spacing:.14em;text-transform:uppercase;color:#F26A12;margin-bottom:12px}
+.neo-toc a{display:block;font:600 13px/1.35 Manrope;color:#5E5C57;text-decoration:none;padding:7px 12px;border-left:2px solid #ece7de;transition:color .15s ease,border-color .15s ease}
+.neo-toc a:hover{color:#15140F;border-color:#F26A12}
+.neo-legal-card h2{scroll-margin-top:24px}
+@media(max-width:900px){.neo-toc{display:none !important}.neo-legal-wrap{display:block !important}.neo-legal-card{border-radius:18px;padding:32px 26px !important}}
+
+/* Bouton « Retour au site » (menu boutique) */
+.neo-back-site{transition:transform .18s ease,border-color .18s ease,color .18s ease,box-shadow .18s ease}
+.neo-back-site:hover{border-color:#F26A12 !important;color:#15140F !important;box-shadow:0 8px 18px -10px rgba(21,20,15,.28);transform:translateY(-1px)}
+
+/* Menu burger (mobile / tablette) */
+#neo-burger{display:none;order:1;margin-left:auto;align-items:center;justify-content:center;width:48px;height:48px;border:1px solid #e7e2d8;border-radius:12px;background:#fff;cursor:pointer;padding:0;flex:none;transition:transform .12s ease}
+#neo-burger:active{transform:scale(.95)}
+@media(max-width:1024px){
+  /* logo à gauche, menu (burger) à droite */
+  header{justify-content:flex-start}
+  #neo-burger{display:inline-flex}
+  .neo-util{display:none !important;order:3;flex-basis:100%;margin-left:0 !important;justify-content:center;margin-top:14px}
+  #neo-nav{display:none !important;order:2}
+  body.neo-nav-open .neo-util{display:flex !important}
+  /* numéros (tél + WhatsApp) hors du burger : ils sont dans le footer. On garde le panier. */
+  body.neo-nav-open .neo-util a[href^="tel:"],
+  body.neo-nav-open .neo-util a[href*="wa.me"]{display:none !important}
+  body.neo-nav-open #neo-nav{display:flex !important;flex-direction:column;align-items:stretch;gap:0 !important;width:100%;margin-top:12px;border-top:1px solid #ece7de;padding-top:4px}
+  body.neo-nav-open #neo-nav > a:not(.neo-back-site):not(.neo-eshop-badge),body.neo-nav-open #neo-nav .neo-hasdrop > a{width:100%;padding:13px 4px !important;font-size:16px !important;border-bottom:1px solid #f2ede4}
+  body.neo-nav-open #neo-nav .neo-hasdrop{display:block !important;position:static !important;width:100%}
+  body.neo-nav-open #neo-nav .neo-drop{position:static !important;display:block !important;padding:0 !important;box-shadow:none !important}
+  body.neo-nav-open #neo-nav .neo-drop > div{border:0 !important;box-shadow:none !important;border-radius:0 !important;padding:2px 0 10px 18px !important;min-width:0 !important}
+  body.neo-nav-open #neo-nav .neo-drop a{padding:9px 12px !important;border:0 !important;justify-content:flex-start !important}
+  body.neo-nav-open #neo-nav .neo-back-site,body.neo-nav-open #neo-nav .neo-eshop-badge{align-self:flex-start;margin-top:14px}
+}
+
+/* Footer : centrer le bloc badge + bouton appel (mobile), largeur identique */
+@media(max-width:640px){
+  .neo-foot-grid div[style*="align-items:stretch"]{align-items:stretch !important;margin-left:auto !important;margin-right:auto !important}
+}
+
+/* Filigrane page contact : masqué sur mobile / tablette */
+@media(max-width:1024px){ .neo-fili{display:none !important} }
+
+/* Upload documents (page contact) */
+.neo-drop{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:2px;cursor:pointer;background:#faf8f4;border:1.5px dashed #d9d3c7;border-radius:14px;padding:15px 16px 13px;transition:border-color .15s,background .15s}
+.neo-drop:hover{border-color:#F26A12;background:#fff}
+.neo-drop.is-drag{border-color:#F26A12;background:#fff5ee}
+.neo-drop-ico{font-size:22px;line-height:1;margin-bottom:2px}
+.neo-drop-t{font:700 15px Manrope;color:#15140F}
+.neo-drop-s{font:400 12px Manrope;color:#8a857c}
+.neo-drop-files{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;width:100%}
+.neo-chip{display:inline-flex;align-items:center;gap:6px;max-width:100%;background:#fff;border:1px solid #e7e3db;border-radius:999px;padding:4px 6px 4px 11px;font:600 12px Manrope;color:#15140F}
+.neo-chip.load{opacity:.65}
+.neo-chip.err{background:#fff1f0;border-color:#f3c0ba;color:#c0341d}
+.neo-chip .neo-chip-name{max-width:150px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.neo-chip .neo-chip-x{cursor:pointer;width:16px;height:16px;border-radius:50%;background:#efe9df;color:#6b665c;display:flex;align-items:center;justify-content:center;font-size:13px;line-height:1;flex:none}
+.neo-chip .neo-chip-x:hover{background:#F26A12;color:#fff}
+
+/* ===================================================================
+   Anti-débordement responsive global — rien ne dépasse sur mobile
+   =================================================================== */
+html,body{overflow-x:hidden}
+
+@media(max-width:768px){
+  /* Conteneurs pleine largeur : padding inclus dans la largeur */
+  #main [style*="44px"], section[style*="44px"], header{box-sizing:border-box}
+  /* Réduire l'énorme padding latéral 44px des sections */
+  [style*="px 44px"]{padding-left:20px !important;padding-right:20px !important}
+  [style*="0 44px"]{padding-left:20px !important;padding-right:20px !important}
+
+  /* Médias jamais plus larges que l'écran */
+  img,video{max-width:100% !important;height:auto}
+  iframe,table{max-width:100% !important}
+
+  /* Mots longs / titres qui débordent */
+  h1,h2,h3,h4,h5,p,a,span,li,div,blockquote{overflow-wrap:break-word;word-wrap:break-word}
+
+  /* Grilles auto-fit / auto-fill -> une seule colonne */
+  [style*="repeat(auto-fit"],[style*="repeat(auto-fill"]{grid-template-columns:1fr !important}
+
+  /* Éléments flex à min-width élevé : autoriser le rétrécissement */
+  [style*="min-width:3"]{min-width:0 !important}
+
+  /* Titres géants adaptés à la largeur */
+  h1{font-size:clamp(28px,8.5vw,42px) !important;line-height:1.06 !important}
+  h2{font-size:clamp(22px,6.5vw,32px) !important;line-height:1.12 !important}
+}
+
+/* Sélecteur de langue (drapeaux) */
+.neo-lang{position:relative;font-family:Manrope}
+.neo-lang-trigger{display:inline-flex;align-items:center;gap:8px;border:0;background:none;cursor:pointer;font:800 13px Manrope;color:#15140F;padding:4px 8px;border-radius:9px;transition:background .15s ease}
+.neo-lang-trigger:hover{background:#f1ece2}
+.neo-flag{display:inline-flex;line-height:0;border-radius:3px;overflow:hidden;box-shadow:0 0 0 1px rgba(0,0,0,.1);flex:none}
+.neo-lang-chev{color:#a9a49b;transition:transform .2s ease}
+.neo-lang-menu{position:absolute;top:100%;right:0;margin-top:7px;min-width:184px;background:#fff;border:1px solid #ece7de;border-radius:13px;box-shadow:0 18px 44px rgba(5,25,43,.17);padding:6px;z-index:60;display:none}
+.neo-lang:hover .neo-lang-menu,.neo-lang:focus-within .neo-lang-menu{display:block}
+.neo-lang:hover .neo-lang-chev,.neo-lang:focus-within .neo-lang-chev{transform:rotate(180deg)}
+.neo-lang-menu button{display:flex;align-items:center;gap:12px;width:100%;border:0;background:none;cursor:pointer;font:600 14px Manrope;color:#3d3b36;padding:10px 12px;border-radius:9px;text-align:left}
+.neo-lang-menu button:hover{background:#faf6ef}
+
+/* Recherche produits — overlay */
+.neo-search-trigger{display:inline-flex;align-items:center;justify-content:center;width:50px;height:50px;border:1px solid #e7e2d8;border-radius:11px;background:#fff;cursor:pointer;flex:none;color:#15140F;transition:border-color .15s,color .15s,background .15s}
+.neo-search-trigger:hover{border-color:#F26A12;color:#F26A12}
+.neo-search-mobile{display:none}
+@media(max-width:1024px){.neo-search-mobile{display:inline-flex;width:48px;height:48px;order:0;margin-left:auto}}
+.neo-search-overlay{position:fixed;inset:0;z-index:200;background:rgba(9,18,30,.5);display:none;padding:20px}
+.neo-search-overlay.is-open{display:block}
+.neo-search-modal{max-width:1080px;margin:3vh auto 0;background:#fff;border-radius:20px;box-shadow:0 40px 90px -30px rgba(5,25,43,.6);overflow:hidden;max-height:92vh;display:flex;flex-direction:column;font-family:Manrope}
+.neo-search-top{display:flex;align-items:center;gap:12px;padding:16px 20px;border-bottom:1px solid #ece7de}
+.neo-search-ico{display:flex;flex:none}
+#neo-search-input{flex:1;min-width:0;border:0;outline:0;font:600 18px Manrope;color:#15140F;background:none;padding:6px 0}
+#neo-search-input::placeholder{color:#a8a297;font-weight:500}
+.neo-search-cancel{border:0;background:none;cursor:pointer;font:700 14px Manrope;color:#F26A12;padding:6px 8px;flex:none}
+.neo-search-body{display:grid;grid-template-columns:260px 1fr;overflow:hidden;flex:1;min-height:0}
+.neo-search-side{border-right:1px solid #f0ebe2;padding:18px 20px;overflow:auto}
+.neo-search-main{padding:18px 22px;overflow:auto}
+.neo-s-block{margin-bottom:20px}
+.neo-s-head{display:flex;align-items:center;justify-content:space-between;font:800 11px Manrope;letter-spacing:.1em;text-transform:uppercase;color:#a8a297;margin-bottom:11px}
+.neo-s-head button{border:0;background:none;cursor:pointer;font:700 10px Manrope;letter-spacing:.06em;color:#F26A12}
+.neo-s-chips{display:flex;flex-wrap:wrap;gap:8px}
+.neo-s-chip{display:inline-flex;align-items:center;gap:6px;border:1px solid #e7e2d8;background:#faf8f4;cursor:pointer;font:600 13px Manrope;color:#3d3b36;padding:7px 13px;border-radius:999px;text-decoration:none;transition:background .15s,border-color .15s,color .15s}
+.neo-s-chip:hover{background:#fff;border-color:#F26A12;color:#15140F}
+.neo-s-hint{font:500 15px Manrope;color:#a8a297;padding:12px 0}
+.neo-s-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.neo-s-card{display:flex;gap:12px;align-items:center;text-decoration:none;border:1px solid #f0ebe2;border-radius:14px;padding:10px;transition:border-color .15s,box-shadow .15s,transform .15s}
+.neo-s-card:hover{border-color:#e0d7c7;box-shadow:0 12px 24px -16px rgba(5,25,43,.4);transform:translateY(-2px)}
+.neo-s-thumb{flex:none;width:60px;height:60px;border-radius:10px;background:#faf8f4;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.neo-s-thumb img{width:100%;height:100%;object-fit:contain;padding:6px}
+.neo-s-info{display:flex;flex-direction:column;gap:2px;min-width:0}
+.neo-s-cat{font:700 9px Manrope;letter-spacing:.08em;text-transform:uppercase;color:#F26A12}
+.neo-s-name{font:700 13px/1.3 Manrope;color:#15140F;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.neo-s-price{font:800 14px Archivo;color:#15140F;margin-top:2px}
+.neo-s-price .woocommerce-Price-currencySymbol{font-size:10px;color:#9a958c;margin-right:2px}
+@media(max-width:760px){
+  .neo-search-overlay{padding:0}
+  .neo-search-modal{margin-top:0;max-height:100vh;border-radius:0}
+  .neo-search-body{grid-template-columns:1fr}
+  .neo-search-side{border-right:0;border-bottom:1px solid #f0ebe2}
+  .neo-s-grid{grid-template-columns:1fr}
+}
+
+/* Ferme le menu langue après sélection (jusqu'au prochain survol) */
+.neo-lang.neo-lang-closed .neo-lang-menu{display:none !important}
+
+/* Barre de recherche pleine largeur (desktop) entre logo et boutons */
+.neo-search-bar{flex:1 1 auto;width:auto;min-width:170px;height:50px;justify-content:flex-start;gap:11px;padding:0 18px;background:#faf8f4;color:#8a857c;font:500 15px Manrope}
+.neo-search-bar:hover{background:#fff;border-color:#F26A12;color:#F26A12}
+.neo-search-bar svg{flex:none}
+.neo-search-bar span{color:inherit;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media(max-width:1024px){.neo-search-bar{display:none !important}}
+
+/* Bandeau haut : avis + expédition + liens */
+.neo-topbar-link{transition:color .15s ease}
+.neo-topbar-link:hover{color:#F26A12 !important}
+@media(max-width:980px){.neo-topbar-ship{display:none !important}}
+@media(max-width:680px){.neo-topbar-link{display:none !important}}
+
+/* Sélecteur langue TranslatePress : options en liens */
+.neo-lang-menu a.neo-lang-opt{display:flex;align-items:center;gap:12px;width:100%;text-decoration:none;font:600 14px Manrope;color:#3d3b36;padding:10px 12px;border-radius:9px}
+.neo-lang-menu a.neo-lang-opt:hover{background:#faf6ef}
+.neo-lang-menu a.neo-lang-opt.is-active{background:#faf6ef;color:#15140F;font-weight:800}
+
+/* Bande d'atouts : grille 3×2 équilibrée (desktop) → 2 → 1 colonne */
+.neo-atouts{display:grid !important;grid-template-columns:repeat(3,auto);justify-content:center;gap:18px 46px !important}
+.neo-atouts > div{font-size:13px !important}
+.neo-atouts > div > span:first-child{width:30px !important;height:30px !important;flex:none}
+@media(max-width:860px){.neo-atouts{grid-template-columns:repeat(2,auto);gap:16px 36px !important}}
+@media(max-width:600px){.neo-atouts{grid-template-columns:max-content;justify-content:center;justify-items:start;gap:14px !important}}
+
+/* Page rapporteur : centrer les boutons en responsive */
+@media(max-width:820px){
+  .neo-rapp-call{text-align:center}
+  .neo-rapp .fluentform .ff_submit_btn_wrapper{text-align:center !important;display:block !important}
+  .neo-rapp .fluentform .ff-btn-submit{float:none !important;margin-left:auto !important;margin-right:auto !important}
+}
+
+/* Rapporteur : macaron 10% réduit + repositionné en responsive (plus de chevauchement) */
+@media(max-width:820px){
+  .neo-rapp-badge{position:static !important;margin:0 auto 12px !important;transform:none !important;width:166px !important;height:166px !important;box-shadow:0 14px 32px rgba(229,57,11,.42) !important}
+  .neo-rapp-badge span:first-child{font-size:56px !important}
+  .neo-rapp-badge span:last-child{font-size:10.5px !important;padding:0 16px !important;margin-top:5px !important}
+}
+
+/* Bandeau haut : avis à gauche (tronqué), langue à droite sur la même ligne (mobile) */
+@media(max-width:680px){
+  .neo-topbar-bar{flex-wrap:nowrap !important;gap:10px}
+  .neo-topbar-left{flex:1 1 auto;min-width:0}
+  .neo-topbar-left > span{min-width:0}
+  .neo-topbar-left [data-i18n="topbar.reviews"]{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .neo-topbar-right{flex:none;margin-left:auto}
+}
+
+/* Banniere cookies (Complianz) — version discrète, charte Neo */
+.cmplz-cookiebanner{max-width:350px !important;width:calc(100vw - 30px) !important;border:1px solid #ece7de !important;border-radius:16px !important;box-shadow:0 22px 55px -20px rgba(5,25,43,.5) !important;font-family:Manrope,system-ui,sans-serif !important;padding:16px 18px !important}
+.cmplz-cookiebanner .cmplz-logo{display:none !important}
+.cmplz-cookiebanner .cmplz-title{font:800 15px/1.2 Archivo,sans-serif !important;color:#15140F !important;margin:0 !important}
+.cmplz-cookiebanner .cmplz-message{font-size:12px !important;line-height:1.5 !important;color:#5E5C57 !important;margin:8px 0 0 !important}
+.cmplz-cookiebanner .cmplz-categories{display:none !important}
+.cmplz-cookiebanner .cmplz-divider{display:none !important}
+.cmplz-cookiebanner .cmplz-buttons{gap:8px !important;margin-top:14px !important;flex-wrap:wrap !important}
+.cmplz-cookiebanner .cmplz-btn{font:700 13px Manrope,sans-serif !important;border-radius:10px !important;padding:9px 16px !important;min-height:0 !important;text-transform:none !important}
+.cmplz-cookiebanner .cmplz-btn.cmplz-accept{background:linear-gradient(120deg,#FBB615,#F26A12 55%,#E5390B) !important;color:#fff !important;border:0 !important}
+.cmplz-cookiebanner .cmplz-btn.cmplz-deny{background:#fff !important;color:#15140F !important;border:1px solid #e0dbd2 !important}
+.cmplz-cookiebanner .cmplz-btn.cmplz-view-preferences,.cmplz-cookiebanner .cmplz-btn.cmplz-save-preferences{background:transparent !important;color:#8a857c !important;border:0 !important;text-decoration:underline !important;padding:9px 6px !important}
+.cmplz-cookiebanner .cmplz-links{font-size:11px !important;margin-top:6px !important}
+.cmplz-cookiebanner .cmplz-links a{color:#8a857c !important}
+
+/* Banniere cookies : centrée en mobile (barre bas, marges égales) */
+@media(max-width:640px){
+  .cmplz-cookiebanner.cmplz-bottom-right,.cmplz-cookiebanner{left:15px !important;right:15px !important;bottom:15px !important;width:auto !important;max-width:none !important;margin:0 auto !important}
+}
+
+/* Banniere cookies : hauteur réduite (message tronqué + compact) */
+.cmplz-cookiebanner .cmplz-message{display:-webkit-box !important;-webkit-line-clamp:3 !important;-webkit-box-orient:vertical !important;overflow:hidden !important;margin:6px 0 0 !important}
+@media(max-width:640px){
+  .cmplz-cookiebanner{padding:13px 15px !important}
+  .cmplz-cookiebanner .cmplz-message{-webkit-line-clamp:2 !important;font-size:11.5px !important;line-height:1.45 !important}
+  .cmplz-cookiebanner .cmplz-title{font-size:14px !important}
+  .cmplz-cookiebanner .cmplz-buttons{margin-top:10px !important}
+  .cmplz-cookiebanner .cmplz-btn{padding:8px 14px !important;font-size:12.5px !important}
+}
+
+/* Banniere cookies : version minimale */
+.cmplz-cookiebanner .cmplz-message{-webkit-line-clamp:2 !important}
+@media(max-width:640px){
+  .cmplz-cookiebanner{padding:11px 14px !important;max-width:none !important}
+  .cmplz-cookiebanner .cmplz-header{margin:0 !important}
+  .cmplz-cookiebanner .cmplz-title{font-size:13px !important}
+  .cmplz-cookiebanner .cmplz-message{-webkit-line-clamp:1 !important;font-size:11px !important;margin:2px 0 0 !important}
+  .cmplz-cookiebanner .cmplz-buttons{margin-top:8px !important;gap:6px !important}
+  .cmplz-cookiebanner .cmplz-btn{padding:7px 12px !important;font-size:12px !important}
+  .cmplz-cookiebanner .cmplz-btn.cmplz-view-preferences,.cmplz-cookiebanner .cmplz-btn.cmplz-save-preferences{padding:7px 4px !important;font-size:11px !important}
+  .cmplz-cookiebanner .cmplz-links.cmplz-information{display:none !important}
+}
+
+/* Banniere cookies : ultra-minimale (mobile) — juste les boutons */
+@media(max-width:640px){
+  .cmplz-cookiebanner{padding:9px 12px !important;border-radius:14px !important}
+  .cmplz-cookiebanner .cmplz-header,.cmplz-cookiebanner .cmplz-message{display:none !important}
+  .cmplz-cookiebanner .cmplz-buttons{margin-top:0 !important;gap:6px !important}
+  .cmplz-cookiebanner .cmplz-btn{padding:7px 12px !important;font-size:12px !important}
+  .cmplz-cookiebanner .cmplz-btn.cmplz-view-preferences{padding:7px 6px !important;font-size:10.5px !important}
+}

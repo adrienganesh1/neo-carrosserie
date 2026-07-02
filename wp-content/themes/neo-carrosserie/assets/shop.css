@@ -1,0 +1,160 @@
+.neo-shop{background:#FEFEFE}
+.neo-shop-inner{max-width:1280px;margin:0 auto;padding:44px 44px 90px;font-family:Manrope,system-ui,sans-serif;color:#15140F}
+.neo-shop .woocommerce-products-header__title,.neo-shop h1{font-family:Archivo,sans-serif;font-weight:900;letter-spacing:-.02em;font-size:40px;margin:0 0 4px}
+.neo-shop .term-description{color:#5E5C57}
+
+/* Barre outils : résultat + tri */
+.neo-shop .woocommerce-result-count{color:#8a857c;font-size:14px;margin:4px 0 0}
+.neo-shop .woocommerce-ordering select{font-family:Manrope;font-weight:600;font-size:14px;padding:11px 34px 11px 15px;border:1px solid #e3ded4;border-radius:11px;background:#fff;color:#15140F;cursor:pointer;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%23F26A12' stroke-width='2'><path d='M5 8l5 5 5-5'/></svg>");background-repeat:no-repeat;background-position:right 12px center;background-size:15px}
+.neo-shop .woocommerce-ordering select:hover{border-color:#F26A12}
+
+/* Grille */
+.neo-shop ul.products{display:grid !important;grid-template-columns:repeat(4,1fr);gap:22px;margin:26px 0 0;list-style:none;padding:0}
+/* Neutralise le clearfix ::before/::after qui crée une case fantôme en grid */
+.neo-shop ul.products::before,.neo-shop ul.products::after{content:none !important;display:none !important}
+@media(max-width:1100px){.neo-shop ul.products{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:820px){.neo-shop ul.products{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.neo-shop ul.products{grid-template-columns:1fr}}
+
+/* Carte */
+.neo-shop ul.products li.product{position:relative;width:auto !important;margin:0 !important;background:#fff;border:1px solid #ece7de;border-radius:18px;overflow:hidden;padding:0;float:none !important;display:flex;flex-direction:column;transition:transform .28s cubic-bezier(.2,.7,.3,1),box-shadow .28s ease,border-color .28s ease}
+.neo-shop ul.products li.product:hover{transform:translateY(-6px);box-shadow:0 24px 42px -20px rgba(5,25,43,.4);border-color:#e0d7c7}
+
+/* Image encadrée + zoom */
+.neo-shop .neo-thumb{position:relative;display:block;aspect-ratio:1/1;background:#faf8f4;overflow:hidden;border-bottom:1px solid #f1ece3}
+.neo-shop .neo-thumb img{width:100%;height:100%;object-fit:contain;padding:18px;margin:0;transition:transform .55s cubic-bezier(.2,.7,.3,1)}
+.neo-shop li.product:hover .neo-thumb img{transform:scale(1.08)}
+
+/* Badges */
+.neo-shop .neo-badge-new{position:absolute;top:12px;left:12px;z-index:2;background:#15140F;color:#fff;font:800 10px/1 Manrope;letter-spacing:.12em;text-transform:uppercase;padding:7px 11px;border-radius:999px}
+.neo-shop .onsale{position:absolute;top:12px;right:12px;left:auto;margin:0;z-index:2;background:linear-gradient(120deg,#FBB615,#F26A12 60%,#E5390B);color:#fff;border-radius:999px;font:800 11px Manrope;border:0;min-height:0;min-width:0;padding:6px 11px}
+
+/* Contenu */
+.neo-shop li.product a.woocommerce-LoopProduct-link{display:flex;flex-direction:column;flex:1;text-decoration:none}
+.neo-shop .neo-loop-cat{display:block;font:700 10px Manrope;letter-spacing:.1em;text-transform:uppercase;color:#F26A12;padding:15px 18px 0}
+.neo-shop li.product .woocommerce-loop-product__title{font-family:Manrope !important;font-weight:700;font-size:15px;line-height:1.35;color:#15140F;padding:6px 18px 0}
+.neo-shop li.product .price{font-family:Archivo;font-weight:900;font-size:19px;color:#15140F;padding:12px 18px 0;margin-top:auto}
+.neo-shop li.product .price .woocommerce-Price-currencySymbol{font-size:11px;color:#9a958c;font-weight:700;margin-right:2px;vertical-align:1px}
+.neo-shop li.product .price del{color:#a7a299;font-weight:600;font-size:14px;margin-right:4px}
+.neo-shop li.product .price ins{text-decoration:none}
+
+/* Bouton Ajouter */
+.neo-shop li.product .button.add_to_cart_button{background:linear-gradient(120deg,#FBB615,#F26A12 55%,#E5390B);color:#fff;border-radius:12px;font:800 14px Manrope;padding:12px 16px;margin:14px 18px 18px;text-align:center;display:block;transition:transform .18s ease,box-shadow .22s ease,filter .2s ease;border:0;box-shadow:0 10px 22px -12px rgba(229,57,11,.75)}
+.neo-shop li.product .button.add_to_cart_button:hover{transform:translateY(-2px);filter:brightness(1.06);box-shadow:0 16px 28px -12px rgba(229,57,11,.9)}
+.neo-shop li.product .button.add_to_cart_button.loading{opacity:.7}
+.neo-shop li.product .added_to_cart{display:block;text-align:center;font:700 12px Manrope;color:#0a3050;margin:-8px 18px 16px;text-decoration:none}
+.neo-shop li.product .button.added{display:none}
+
+/* Boutons génériques (fiche produit / panier / checkout) */
+.neo-shop .single_add_to_cart_button,.neo-shop a.checkout-button,.neo-shop .wc-proceed-to-checkout .button,.neo-shop .button.alt{background:linear-gradient(120deg,#FBB615,#F26A12 55%,#E5390B) !important;color:#fff !important;border-radius:12px;font-family:Manrope;font-weight:800;padding:14px 24px;border:0;transition:transform .18s,box-shadow .2s}
+.neo-shop .single_add_to_cart_button:hover,.neo-shop a.checkout-button:hover{transform:translateY(-2px);box-shadow:0 14px 26px -10px rgba(229,57,11,.7)}
+
+/* Panier vide + boutons secondaires */
+.neo-shop .cart-empty{text-align:center;font:700 20px Manrope;color:#15140F;padding:26px 0 6px}
+.neo-shop .return-to-shop{text-align:center;margin:14px 0 50px}
+.neo-shop .wc-backward,.neo-shop .button.wc-backward{display:inline-block;background:linear-gradient(120deg,#FBB615,#F26A12 55%,#E5390B) !important;color:#fff !important;border-radius:12px;font-family:Manrope;font-weight:800;padding:14px 26px;border:0;box-shadow:0 12px 26px -12px rgba(229,57,11,.6)}
+.neo-shop .woocommerce-cart-form table.cart td.actions .button,.neo-shop .cart-collaterals .checkout-button{border-radius:12px;font-family:Manrope;font-weight:800}
+
+/* Fiche produit (single) */
+.neo-shop div.product .product_title{font-family:Archivo;font-weight:900;letter-spacing:-.02em;line-height:1.05}
+.neo-shop div.product p.price,.neo-shop div.product .summary .price{font:900 27px Archivo;color:#15140F;margin:6px 0 18px}
+.neo-shop div.product p.price .woocommerce-Price-currencySymbol{font-size:14px;color:#9a958c;font-weight:700;vertical-align:2px;margin-right:3px}
+.neo-shop div.product p.price del{color:#a7a299;font-size:18px;font-weight:600;margin-right:6px}
+.neo-shop div.product p.price ins{text-decoration:none}
+.neo-shop div.product form.cart{display:flex;align-items:center;gap:12px;margin:0 0 22px}
+.neo-shop div.product .quantity input.qty{height:48px;width:66px;border:1px solid #e3ded4;border-radius:12px;font:700 15px Manrope;text-align:center;color:#15140F}
+.neo-shop div.product .product_meta{font:500 13px/1.9 Manrope;color:#8a857c;border-top:1px solid #ece7de;padding-top:16px;margin-top:8px}
+.neo-shop div.product .product_meta a{color:#F26A12;text-decoration:none}
+/* Onglets Description / Avis */
+.neo-shop .woocommerce-tabs ul.tabs{border:0 !important;padding:0 !important;margin:10px 0 24px !important;display:flex;gap:4px}
+.neo-shop .woocommerce-tabs ul.tabs::before{display:none !important}
+.neo-shop .woocommerce-tabs ul.tabs li{background:transparent !important;border:0 !important;border-radius:0 !important;margin:0 !important;padding:0 !important}
+.neo-shop .woocommerce-tabs ul.tabs li::before,.neo-shop .woocommerce-tabs ul.tabs li::after{display:none !important}
+.neo-shop .woocommerce-tabs ul.tabs li a{font:800 14px Manrope !important;color:#8a857c;padding:10px 8px !important;border-bottom:2px solid transparent}
+.neo-shop .woocommerce-tabs ul.tabs li.active a{color:#15140F;border-bottom-color:#F26A12}
+.neo-shop .woocommerce-tabs .panel h2{font-family:Archivo;font-weight:900;letter-spacing:-.01em;font-size:22px;color:#15140F;margin:22px 0 10px}
+.neo-shop .woocommerce-tabs .panel h3{font-family:Archivo;font-weight:800;font-size:18px;color:#15140F;margin:20px 0 8px}
+.neo-shop .woocommerce-tabs .panel p,.neo-shop .woocommerce-tabs .panel li{font-family:Manrope;color:#3d3b36;line-height:1.7}
+.neo-shop .woocommerce-tabs .panel ul{padding-left:20px}
+.neo-shop .related.products>h2,.neo-shop .up-sells>h2{font-family:Archivo;font-weight:900;font-size:26px;letter-spacing:-.01em;color:#15140F;margin-bottom:20px}
+
+/* Panier (cart) — harmonisation */
+.neo-shop table.shop_table.cart{border:1px solid #ece7de;border-radius:16px;border-collapse:separate;border-spacing:0;overflow:hidden}
+.neo-shop table.shop_table.cart thead th{background:#faf8f4;font:800 12px Manrope;letter-spacing:.04em;text-transform:uppercase;color:#8a857c;border:0;padding:16px 14px}
+.neo-shop table.shop_table.cart td{border-top:1px solid #f0ebe2;vertical-align:middle;padding:16px 14px;font-family:Manrope;color:#3d3b36}
+.neo-shop table.shop_table.cart td.product-thumbnail img{width:60px;height:60px;object-fit:contain;border:1px solid #ece7de;border-radius:12px;background:#fff;padding:4px}
+.neo-shop table.shop_table.cart td.product-name a{color:#15140F !important;font-weight:700;text-decoration:none}
+.neo-shop table.shop_table.cart td.product-name a:hover{color:#F26A12 !important}
+.neo-shop table.shop_table.cart td.product-price,.neo-shop table.shop_table.cart td.product-subtotal{font-family:Archivo;font-weight:800;color:#15140F}
+.neo-shop table.shop_table.cart td.product-remove a.remove{display:inline-flex !important;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;font-size:24px;line-height:1;font-weight:700;color:#E5390B !important;background:rgba(229,57,11,.09);border:1px solid rgba(229,57,11,.22);text-decoration:none;transition:background .18s ease,color .18s ease,transform .12s ease}
+.neo-shop table.shop_table.cart td.product-remove a.remove:hover{background:#E5390B;color:#fff !important;transform:scale(1.06)}
+.neo-shop table.shop_table.cart td.product-remove{text-align:center;vertical-align:middle}
+.neo-shop table.shop_table.cart .quantity input.qty{height:42px;width:62px;border:1px solid #e3ded4;border-radius:10px;text-align:center;font:700 14px Manrope;color:#15140F}
+.neo-shop table.shop_table.cart td.actions{padding:16px 14px;background:#faf8f4}
+.neo-shop .coupon{display:inline-flex;flex-wrap:wrap;gap:10px;align-items:center}
+.neo-shop .coupon input#coupon_code{height:44px;width:240px;max-width:100%;border:1px solid #e3ded4;border-radius:10px;padding:0 14px;font-family:Manrope;font-size:15px}
+.neo-shop table.shop_table.cart td.actions .button{display:inline-flex !important;align-items:center;justify-content:center;text-align:center;white-space:nowrap;background:#15140F !important;color:#fff !important;border-radius:11px !important;font-family:Manrope;font-weight:800;height:44px;padding:0 20px !important;border:0 !important}
+.neo-shop table.shop_table.cart td.actions button[name="update_cart"]{background:#fff !important;color:#15140F !important;border:1px solid #e0dbd2 !important}
+/* Coupon en responsive : champ + bouton pleine largeur, empilés, centrés */
+@media(max-width:640px){
+  .neo-shop .coupon{width:100%;flex-direction:column;align-items:stretch}
+  .neo-shop .coupon input#coupon_code{width:100%}
+  .neo-shop .coupon .button{width:100%}
+}
+.neo-shop .cart_totals h2{font-family:Archivo;font-weight:900;font-size:26px;letter-spacing:-.02em;color:#15140F;margin-bottom:16px}
+.neo-shop .cart_totals table.shop_table{border:1px solid #ece7de;border-radius:16px;border-collapse:separate;border-spacing:0;overflow:hidden}
+.neo-shop .cart_totals table.shop_table th,.neo-shop .cart_totals table.shop_table td{border-top:1px solid #f0ebe2;padding:15px 18px;font-family:Manrope;color:#3d3b36}
+.neo-shop .cart_totals table.shop_table tr:first-child th,.neo-shop .cart_totals table.shop_table tr:first-child td{border-top:0}
+.neo-shop .cart_totals .order-total th,.neo-shop .cart_totals .order-total .amount{font-family:Archivo;font-weight:900;font-size:19px;color:#15140F}
+.neo-shop .wc-proceed-to-checkout{padding-top:18px}
+.neo-shop .wc-proceed-to-checkout a.checkout-button.button.alt,.neo-shop .wc-proceed-to-checkout a.checkout-button,.neo-shop a.checkout-button.button.alt{background:linear-gradient(120deg,#FBB615,#F26A12 55%,#E5390B) !important;color:#fff !important;border-radius:13px !important;font:800 17px Manrope !important;padding:17px 24px !important;text-align:center;box-shadow:0 14px 30px -12px rgba(229,57,11,.55) !important;border:0 !important}
+
+/* Commande (checkout) — harmonisation */
+.neo-shop .woocommerce-checkout h3,.neo-shop #order_review_heading{font-family:Archivo;font-weight:900;font-size:24px;letter-spacing:-.02em;color:#15140F;margin:0 0 18px}
+.neo-shop .woocommerce-checkout .form-row label{font:600 13px Manrope;color:#5E5C57;margin-bottom:4px;display:block}
+.neo-shop .woocommerce-checkout .required{color:#E5390B;border:0}
+.neo-shop .woocommerce-checkout .input-text,.neo-shop .woocommerce-checkout select,.neo-shop .woocommerce-checkout textarea,.neo-shop .select2-selection{border:1px solid #e3ded4 !important;border-radius:11px !important;min-height:46px;padding:10px 14px !important;font-family:Manrope !important;color:#15140F;background:#fff !important}
+.neo-shop .select2-selection__rendered{line-height:26px !important;padding-left:0 !important}
+.neo-shop .select2-selection__arrow{height:44px !important}
+.neo-shop .woocommerce-checkout textarea{min-height:90px}
+.neo-shop .woocommerce-checkout .input-text:focus,.neo-shop .woocommerce-checkout select:focus,.neo-shop .woocommerce-checkout textarea:focus{border-color:#F26A12 !important;outline:0}
+.neo-shop .woocommerce-checkout-review-order{background:#faf8f4;border:1px solid #ece7de;border-radius:18px;padding:24px 24px}
+.neo-shop table.woocommerce-checkout-review-order-table{border:0;font-family:Manrope}
+.neo-shop table.woocommerce-checkout-review-order-table th,.neo-shop table.woocommerce-checkout-review-order-table td{border-top:1px solid #ece7de;padding:12px 6px;color:#3d3b36}
+.neo-shop table.woocommerce-checkout-review-order-table thead th{border:0;font:800 11px Manrope;letter-spacing:.04em;text-transform:uppercase;color:#8a857c}
+.neo-shop table.woocommerce-checkout-review-order-table .order-total th,.neo-shop table.woocommerce-checkout-review-order-table .order-total .amount{font-family:Archivo;font-weight:900;font-size:19px;color:#15140F}
+.neo-shop #payment ul.payment_methods{border:1px solid #ece7de;border-radius:14px;background:#fff;padding:14px 16px;margin:0}
+.neo-shop #payment div.payment_box{background:#faf8f4 !important;border-radius:10px}
+.neo-shop #payment div.payment_box::before{border-bottom-color:#faf8f4 !important}
+.neo-shop #payment #place_order,.neo-shop #place_order{background:linear-gradient(120deg,#FBB615,#F26A12 55%,#E5390B) !important;color:#fff !important;border-radius:13px !important;font:800 17px Manrope !important;padding:16px 24px !important;width:100%;border:0 !important;box-shadow:0 14px 30px -12px rgba(229,57,11,.55) !important}
+
+/* Notices WooCommerce (erreur / message / info) */
+.neo-shop .woocommerce-error,.neo-shop .woocommerce-message,.neo-shop .woocommerce-info,.neo-shop .coupon-error-notice,.coupon-error-notice{
+  border:1px solid !important;border-radius:12px !important;padding:13px 16px !important;margin:0 0 20px !important;
+  font:600 14px/1.5 Manrope !important;list-style:none !important;box-shadow:none !important}
+.neo-shop .woocommerce-error::before,.neo-shop .woocommerce-message::before,.neo-shop .woocommerce-info::before{display:none !important}
+.neo-shop .woocommerce-error,.neo-shop .coupon-error-notice,.coupon-error-notice{background:#fdf0ec !important;border-color:#f2c6b7 !important;color:#b23a15 !important}
+.neo-shop .woocommerce-message{background:#eef7ef !important;border-color:#c7e6cd !important;color:#2f7d3a !important}
+.neo-shop .woocommerce-info{background:#fbf6ee !important;border-color:#ecd9b6 !important;color:#8a6a26 !important}
+.neo-shop .woocommerce-error a,.neo-shop .woocommerce-message a,.neo-shop .woocommerce-info a{color:inherit;font-weight:800}
+.neo-shop .woocommerce-message .button,.neo-shop .woocommerce-info .button{background:#15140F !important;color:#fff !important;border-radius:10px !important;font-weight:800;padding:8px 16px !important}
+
+/* coupon-error-notice espacement (pas collé au bouton) */
+.neo-shop .coupon-error-notice,.coupon-error-notice{margin:16px 0 4px !important;display:block;clear:both}
+
+/* Padding cartes produit (prime sur le CSS WooCommerce core, même spécificité) */
+.neo-shop ul.products li.product .neo-loop-cat{padding:15px 18px 0 !important}
+.neo-shop ul.products li.product .woocommerce-loop-product__title{padding:6px 18px 2px !important}
+.neo-shop ul.products li.product .price{padding:0 18px !important}
+.neo-shop ul.products li.product .button,
+.neo-shop ul.products li.product .added_to_cart{margin:14px 18px 18px !important}
+
+/* Pagination boutique — charte Neo */
+.neo-shop .woocommerce-pagination{margin:44px 0 8px;text-align:center}
+.neo-shop .woocommerce-pagination ul{display:inline-flex;flex-wrap:wrap;gap:8px;border:0 !important;margin:0;padding:0;list-style:none}
+.neo-shop .woocommerce-pagination ul li{border:0 !important;margin:0;overflow:visible}
+.neo-shop .woocommerce-pagination ul li .page-numbers{display:inline-flex;align-items:center;justify-content:center;min-width:44px;height:44px;padding:0 12px;border:1px solid #e7e2d8 !important;border-radius:12px;background:#fff;font:800 15px Manrope;color:#15140F !important;text-decoration:none;transition:background .15s,border-color .15s,color .15s,transform .12s,box-shadow .15s}
+.neo-shop .woocommerce-pagination ul li a.page-numbers:hover{border-color:#F26A12 !important;color:#F26A12 !important;transform:translateY(-1px);box-shadow:0 8px 18px -10px rgba(229,57,11,.5)}
+.neo-shop .woocommerce-pagination ul li span.current{background:linear-gradient(120deg,#FBB615,#F26A12 55%,#E5390B);border-color:transparent !important;color:#fff !important;box-shadow:0 10px 22px -10px rgba(229,57,11,.6)}
+.neo-shop .woocommerce-pagination ul li .page-numbers.dots{border-color:transparent !important;background:none;min-width:24px;color:#a8a297 !important}
+.neo-shop .woocommerce-pagination ul li .prev.page-numbers,.neo-shop .woocommerce-pagination ul li .next.page-numbers{font-size:18px;font-weight:700}

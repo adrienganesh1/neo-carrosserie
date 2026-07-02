@@ -5,7 +5,6 @@ WP-Cache Config Sample File
 See wp-cache.php for author details.
 */
 
-$cache_page_secret = 'a5b2bddf7039729b6d0ad5e4f42cea70';
 $cache_time_interval = 600;
 if ( ! defined('WPCACHEHOME') )
 	define( 'WPCACHEHOME', WP_CONTENT_DIR . "/plugins/wp-super-cache/" );
@@ -22,7 +21,7 @@ $ossdlcdn = 0;
 // Array of files that have 'wp-' but should still be cached
 $cache_acceptable_files = array( 'wp-comments-popup.php', 'wp-links-opml.php', 'wp-locations.php' );
 
-$cache_rejected_uri = array('wp-.*\\.php', 'index\\.php');
+$cache_rejected_uri = array( 'wp-.*\.php', 'index\.php', 'panier', 'commande', 'mon-compte', 'cart', 'checkout', 'my-account', 'add-to-cart', '/contact', '/rapporteur' );
 $cache_rejected_user_agent = array();
 
 $cache_rebuild_files = 1;
@@ -33,7 +32,7 @@ $cache_rebuild_files = 1;
 $wp_cache_mutex_disabled = 1;
 
 // Just modify it if you have conflicts with semaphores
-$sem_id = 1566648023;
+$sem_id = 352954637;
 
 if ( '/' != substr($cache_path, -1)) {
 	$cache_path .= '/';
