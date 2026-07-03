@@ -6,6 +6,21 @@ $vowel = preg_match('/^[aeiouyàâéèêAEIOUY]/u', $ville);
 $de = $vowel ? "d'".$ville : "de ".$ville;   // d'Aigle / de Bex
 $a  = "à ".$ville;
 $mapq = rawurlencode($ville.', Suisse');
+
+// Paragraphe UNIQUE par commune (évite le contenu dupliqué entre pages villes)
+$communes = array(
+  'Aigle'         => "Aigle, c'est chez nous : notre atelier se trouve au Chemin de St-Triphon 22, au cœur du chef-lieu du district. Ville viticole dominée par son château, Aigle est notre base pour la carrosserie, la peinture et l'esthétique automobile — vous déposez votre véhicule à deux pas du centre et repartez avec une prise en charge complète.",
+  'Bex'           => "À une dizaine de minutes au sud, Bex et le Chablais vaudois sont accessibles en quelques minutes par la route cantonale ou l'autoroute A9. Que vous veniez des hauts de Bex ou du secteur des Salines, nous récupérons et réparons votre véhicule — choc, rayure, dégâts de grêle ou pare-brise — avec un devis gratuit et sans engagement.",
+  'Monthey'       => "De l'autre côté du Rhône, Monthey et le Chablais valaisan ne sont qu'à un quart d'heure de notre atelier d'Aigle. Pour les automobilistes montheysans, NEO Carrosserie est une alternative proche et réactive pour la carrosserie, la peinture et le débosselage sans peinture, sans les délais des grands centres.",
+  'Villeneuve'    => "À l'extrémité est du Léman, entre lac et montagnes, Villeneuve est à une dizaine de minutes de notre atelier par l'A9. Nous y intervenons régulièrement pour des réparations après accident, du polissage ou un remplacement de pare-brise, avec un véhicule de courtoisie pour vous garder mobile.",
+  'Saint-Maurice' => "Porte du Valais entre Bex et Monthey, Saint-Maurice et son abbaye millénaire sont à un quart d'heure de notre atelier d'Aigle. Nous prenons en charge les véhicules saint-mauriards de A à Z : carrosserie, peinture en teinte d'origine et esthétique, avec une gestion complète du dossier d'assurance.",
+  'Montreux'      => "Sur la Riviera, célèbre pour son festival de jazz et ses quais fleuris, Montreux est à moins de vingt minutes de notre atelier par l'autoroute. Nous soignons les carrosseries montreusiennes avec la même exigence : finition impeccable et délais courts, du simple impact à la remise en état après sinistre.",
+  'Vevey'         => "Ville de la Riviera au pied des vignes de Lavaux, Vevey est à une vingtaine de minutes de notre atelier d'Aigle par l'A9. Pour les Veveysans, nous assurons carrosserie, peinture et detailing avec le même niveau de finition, et un devis gratuit avant toute intervention.",
+  'Lausanne'      => "Capitale vaudoise et ville olympique, Lausanne est à une trentaine de minutes par l'autoroute. Pour les Lausannois attachés à la qualité, le déplacement en vaut la peine : un travail de finition soigné, des délais maîtrisés et un accueil personnalisé, loin de l'anonymat des grands garages.",
+  'Martigny'      => "Au coude du Rhône, aux portes du Valais central et de la Fondation Gianadda, Martigny est à environ vingt-cinq minutes de notre atelier par l'A9. Nous accueillons les véhicules martignerains pour tous travaux de carrosserie, peinture et esthétique, avec prise en charge de l'assurance et devis sans engagement.",
+  'Sion'          => "Capitale du Valais, dominée par les collines de Valère et Tourbillon, Sion est reliée à notre atelier d'Aigle par l'autoroute en une quarantaine de minutes. Pour une carrosserie et une peinture vraiment soignées, les Sédunois peuvent nous confier leur véhicule — nous organisons volontiers la logistique.",
+);
+$uniq = isset($communes[$ville]) ? $communes[$ville] : '';
 ?>
   <!-- HERO -->
   <section style="position:relative;overflow:hidden;max-width:1280px;margin:0 auto;padding:46px 44px 24px">
@@ -31,7 +46,7 @@ $mapq = rawurlencode($ville.', Suisse');
     <div style="display:flex;flex-wrap:wrap;gap:46px">
       <div style="flex:1 1 440px;min-width:320px">
         <h2 style="font:800 30px/1.1 Archivo;letter-spacing:-.02em;margin:0 0 16px">Votre carrossier de confiance, proche <?php echo esc_html($de); ?></h2>
-        <p style="font:400 17px/1.7 Manrope;color:#5E5C57;margin:0 0 14px">Situés au Chemin de St-Triphon 22 à Aigle, à quelques minutes <?php echo esc_html($de); ?>, nous intervenons sur tous types de véhicules : réparation de chocs, débosselage, peinture, esthétique et entretien auto et bateau.</p>
+        <p style="font:400 17px/1.7 Manrope;color:#5E5C57;margin:0 0 14px"><?php echo $uniq ? esc_html($uniq) : 'Situés au Chemin de St-Triphon 22 à Aigle, à quelques minutes '.esc_html($de).', nous intervenons sur tous types de véhicules : réparation de chocs, débosselage, peinture, esthétique et entretien auto et bateau.'; ?></p>
         <p style="font:400 17px/1.7 Manrope;color:#5E5C57;margin:0">Carrosserie et débosselage, peinture automobile, remplacement de pare-brise, réparation après grêle, entretien et mécanique : nous prenons en charge votre véhicule de A à Z, avec un devis gratuit et sans engagement.</p>
         <div style="display:flex;flex-wrap:wrap;gap:9px;margin-top:24px">
           <a href="/services/" style="font:700 13px Manrope;background:#15140F;color:#fff;padding:9px 16px;border-radius:999px;text-decoration:none">Voir nos services</a>
