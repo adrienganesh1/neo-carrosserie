@@ -83,54 +83,59 @@
     var AJAX  = <?php echo json_encode( admin_url('admin-ajax.php') ); ?>;
     var NONCE = <?php echo json_encode( wp_create_nonce('neo_client_upload') ); ?>;
     var MAX   = 10 * 1024 * 1024;
-    document.querySelectorAll('.neo-drop').forEach(function(drop){
+    // Délégation d'évènements sur document : robuste à l'ordre du DOM et aux
+    // rendus tardifs (le binding direct au chargement ratait les vraies zones).
+    var store = {};
+    function sync(field){ var h=document.querySelector('input[name="'+field+'"]'); if(h){ h.value=(store[field]||[]).join(', '); } }
+    function chip(name, state){
+      var c=document.createElement('span'); c.className='neo-chip'+(state?(' '+state):'');
+      var n=document.createElement('span'); n.className='neo-chip-name'; n.textContent=name; c.appendChild(n);
+      return c;
+    }
+    function upload(drop, file){
       var field    = drop.getAttribute('data-neo-upl');
       var multiple = drop.getAttribute('data-multiple') === '1';
-      var input    = drop.querySelector('input[type=file]');
       var wrap     = drop.querySelector('.neo-drop-files');
-      var urls     = [];
-      function sync(){ var h=document.querySelector('input[name="'+field+'"]'); if(h){ h.value=urls.join(', '); } }
-      function chip(name, state){
-        var c=document.createElement('span'); c.className='neo-chip'+(state?(' '+state):'');
-        var n=document.createElement('span'); n.className='neo-chip-name'; n.textContent=name; c.appendChild(n);
-        return c;
-      }
-      function upload(file){
-        if(file.size > MAX){ wrap.appendChild(chip(file.name+' — trop lourd (10 Mo max)','err')); return; }
-        var c=chip(file.name,'load'); wrap.appendChild(c);
-        var fd=new FormData(); fd.append('action','neo_client_upload'); fd.append('nonce',NONCE); fd.append('file',file);
-        fetch(AJAX,{method:'POST',body:fd,credentials:'same-origin'})
-          .then(function(r){ return r.json(); })
-          .then(function(res){
-            if(res && res.success){
-              var u=res.data.url;
-              if(multiple){ urls.push(u); }
-              else { urls=[u]; Array.prototype.slice.call(wrap.querySelectorAll('.neo-chip')).forEach(function(x){ if(x!==c) x.remove(); }); }
-              sync();
-              c.className='neo-chip';
-              var x=document.createElement('span'); x.className='neo-chip-x'; x.textContent='×';
-              x.addEventListener('click',function(e){ e.preventDefault(); e.stopPropagation(); urls=urls.filter(function(v){return v!==u;}); sync(); c.remove(); });
-              c.appendChild(x);
-            } else {
-              c.className='neo-chip err';
-              c.querySelector('.neo-chip-name').textContent = file.name+' — '+((res&&res.data&&res.data.message)||'échec');
-            }
-          })
-          .catch(function(){ c.className='neo-chip err'; c.querySelector('.neo-chip-name').textContent=file.name+' — erreur réseau'; });
-      }
-      input.addEventListener('change',function(){
-        if(!multiple){ wrap.innerHTML=''; urls=[]; sync(); }
-        Array.prototype.slice.call(input.files).forEach(upload);
-        input.value='';
-      });
-      ['dragover','dragenter'].forEach(function(ev){ drop.addEventListener(ev,function(e){ e.preventDefault(); drop.classList.add('is-drag'); }); });
-      ['dragleave','dragend'].forEach(function(ev){ drop.addEventListener(ev,function(e){ e.preventDefault(); drop.classList.remove('is-drag'); }); });
-      drop.addEventListener('drop',function(e){
-        e.preventDefault(); drop.classList.remove('is-drag');
-        var files=e.dataTransfer && e.dataTransfer.files; if(!files || !files.length) return;
-        if(!multiple){ wrap.innerHTML=''; urls=[]; sync(); }
-        Array.prototype.slice.call(files).forEach(upload);
-      });
+      if(!store[field]) store[field]=[];
+      if(file.size > MAX){ if(wrap) wrap.appendChild(chip(file.name+' — trop lourd (10 Mo max)','err')); return; }
+      var c=chip(file.name,'load'); if(wrap) wrap.appendChild(c);
+      var fd=new FormData(); fd.append('action','neo_client_upload'); fd.append('nonce',NONCE); fd.append('file',file);
+      fetch(AJAX,{method:'POST',body:fd,credentials:'same-origin'})
+        .then(function(r){ return r.json(); })
+        .then(function(res){
+          if(res && res.success){
+            var u=res.data.url;
+            if(multiple){ store[field].push(u); }
+            else { store[field]=[u]; if(wrap){ Array.prototype.slice.call(wrap.querySelectorAll('.neo-chip')).forEach(function(x){ if(x!==c) x.remove(); }); } }
+            sync(field);
+            c.className='neo-chip';
+            var x=document.createElement('span'); x.className='neo-chip-x'; x.textContent='×';
+            x.addEventListener('click',function(e){ e.preventDefault(); e.stopPropagation(); store[field]=(store[field]||[]).filter(function(v){return v!==u;}); sync(field); c.remove(); });
+            c.appendChild(x);
+          } else {
+            c.className='neo-chip err';
+            var nm=c.querySelector('.neo-chip-name'); if(nm) nm.textContent = file.name+' — '+((res&&res.data&&res.data.message)||'échec');
+          }
+        })
+        .catch(function(){ c.className='neo-chip err'; var nm=c.querySelector('.neo-chip-name'); if(nm) nm.textContent=file.name+' — erreur réseau'; });
+    }
+    function handleFiles(drop, fileList){
+      var field=drop.getAttribute('data-neo-upl');
+      var multiple=drop.getAttribute('data-multiple')==='1';
+      if(!multiple){ var w=drop.querySelector('.neo-drop-files'); if(w) w.innerHTML=''; store[field]=[]; sync(field); }
+      Array.prototype.slice.call(fileList).forEach(function(f){ upload(drop,f); });
+    }
+    document.addEventListener('change',function(e){
+      var inp=e.target; if(!inp || inp.type!=='file') return;
+      var drop=inp.closest ? inp.closest('.neo-drop[data-neo-upl]') : null; if(!drop) return;
+      handleFiles(drop, inp.files); inp.value='';
+    });
+    document.addEventListener('dragover',function(e){ var d=e.target.closest?e.target.closest('.neo-drop[data-neo-upl]'):null; if(d){ e.preventDefault(); d.classList.add('is-drag'); } });
+    document.addEventListener('dragleave',function(e){ var d=e.target.closest?e.target.closest('.neo-drop[data-neo-upl]'):null; if(d){ d.classList.remove('is-drag'); } });
+    document.addEventListener('drop',function(e){
+      var d=e.target.closest?e.target.closest('.neo-drop[data-neo-upl]'):null; if(!d) return;
+      e.preventDefault(); d.classList.remove('is-drag');
+      var files=e.dataTransfer && e.dataTransfer.files; if(files && files.length) handleFiles(d, files);
     });
   })();
   </script>
