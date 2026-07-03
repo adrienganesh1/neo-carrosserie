@@ -13,7 +13,7 @@ add_action('after_setup_theme', 'neo_theme_setup');
 function neo_theme_assets() {
     $u = get_template_directory_uri();
     // Polices du design
-    wp_enqueue_style('neo-fonts', 'https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap', array(), null);
+    wp_enqueue_style('neo-fonts', get_template_directory_uri() . '/assets/fonts/fonts.css', array(), null);
     // Styles de base (version = date de modif -> cache navigateur sûr, auto-busté aux mises à jour)
     $dir = get_template_directory();
     wp_enqueue_style('neo-base', $u . '/assets/base.css', array(), @filemtime($dir . '/assets/base.css') ?: '0.1');
@@ -357,8 +357,9 @@ function neo_client_upload() {
    ============================================================ */
 // Préconnexion aux domaines de polices (accélère le rendu)
 add_action('wp_head', function () {
-    echo '<link rel="preconnect" href="https://fonts.googleapis.com">' . "\n";
-    echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' . "\n";
+    $neo_fu = get_template_directory_uri() . '/assets/fonts/';
+    echo '<link rel="preload" as="font" type="font/woff2" crossorigin href="' . esc_url($neo_fu . 'archivo-800-latin.woff2') . '">' . "\n";
+    echo '<link rel="preload" as="font" type="font/woff2" crossorigin href="' . esc_url($neo_fu . 'manrope-400-latin.woff2') . '">' . "\n";
 }, 1);
 
 // Image Open Graph / Twitter par défaut (Yoast n'en émet pas sans réglage)
@@ -383,11 +384,42 @@ add_action('wp_enqueue_scripts', function () {
                     'wc-blocks-style','wc-blocks-vendors-style','brands-styles') as $h ) {
         wp_dequeue_style($h);
     }
-    // Scripts non essentiels (on conserve jquery, woocommerce, wc-cart-fragments)
+    // Scripts non essentiels (on conserve jquery, woocommerce)
     foreach ( array('wc-add-to-cart','wc-single-product','wc-checkout','flexslider','zoom','photoswipe') as $h ) {
         wp_dequeue_script($h);
     }
 }, 99);
+
+/* ============================================================
+   Performance — front léger : retire les scripts/CSS inutiles
+   ============================================================ */
+add_action('init', function () {
+    // Emojis (JS de détection + CSS)
+    remove_action('wp_head', 'print_emoji_detection_script', 7);
+    remove_action('wp_print_styles', 'print_emoji_styles');
+    remove_action('admin_print_scripts', 'print_emoji_detection_script');
+    remove_action('admin_print_styles', 'print_emoji_styles');
+    remove_filter('the_content_feed', 'wp_staticize_emoji');
+    remove_filter('comment_text_rss', 'wp_staticize_emoji');
+    remove_filter('wp_mail', 'wp_staticize_emoji_for_email');
+    // oEmbed (liens de découverte + wp-embed.js)
+    remove_action('wp_head', 'wp_oembed_add_discovery_links');
+    remove_action('wp_head', 'wp_oembed_add_host_js');
+});
+add_action('wp_footer', function () { wp_dequeue_script('wp-embed'); }, 1);
+
+// jQuery Migrate : inutile sur ce thème moderne
+add_action('wp_default_scripts', function ($scripts) {
+    if ( is_admin() ) return;
+    if ( isset($scripts->registered['jquery']) && ! empty($scripts->registered['jquery']->deps) ) {
+        $scripts->registered['jquery']->deps = array_diff(
+            $scripts->registered['jquery']->deps, array('jquery-migrate')
+        );
+    }
+});
+
+// wc-cart-fragments : requête AJAX panier à CHAQUE page — inutile (pas de mini-panier dynamique)
+add_action('wp_enqueue_scripts', function () { wp_dequeue_script('wc-cart-fragments'); }, 20);
 
 /* ============================================================
    Recherche produits — overlay moderne + recherche live (AJAX)
