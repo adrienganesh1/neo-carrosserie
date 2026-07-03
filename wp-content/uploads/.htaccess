@@ -8,3 +8,18 @@
     Deny from all
   </IfModule>
 </FilesMatch>
+
+# Sert automatiquement la version WebP (image.jpg.webp) si le navigateur la supporte
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /wp-content/uploads/
+  RewriteCond %{HTTP_ACCEPT} image/webp
+  RewriteCond %{REQUEST_FILENAME}\.webp -f
+  RewriteRule ^(.+)\.(jpe?g|png)$ $1.$2.webp [T=image/webp,E=REQUEST_image:1,L]
+</IfModule>
+<IfModule mod_headers.c>
+  Header append Vary Accept env=REQUEST_image
+</IfModule>
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+</IfModule>

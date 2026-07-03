@@ -22,6 +22,11 @@ wp-content/uploads/cache/
 wp-content/ai1wm-backups/
 wp-content/updraft/
 
+# === WebP générés (régénérables via le mu-plugin neo-webp) ===
+*.jpg.webp
+*.jpeg.webp
+*.png.webp
+
 # === Système / éditeurs ===
 .DS_Store
 Thumbs.db
