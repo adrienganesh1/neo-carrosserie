@@ -23,7 +23,7 @@ header('Retry-After: 600');
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="icon" href="https://www.neo-carrosserie.ch/wp-content/uploads/2025/06/cropped-Capture_d_ecran_2025-06-09_093706-removebg-preview-32x32.png">
+    <link rel="icon" href="https://www.neo-carrosserie.ch/wp-content/uploads/2025/06/cropped-neo-carrosserie-logo-32x32.png">
     <link rel="stylesheet" href="https://www.neo-carrosserie.ch/wp-content/maintenance/assets/styles.css">
     <script src="https://www.neo-carrosserie.ch/wp-content/maintenance/assets/timer.js"></script>
     <title>Maintenance planifiée</title>
