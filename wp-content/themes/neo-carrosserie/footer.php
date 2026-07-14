@@ -51,6 +51,7 @@ if ( ! $neo_is_shopctx ) : ?>
           <div style="font:800 11px Manrope;letter-spacing:.14em;text-transform:uppercase;color:#F2A23F;margin-bottom:11px" data-i18n="foot.social">Suivez-nous</div>
           <div class="neo-soc-row" style="display:flex;gap:10px;flex-wrap:wrap">
             <a class="neo-soc" href="https://www.instagram.com/neocarrosserie/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+            <a class="neo-soc" href="https://www.tiktok.com/@neocarrosserie" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 1 1-2.59-2.6c.27 0 .53.04.78.12V9.66a5.7 5.7 0 0 0-.78-.05c-3.14 0-5.69 2.55-5.69 5.7 0 3.13 2.55 5.68 5.69 5.68 3.14 0 5.69-2.55 5.69-5.68V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3a4.29 4.29 0 0 1-3.25-1.48z"/></svg></a>
           </div>
         </div>
       </div>

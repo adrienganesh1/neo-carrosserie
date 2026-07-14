@@ -103,7 +103,7 @@ function neo_localbusiness_schema() {
             array('@type'=>'Offer','itemOffered'=>array('@type'=>'Service','name'=>'Conciergerie automobile')),
             array('@type'=>'Offer','itemOffered'=>array('@type'=>'Service','name'=>'Entretien auto et bateau')),
         ),
-        'sameAs' => array('https://www.instagram.com/neocarrosserie/'),
+        'sameAs' => array('https://www.instagram.com/neocarrosserie/', 'https://www.tiktok.com/@neocarrosserie'),
     );
     echo "\n<script type=\"application/ld+json\">" . wp_json_encode($schema, JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) . "</script>\n";
 }
