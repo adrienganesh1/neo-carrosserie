@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Limit Login Attempts Security &#8211; Login Security, 2FA, Firewall, Brute Force Prevention - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-06-22 10:03:02+0000\n"
+"PO-Revision-Date: 2026-07-05 16:15:26+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,149 @@ msgstr ""
 "X-Generator: GlotPress/4.0.3\n"
 "Language: fr\n"
 "Project-Id-Version: Plugins - Limit Login Attempts Security &#8211; Login Security, 2FA, Firewall, Brute Force Prevention - Stable (latest release)\n"
+
+#: views/chart-failed-attempts.php:184
+msgid "Total shared request quota for your account."
+msgstr "Quota total de requêtes partagé pour votre compte."
+
+#: views/chart-failed-attempts.php:177
+msgid "Requests used by all sites in your account since the first day of the month."
+msgstr "Requêtes utilisées par tous les sites de votre compte depuis le premier jour du mois."
+
+#: views/chart-failed-attempts.php:172
+msgid "Requests used by this site since the first day of the month."
+msgstr "Requêtes utilisées par ce site depuis le premier jour du mois."
+
+#: views/tab-settings.php:834
+msgid "Failed to send test email."
+msgstr "Échec de l’envoi de l’e-mail de test."
+
+#: views/tab-settings.php:814
+msgid "Email is required."
+msgstr "L’e-mail est obligatoire."
+
+#: views/tab-settings.php:182
+msgid "Email Digests"
+msgstr "Récapitulatifs par e-mail"
+
+#: views/emails/test-notification-content.php:9
+msgid "If this email is going to spam, please add this address to your safelist."
+msgstr "Si cet e-mail arrive dans vos indésirables, veuillez ajouter cette adresse à votre liste d’autorisation."
+
+#: views/emails/test-notification-content.php:8
+msgid "Your email notifications for Limit Login Attempts Reloaded are working correctly."
+msgstr "Vos notifications par e-mail pour Limit Login Attempts Reloaded fonctionnent correctement."
+
+#: views/emails/footer-verification-text.php:10
+msgid "This verification email was sent by<wbr> <wbr><strong><a href=\"https://www.limitloginattempts.com\" target=\"_blank\" rel=\"noopener\">Limit&nbsp;Login&nbsp;Attempts&nbsp;Reloaded</a></strong>."
+msgstr "Cet e-mail de vérification a été envoyé par<wbr> <wbr><strong><a href=\"https://www.limitloginattempts.com\" target=\"_blank\" rel=\"noopener\">Limit Login Attempts Reloaded</a></strong>."
+
+#: views/emails/failed-login.php:6
+msgid "Failed login attempt detected"
+msgstr "Tentative de connexion échouée détectée"
+
+#: views/emails/failed-login-content.php:46
+msgid "This alert was sent by your website where Limit Login Attempts Reloaded free version is installed and you are listed as the admin."
+msgstr "Cette alerte a été envoyée par votre site sur lequel la version gratuite de Limit Login Attempts Reloaded est installée et où vous êtes désigné comme administrateur/administratrice."
+
+#: views/emails/failed-login-content.php:41
+msgid "Try Micro Cloud."
+msgstr "Essayez Micro Cloud."
+
+#: views/emails/failed-login-content.php:29
+msgid "Login address: <strong><a href=\"{current_url}\" target=\"_blank\" rel=\"noopener\">{current_url_label}</a></strong>"
+msgstr "Adresse de connexion : <strong><a href=\"{current_url}\" target=\"_blank\" rel=\"noopener\">{current_url_label}</a></strong>"
+
+#: views/emails/failed-login-content.php:27
+msgid "Last user attempted: <strong>{username}</strong>"
+msgstr "Dernière tentative de connexion : <strong>{username}</strong>"
+
+#: views/emails/digest-next-steps.php:9
+msgid "gives you deeper visibility and stronger protection with advanced IP intelligence, block by country, detailed login logs and monitoring, and automatic malicious IP detection."
+msgstr "offre une visibilité plus approfondie et une protection renforcée grâce à une intelligence IP avancée, au blocage par pays, à des journaux de connexion détaillés et à une surveillance, ainsi qu’à la détection automatique des IP malveillantes."
+
+#: views/emails/digest-next-steps.php:8
+msgid "Noticing consistent attack patterns?"
+msgstr "Avez-vous remarqué des schémas d’attaque récurrents ?"
+
+#: views/emails/digest-next-steps.php:7
+msgid "If you recognize an IP address or see repeated attempts against a specific username, open your dashboard to review the IP details and adjust allowlist or denylist rules if needed."
+msgstr "Si vous reconnaissez une adresse IP ou constatez des tentatives répétées visant un identifiant spécifique, ouvrez votre tableau de bord pour consulter les détails de l’IP et ajuster les règles de liste d’autorisation ou de liste de refus si nécessaire."
+
+#: views/emails/digest-next-steps.php:6
+msgid "What you should do next"
+msgstr "Ce que vous devez faire ensuite"
+
+#: views/emails/digest-daily-content.php:48
+#: views/emails/digest-monthly-content.php:48
+#: views/emails/digest-weekly-content.php:48
+msgid "No targeted usernames in this period."
+msgstr "Aucun identifiant ciblé sur cette période."
+
+#: views/emails/digest-daily-content.php:41
+#: views/emails/digest-monthly-content.php:41
+#: views/emails/digest-weekly-content.php:41
+msgid "Most targeted usernames"
+msgstr "Identifiants les plus ciblés"
+
+#: views/emails/digest-daily-content.php:37
+#: views/emails/digest-monthly-content.php:37
+#: views/emails/digest-weekly-content.php:37
+msgid "No IP activity in this period."
+msgstr "Aucune activité IP sur cette période."
+
+#: views/emails/digest-daily-content.php:32
+#: views/emails/digest-monthly-content.php:32
+#: views/emails/digest-weekly-content.php:32
+msgid "Last seen"
+msgstr "Dernière activité"
+
+#: views/emails/digest-daily-content.php:24
+#: views/emails/digest-monthly-content.php:24
+#: views/emails/digest-weekly-content.php:24
+msgid "Top IPs blocked"
+msgstr "Principales adresses IP bloquées"
+
+#: views/emails/digest-daily-content.php:10
+#: views/emails/digest-monthly-content.php:10
+#: views/emails/digest-weekly-content.php:10
+msgid "Summary"
+msgstr "Résumé"
+
+#: views/emails/digest-daily-content.php:8
+#: views/emails/digest-monthly-content.php:8
+#: views/emails/digest-weekly-content.php:8
+msgid "from Limit Login Attempts Security for"
+msgstr "de Limit Login Attempts Security pour"
+
+#: views/emails/digest-daily-content.php:3
+#: views/emails/digest-monthly-content.php:3
+#: views/emails/digest-weekly-content.php:3
+msgid "Hello"
+msgstr "Bonjour"
+
+#: core/LimitLoginAttempts.php:3399
+msgid "Please enter a valid admin notification email."
+msgstr "Veuillez saisir une adresse e-mail valide pour les notifications destinées à l’administrateur/administratrice."
+
+#: core/digest/DigestStorage.php:29
+msgid "Digest Day"
+msgstr "Jour du récapitulatif"
+
+#: core/digest/DigestStorage.php:28
+msgid "Digest Days"
+msgstr "Jours du récapitulatif"
+
+#. translators: %s: month and year
+#. translators: %s: date in Y-m-d format
+#: core/digest/DigestDispatcher.php:412 core/digest/DigestDispatcher.php:419
+msgid "Login Security Summary - %s"
+msgstr "Résumé de sécurité des connexions - %s"
+
+#. translators: 1: start date, 2: end date
+#: core/digest/DigestDispatcher.php:405
+msgid "Login Security Summary - %1$s to %2$s"
+msgstr "Résumé de sécurité des connexions - du %1$s au %2$s"
 
 #: core/mfa/MfaEndpoint.php:247
 msgid "Click to continue"
@@ -19,7 +162,7 @@ msgstr "Cliquez pour continuer"
 msgid "This will disable 2FA on your website for one hour."
 msgstr "Cela désactivera la 2FA sur votre site pendant une heure."
 
-#: core/AdminNoticesController.php:134 views/admin-dashboard-widgets.php:49
+#: core/AdminNoticesController.php:134 views/admin-dashboard-widgets.php:51
 msgid "⚠️ Action required: Your existing 2FA recovery links are no longer valid. On the <a href=\"%s\">2FA settings page</a>, turn 2FA off and then back on, then follow the prompts to download the new recovery links."
 msgstr "⚠️ Action requise : vos liens de récupération 2FA existants ne sont plus valides. Sur la <a href=\"%s\">page des réglages de la 2FA</a>, désactivez puis réactivez la 2FA, puis suivez les instructions pour télécharger les nouveaux liens de récupération."
 
@@ -32,7 +175,7 @@ msgid "Your site is currently at a low risk for brute force activity."
 msgstr "Votre site présente actuellement un faible risque d’attaque par force brute."
 
 #: core/integrations/WooCommerceIntegration.php:234
-#: core/LimitLoginAttempts.php:4143
+#: core/LimitLoginAttempts.php:4242
 msgid "Registration is currently disabled."
 msgstr "L’inscription est actuellement désactivée."
 
@@ -41,12 +184,12 @@ msgid "Your site has experienced %d+ failed login attempts in the past 24 hours.
 msgstr "Votre site a enregistré %d+ tentatives de connexion échouées au cours des 24 dernières heures."
 
 #. translators: %s: technical error reason.
-#: core/CloudApp.php:249
+#: core/CloudApp.php:313
 msgid "Reason: %s"
 msgstr "Raison : %s"
 
 #. translators: %d: HTTP response code.
-#: core/CloudApp.php:241
+#: core/CloudApp.php:305
 msgid "Code: %d"
 msgstr "Code : %d"
 
@@ -199,7 +342,7 @@ msgstr "Imprimer"
 msgid "Copy to clipboard"
 msgstr "Copier dans le presse-papiers"
 
-#: core/LimitLoginAttempts.php:1776 views/options-page.php:169
+#: core/LimitLoginAttempts.php:1792 views/options-page.php:187
 msgid "2FA"
 msgstr "2FA"
 
@@ -391,11 +534,11 @@ msgstr "Avant d’activer la 2FA/MFA, nous vous recommandons fortement de vous a
 msgid "Your site is not using HTTPS. Enabling HTTPS is recommended for better security."
 msgstr "Votre site n’utilise pas HTTPS. L’activation de HTTPS est recommandée pour une meilleure sécurité."
 
-#: core/CloudApp.php:261
+#: core/CloudApp.php:324
 msgid "Click here to refresh the page"
 msgstr "Cliquez ici pour actualiser la page"
 
-#: core/CloudApp.php:254
+#: core/CloudApp.php:318
 msgid "Oops, it looks like the site is having a temporary network issue."
 msgstr "Oups, il semble que le site rencontre un problème réseau temporaire."
 
@@ -443,7 +586,7 @@ msgstr "Souhaitez-vous vous inscrire ?"
 msgid "When submitting a support ticket, please include the contents of the window shown above."
 msgstr "Lors de l’envoi d’un ticket de support, veuillez inclure le contenu de la fenêtre affichée ci-dessus."
 
-#: views/options-page.php:144
+#: views/options-page.php:162
 msgid "Customer ID:"
 msgstr "ID client/cliente :"
 
@@ -516,7 +659,7 @@ msgstr "Avec Premium, votre site devient une partie d’un puissant réseau de r
 
 #: views/emails/failed-login-content.php:24
 msgid "{attempts_count} failed login attempts ({lockouts_count} lockout(s)) from IP"
-msgstr "{attempts_count} tentatives de connexion ratées ({lockouts_count} blocage(s)) depuis l’adresse IP"
+msgstr "{attempts_count} tentatives de connexion échouées ({lockouts_count} verrouillage(s)) depuis l’IP"
 
 #: views/tab-settings.php:693
 msgid "Custom Login Error Message"
@@ -534,7 +677,7 @@ msgstr "Limit Login Attempts Reloaded Application Cloud"
 msgid "To block all countries but your own add your country as Allow Only rule"
 msgstr "Pour bloquer tous les pays sauf le vôtre, ajoutez votre pays à la règle « Autoriser uniquement »"
 
-#: views/options-page.php:134
+#: views/options-page.php:152
 msgid "Account Login"
 msgstr "Connexion au compte"
 
@@ -553,6 +696,10 @@ msgstr "Premiers pas (gratuit)"
 #: resources/compare-plans-data.php:83
 msgid "1k for first month%s(100 per month after)"
 msgstr "1k pour le premier mois%s (100 pour les mois suivants)"
+
+#: views/chart-failed-attempts.php:167
+msgid "Monthly Usage:"
+msgstr "Utilisation mensuelle :"
 
 #: views/tab-settings.php:534
 msgid "These settings are independent of the apps."
@@ -711,7 +858,7 @@ msgstr "En fonction de votre degré d’activité par force brute, nous vous rec
 msgid "Based on your level of brute force activity, we recommend <a href=\"%s\" class=\"llar_orange\">upgrading to premium</a> to access features to reduce failed logins and improve site performance."
 msgstr "En fonction de votre degré d’activité par force brute, nous vous recommandons <a href=\"%s\" class=\"llar_orange\">de mettre à niveau vers Premium</a> pour accéder à des fonctionnalités permettant de réduire les échecs de connexion et d’améliorer les performances du site."
 
-#: views/options-page.php:54
+#: views/options-page.php:69
 msgid "You have exhausted your monthly quota of free Micro Cloud requests. The plugin has now reverted to the free version. <a href=\"%s\" class=\"link__style_color_inherit\" target=\"_blank\">Upgrade to the premium</a> version today to maintain cloud protection and advanced features."
 msgstr "Vous avez épuisé votre quota mensuel de demandes gratuites Micro Cloud. L’extension est maintenant repassée à la version gratuite. <a href=\"%s\" class=\"link__style_color_inherit\" target=\"_blank\">Mettre à niveau vers la version premium</a> aujourd’hui pour conserver la protection du cloud et les fonctionnalités avancées."
 
@@ -1905,11 +2052,11 @@ msgstr "Aidez-nous à sécuriser notre réseau en nous donnant accès à vos inf
 msgid "Enable Micro Cloud (FREE)"
 msgstr "Activer Micro Cloud (gratuit)"
 
-#: views/options-page.php:205
+#: views/options-page.php:223
 msgid "Automatic switch to free version when premium stops working (usually due to non-payment or exceeding monthly resource budget)."
 msgstr "Basculement automatique vers la version gratuite lorsque la version premium ne fonctionne plus (généralement en raison d’un défaut de paiement ou d’un dépassement du budget de ressources mensuel)."
 
-#: views/options-page.php:70
+#: views/options-page.php:85
 msgid "Enjoying Micro Cloud? To prevent interruption of the cloud app, <a href=\"%s\" class=\"link__style_color_inherit\" target=\"_blank\">Upgrade to Premium</a> today"
 msgstr "Vous appréciez Micro Cloud ? Pour éviter l’interruption de l’application cloud, <a href=\"%s\" class=\"link__style_color_inherit\" target=\"_blank\">mettez à niveau vers Premium</a> dès aujourd’hui."
 
@@ -1933,7 +2080,7 @@ msgstr "<a class=\"link__style_unlink llar_turquoise\" href=\"llar_auto_update_c
 msgid "<a class=\"link__style_unlink llar_turquoise\" href=\"%s\">Enable email notifications</a> to receive timely alerts and updates via email."
 msgstr "<a class=\"link__style_unlink llar_turquoise\" href=\"%s\">Activez les notifications par e-mail</a> pour recevoir des alertes et des mises à jour par e-mail."
 
-#: core/LimitLoginAttempts.php:1064 core/LimitLoginAttempts.php:1805
+#: core/LimitLoginAttempts.php:1064 core/LimitLoginAttempts.php:1821
 msgid "Free Upgrade"
 msgstr "Mise à niveau gratuite"
 
@@ -1949,6 +2096,10 @@ msgstr "Mise à niveau limitée"
 msgid "How To Activate Micro Cloud"
 msgstr "Comment activer Micro Cloud"
 
+#: views/micro-cloud-modal.php:32
+msgid "Please note that some domains have very high brute force activity, which may cause Micro Cloud to run out of resources in under 24 hours. We will send an email when resources are fully utilized and the app reverts back to the free version. You may upgrade to one of our premium plans to prevent the app from reverting."
+msgstr "Veuillez noter que certains domaines ont une activité très élevée en matière de force brute, ce qui peut entraîner l’épuisement des ressources de Micro Cloud en moins de 24 heures. Nous enverrons un e-mail lorsque les ressources seront entièrement utilisées et que l’application reviendra à la version gratuite. Vous pouvez mettre à niveau à l’une de nos offres premium pour éviter que l’application ne revienne à la version gratuite."
+
 #: views/micro-cloud-modal.php:29
 msgid "Help us secure our network and we’ll provide you with limited access to our premium features including our login firewall, IP Intelligence, and performance optimizer."
 msgstr "Aidez-nous à sécuriser notre réseau et nous vous fournirons un accès limité à nos fonctionnalités premium, y compris notre pare-feu de connexion, l’IP Intelligent et l’optimiseur de performance."
@@ -1956,10 +2107,6 @@ msgstr "Aidez-nous à sécuriser notre réseau et nous vous fournirons un accès
 #: views/micro-cloud-modal.php:26
 msgid "Get Started with Micro Cloud for FREE"
 msgstr "Faites vos premiers pas avec Micro Cloud gratuitement"
-
-#: views/micro-cloud-modal.php:32
-msgid "Please note that some domains have very high brute force activity, which may cause Micro Cloud to run out of resources in under 24 hours. We will send an email when resources are fully utilized and the app reverts back to the free version. You may upgrade to one of our premium plans to prevent the app from reverting."
-msgstr "Veuillez noter que certains domaines ont une activité très élevée en matière de force brute, ce qui peut entraîner l’épuisement des ressources de Micro Cloud en moins de 24 heures. Nous enverrons un e-mail lorsque les ressources seront entièrement utilisées et que l’application reviendra à la version gratuite. Vous pouvez mettre à niveau à l’une de nos offres premium pour éviter que l’application ne revienne à la version gratuite."
 
 #: views/onboarding-popup.php:75
 msgid "Activate"
@@ -2034,8 +2181,8 @@ msgstr "Sécurisez votre page de connexion grâce à notre pare-feu de connexion
 msgid "LLAR Security Notifications [TEST]"
 msgstr "Notifications de sécurité LLAR [TEST]"
 
-#: views/chart-circle-failed-attempts-today.php:37
-#: views/chart-failed-attempts.php:138
+#: views/chart-circle-failed-attempts-today.php:38
+#: views/chart-failed-attempts.php:139
 msgid "An IP that has made an unsuccessful login attempt on your website."
 msgstr "Une IP qui a fait une tentative de connexion échouée sur votre site."
 
@@ -2043,12 +2190,12 @@ msgstr "Une IP qui a fait une tentative de connexion échouée sur votre site."
 msgid "No, I don't want advanced protection"
 msgstr "Non, je ne veux pas de protection avancée"
 
-#: views/chart-failed-attempts.php:152
+#: views/chart-failed-attempts.php:153
 msgid "A request is utilized when the cloud validates whether an IP address is allowed to attempt a login, which also includes denied logins."
 msgstr "Une demande est utilisée lorsque le cloud vérifie si une adresse IP est autorisée à tenter une connexion, ce qui inclut également les connexions refusées."
 
-#: views/chart-circle-failed-attempts-today.php:36
-#: views/chart-failed-attempts.php:137
+#: views/chart-circle-failed-attempts-today.php:37
+#: views/chart-failed-attempts.php:138
 msgid "An IP that hasn't been previously denied by the cloud app, but has made an unsuccessful login attempt on your website."
 msgstr "Une adresse IP qui n’a pas été précédemment refusée par l’application cloud, mais qui a échoué lors d’une tentative de connexion sur votre site."
 
@@ -2081,7 +2228,7 @@ msgstr "Déverrouillé"
 msgid "Unlock"
 msgstr "Déverrouiller"
 
-#: core/LimitLoginAttempts.php:1890
+#: core/LimitLoginAttempts.php:1906
 msgid "LLAR"
 msgstr "LLAR"
 
@@ -2113,8 +2260,8 @@ msgstr "Délai en heures avant que les blocages ne soient retirés."
 msgid "Server variables containing IP addresses."
 msgstr "Variables de serveur contenant des adresses IP."
 
-#: core/LimitLoginAttempts.php:1782 resources/compare-plans-data.php:72
-#: views/options-page.php:175
+#: core/LimitLoginAttempts.php:1798 resources/compare-plans-data.php:72
+#: views/options-page.php:193
 msgid "Login Firewall"
 msgstr "Connexion pare-feu"
 
@@ -2166,15 +2313,15 @@ msgstr "Liste de refus"
 msgid "The LLAR dashboard widget provides a quick glance of your daily failed login activity on the main WordPress dashboard. You may hide this widget by checking this box."
 msgstr "Le widget du tableau de bord de LLAR permet d’avoir un aperçu rapide de votre activité quotidienne de connexion échouée sur le tableau de bord WordPress. Vous pouvez masquer ce widget en cochant cette case."
 
-#: views/chart-circle-failed-attempts-today.php:48
+#: views/chart-circle-failed-attempts-today.php:49
 msgid "Cloud protection enabled"
 msgstr "Protection cloud activée"
 
-#: core/digest/DigestDispatcher.php:391
+#: core/digest/DigestDispatcher.php:388
 msgid "from these notifications."
 msgstr "de ces notifications."
 
-#: core/digest/DigestDispatcher.php:387
+#: core/digest/DigestDispatcher.php:384
 msgid "Unsubscribe"
 msgstr "Se désabonner"
 
@@ -2259,7 +2406,7 @@ msgstr "Hourra ! Aucune tentative de connexion échouée (dernières 24 heures)
 msgid "No contract - cancel anytime"
 msgstr "Aucun contrat - résilier à tout moment"
 
-#: core/LimitLoginAttempts.php:3286
+#: core/LimitLoginAttempts.php:3344
 msgid "The %s IP range is invalid"
 msgstr "La plage IP %s est invalide"
 
@@ -2291,7 +2438,7 @@ msgstr "Limite du nombre de tentatives de réessai"
 msgid "Installed"
 msgstr "Installé"
 
-#: core/LimitLoginAttempts.php:1805 views/emails/digest-next-steps.php:9
+#: core/LimitLoginAttempts.php:1821 views/emails/digest-next-steps.php:9
 msgid "Premium"
 msgstr "Premium"
 
@@ -2407,7 +2554,7 @@ msgstr "200 000 demandes par mois"
 msgid "Version"
 msgstr "Version"
 
-#: views/chart-failed-attempts.php:250 views/emails/digest-daily-content.php:31
+#: views/chart-failed-attempts.php:251 views/emails/digest-daily-content.php:31
 #: views/emails/digest-monthly-content.php:31
 #: views/emails/digest-weekly-content.php:31
 msgid "Attempts"
@@ -2421,7 +2568,7 @@ msgstr "Oui, activez la mise à jour automatique"
 msgid "Do you want Limit Login Attempts Reloaded to provide the latest version automatically?"
 msgstr "Voulez-vous que Limit Login Attempts Reloaded vous fournisse automatiquement la dernière version ?"
 
-#: views/options-page.php:195
+#: views/options-page.php:213
 msgid "Premium / Extensions"
 msgstr "Premium / Extensions"
 
@@ -2521,7 +2668,7 @@ msgstr "Si vous avez acheté une offre premium, vérifiez votre e-mail pour obte
 msgid "Support for free customers is available via our forums page on WordPress.org.<br>The majority of requests <b>receive an answer within a few days</b>."
 msgstr "Le support pour les clients/clientes ayant une offre gratuite est disponible via notre page de forums sur WordPress.org.<br>La majorité des demandes <b>reçoivent une réponse dans les jours qui suivent</b>."
 
-#: core/LimitLoginAttempts.php:2606
+#: core/LimitLoginAttempts.php:2632
 msgid "Failed login by IP %1$s %2$s"
 msgstr "Échec de connexion depuis l’IP %1$s %2$s"
 
@@ -2602,9 +2749,9 @@ msgstr "Message RGPD"
 msgid "By proceeding you understand and give your consent that your IP address and browser information might be processed by the security plugins installed on this site."
 msgstr "En poursuivant, vous comprenez et consentez à ce que votre adresse IP et les informations relatives à votre navigateur soient traitées par les extensions de sécurité installées sur ce site."
 
-#: views/chart-circle-failed-attempts-today.php:30
-#: views/chart-failed-attempts.php:36 views/chart-failed-attempts.php:121
-#: views/chart-failed-attempts.php:131
+#: views/chart-circle-failed-attempts-today.php:31
+#: views/chart-failed-attempts.php:37 views/chart-failed-attempts.php:122
+#: views/chart-failed-attempts.php:132
 msgid "Failed Login Attempts"
 msgstr "Tentatives de connexion échouées"
 
@@ -2612,7 +2759,7 @@ msgstr "Tentatives de connexion échouées"
 msgid "Failed Login Attempts Today"
 msgstr "Tentatives de connexion échouées aujourd’hui"
 
-#: core/LimitLoginAttempts.php:1797 views/options-page.php:191
+#: core/LimitLoginAttempts.php:1813 views/options-page.php:209
 #: views/tab-dashboard.php:136
 msgid "Help"
 msgstr "Aide"
@@ -2674,8 +2821,8 @@ msgstr "Mettre à niveau maintenant"
 msgid "Active Lockouts"
 msgstr "Verrouillages actifs"
 
-#: views/chart-failed-attempts.php:44 views/chart-failed-attempts.php:147
-#: views/chart-failed-attempts.php:267
+#: views/chart-failed-attempts.php:45 views/chart-failed-attempts.php:148
+#: views/chart-failed-attempts.php:268
 msgid "Requests"
 msgstr "Demandes"
 
@@ -2697,19 +2844,19 @@ msgstr "Support Premium"
 msgid "This notification was sent automatically via Limit Login Attempts Reloaded Plugin."
 msgstr "Cette notification a été envoyée automatiquement via l’extension Limit Login Attempts Reloaded."
 
-#: core/LimitLoginAttempts.php:3963
+#: core/LimitLoginAttempts.php:4062
 msgid "Don't show this message again"
 msgstr "Ne plus afficher ce message"
 
-#: core/LimitLoginAttempts.php:3962
+#: core/LimitLoginAttempts.php:4061
 msgid "Remind me a month from now"
 msgstr "Rappelez-le-moi dans un mois"
 
-#: core/LimitLoginAttempts.php:3961
+#: core/LimitLoginAttempts.php:4060
 msgid "Yes, turn on email notifications"
 msgstr "Oui, activer les notifications par e-mail"
 
-#: core/LimitLoginAttempts.php:3956
+#: core/LimitLoginAttempts.php:4055
 msgid "You have been upgraded to the latest version of <strong>Limit Login Attempts Reloaded</strong>.<br> Due to increased security threats around the holidays, we recommend turning on email notifications when you receive a failed login attempt."
 msgstr "Vous avez été mis à niveau vers la dernière version de <strong>Limit Login Attempts Reloaded</strong>.<br>En raison de l’augmentation des menaces de sécurité pendant les vacances, nous vous recommandons d’activer les notifications par e-mail lorsque vous recevez une tentative de connexion échouée."
 
@@ -2717,7 +2864,7 @@ msgstr "Vous avez été mis à niveau vers la dernière version de <strong>Limit
 msgid "Run auto backups of access control lists, lockouts and logs"
 msgstr "Sauvegarde automatique des listes de contrôle d’accès, des verrouillages et du journal."
 
-#: views/options-page.php:200
+#: views/options-page.php:218
 msgid "Failover"
 msgstr "Basculement"
 
@@ -2875,7 +3022,7 @@ msgstr "Synchroniser les listes d’autorisations/%sde refus/%sde laissez-passer
 msgid "Use intelligent IP denial/%sunblocking technology"
 msgstr "Utiliser une technologie intelligente de blocage/%sdéblocage de l’IP"
 
-#: core/LimitLoginAttempts.php:1787 views/options-page.php:181
+#: core/LimitLoginAttempts.php:1803 views/options-page.php:199
 msgid "Logs"
 msgstr "Journaux"
 
@@ -2885,8 +3032,14 @@ msgstr "Journaux"
 msgid "Pattern"
 msgstr "Motif"
 
-#: core/LimitLoginAttempts.php:1053 core/LimitLoginAttempts.php:1766
-#: views/options-page.php:161
+#: views/emails/digest-daily-content.php:30
+#: views/emails/digest-monthly-content.php:30
+#: views/emails/digest-weekly-content.php:30
+msgid "Lockouts"
+msgstr "Verrouillages"
+
+#: core/LimitLoginAttempts.php:1053 core/LimitLoginAttempts.php:1782
+#: views/options-page.php:179
 msgid "Dashboard"
 msgstr "Tableau de bord"
 
@@ -2899,8 +3052,8 @@ msgstr "Enregistrer les réglages"
 msgid "General Settings"
 msgstr "Réglages généraux"
 
-#: core/LimitLoginAttempts.php:3313 core/LimitLoginAttempts.php:3393
-#: core/LimitLoginAttempts.php:3400
+#: core/LimitLoginAttempts.php:3371 core/LimitLoginAttempts.php:3451
+#: core/LimitLoginAttempts.php:3458
 msgid "Settings saved."
 msgstr "Réglages enregistrés."
 
@@ -2908,27 +3061,27 @@ msgstr "Réglages enregistrés."
 msgid "The app absorbs the main load caused by brute-force attacks, analyzes login attempts, and blocks unwanted visitors. It provides other service functions as well."
 msgstr "Cette application absorbe la charge principale causée par les attaques par force brute, analyse les tentatives de connexion et bloque les visiteurs indésirables. Elle fournit également d’autres fonctions de service."
 
-#: core/LimitLoginAttempts.php:3870
+#: core/LimitLoginAttempts.php:3969
 msgid "Leave a review"
 msgstr "Laisser un avis"
 
-#: core/LimitLoginAttempts.php:3869
+#: core/LimitLoginAttempts.php:3968
 msgid "Maybe later"
 msgstr "Peut-être ultérieurement"
 
-#: core/LimitLoginAttempts.php:3868
+#: core/LimitLoginAttempts.php:3967
 msgid "Don't show again"
 msgstr "Ne plus afficher"
 
-#: core/LimitLoginAttempts.php:3865
+#: core/LimitLoginAttempts.php:3964
 msgid "We would really like to hear your feedback about the plugin! Please take a couple minutes to write a few words <a href=\"https://wordpress.org/support/plugin/limit-login-attempts-reloaded/reviews/#new-post\" target=\"_blank\">here</a>. Thank you!"
 msgstr "Nous aimerions vraiment avoir votre avis sur l’extension ! Veuillez prendre quelques minutes pour écrire quelques mots <a href=\"https://wordpress.org/support/plugin/limit-login-attempts-reloaded/reviews/#new-post\" target=\"_blank\">ici</a>. Merci !"
 
-#: core/LimitLoginAttempts.php:3863
+#: core/LimitLoginAttempts.php:3962
 msgid "Hey <strong>Limit Login Attempts Reloaded</strong> user!"
 msgstr "Bonjour utilisateur de <strong>Limit Login Attempts Reloaded</strong> !"
 
-#: core/LimitLoginAttempts.php:3864
+#: core/LimitLoginAttempts.php:3963
 msgid "A <strong>crazy idea</strong> we wanted to share! What if we put an image from YOU on the <a href=\"https://wordpress.org/plugins/limit-login-attempts-reloaded/\" target=\"_blank\">LLAR page</a>?! (<a href=\"https://wordpress.org/plugins/hello-dolly/\" target=\"_blank\">example</a>) A drawing made by you or your child would cheer people up! Send us your drawing by <a href=\"mailto:wpchef.me@gmail.com\" target=\"_blank\">email</a> and we like it, we'll add it in the next release. Let's have some fun!"
 msgstr "Une <strong> idée folle</strong> que nous voulions partager ! Et si nous mettions une de VOS images sur la <a href=\"https://wordpress.org/plugins/limit-login-attempts-reloaded/\" target=\"_blank\">page LLAR</a> ?! (<a href=\"https://wordpress.org/plugins/hello-dolly/\" target=\"_blank\">exemple</a>) Un dessin fait par vous ou votre enfant ferait plaisir aux gens ! Envoyez-nous votre dessin par <a href=\"mailto:wpchef.me@gmail.com\" target=\"_blank\">e-mail</a> et si nous l’aimons, nous l’ajouterons dans la prochaine version. Amusons-nous un peu !"
 
@@ -2936,12 +3089,12 @@ msgstr "Une <strong> idée folle</strong> que nous voulions partager ! Et si no
 msgid "Debug Info"
 msgstr "Informations de débogage"
 
-#: core/LimitLoginAttempts.php:1054 core/LimitLoginAttempts.php:1771
-#: views/options-page.php:165
+#: core/LimitLoginAttempts.php:1054 core/LimitLoginAttempts.php:1787
+#: views/options-page.php:183
 msgid "Settings"
 msgstr "Réglages"
 
-#: core/LimitLoginAttempts.php:1792 views/options-page.php:187
+#: core/LimitLoginAttempts.php:1808 views/options-page.php:205
 msgid "Debug"
 msgstr "Débogage"
 
@@ -2961,7 +3114,7 @@ msgstr "après"
 msgid "Email to"
 msgstr "Envoyer à"
 
-#: core/LimitLoginAttempts.php:3014
+#: core/LimitLoginAttempts.php:3072
 msgid "<strong>ERROR</strong>: Incorrect email address or password."
 msgstr "<strong>Erreur</strong> : Adresse e-mail ou mot de passe incorrect."
 
@@ -3032,24 +3185,24 @@ msgstr "Nombre total de verrouillages"
 msgid "Statistics"
 msgstr "Statistiques"
 
-#: core/LimitLoginAttempts.php:3041
+#: core/LimitLoginAttempts.php:3099
 msgid "WC Error"
 msgstr "Erreur WC"
 
-#: core/LimitLoginAttempts.php:1375 core/LimitLoginAttempts.php:2356
-#: core/LimitLoginAttempts.php:2946
+#: core/LimitLoginAttempts.php:1391 core/LimitLoginAttempts.php:2382
+#: core/LimitLoginAttempts.php:3004
 msgid "Please try again in %d minute."
 msgid_plural "Please try again in %d minutes."
 msgstr[0] "Veuillez réessayer dans %d minute."
 msgstr[1] "Veuillez réessayer dans %d minutes."
 
-#: core/LimitLoginAttempts.php:2569
+#: core/LimitLoginAttempts.php:2595
 msgid "%d minute"
 msgid_plural "%d minutes"
 msgstr[0] "%d minute"
 msgstr[1] "%d minutes"
 
-#: core/LimitLoginAttempts.php:2562
+#: core/LimitLoginAttempts.php:2588
 msgid "%d hour"
 msgid_plural "%d hours"
 msgstr[0] "%d heure"
@@ -3061,8 +3214,8 @@ msgstr[1] "%d heures"
 msgid "Gateway"
 msgstr "Passerelle"
 
-#: core/LimitLoginAttempts.php:1373 core/LimitLoginAttempts.php:2354
-#: core/LimitLoginAttempts.php:2943
+#: core/LimitLoginAttempts.php:1389 core/LimitLoginAttempts.php:2380
+#: core/LimitLoginAttempts.php:3001
 msgid "Please try again in %d hour."
 msgid_plural "Please try again in %d hours."
 msgstr[0] "Veuillez réessayer dans %d heure."
@@ -3080,7 +3233,7 @@ msgstr "Utiliser les réglages généraux"
 msgid "Tried to log in as"
 msgstr "Tentative de connexion en tant que"
 
-#: core/LimitLoginAttempts.php:2931
+#: core/LimitLoginAttempts.php:2989
 msgid "Please try again later."
 msgstr "Veuillez réessayer ultérieurement."
 
@@ -3092,7 +3245,7 @@ msgstr "Un identifiant par ligne"
 msgid "allowed retries"
 msgstr "tentatives autorisées"
 
-#: core/LimitLoginAttempts.php:3227
+#: core/LimitLoginAttempts.php:3285
 msgid "Cleared IP log"
 msgstr "Journal des IP effacé"
 
@@ -3103,10 +3256,6 @@ msgstr "minutes de verrouillage"
 #: views/tab-settings.php:542
 msgid "Let network sites use their own settings"
 msgstr "Laisser les sites en réseau utiliser leurs propres réglages"
-
-#: core/LimitLoginAttempts.php:3241
-msgid "Cleared current lockouts"
-msgstr "Verrouillages actuels nettoyés"
 
 #. Plugin Name of the plugin
 #. Author of the plugin
@@ -3125,14 +3274,14 @@ msgstr[1] "<strong>%d</strong> tentatives restants."
 msgid "If disabled, the global settings will be forcibly applied to the entire network."
 msgstr "Si cette option est désactivée, les réglages globaux seront appliqués de force à l’ensemble du réseau."
 
-#: core/LimitLoginAttempts.php:957 core/LimitLoginAttempts.php:2968
-#: core/LimitLoginAttempts.php:3017 core/LimitLoginAttempts.php:3022
+#: core/LimitLoginAttempts.php:957 core/LimitLoginAttempts.php:3026
+#: core/LimitLoginAttempts.php:3075 core/LimitLoginAttempts.php:3080
 msgid "<strong>ERROR</strong>: Incorrect username or password."
 msgstr "<strong>Erreur</strong> : identifiant ou mot de passe incorrect."
 
-#: core/LimitLoginAttempts.php:1232 core/LimitLoginAttempts.php:1368
-#: core/LimitLoginAttempts.php:2347 core/LimitLoginAttempts.php:2836
-#: core/LimitLoginAttempts.php:2923
+#: core/LimitLoginAttempts.php:1244 core/LimitLoginAttempts.php:1384
+#: core/LimitLoginAttempts.php:2373 core/LimitLoginAttempts.php:2863
+#: core/LimitLoginAttempts.php:2981
 msgid "<strong>ERROR</strong>: Too many failed login attempts."
 msgstr "<strong>Erreur</strong> : trop de tentatives de connexions ont échoué."
 
@@ -3144,10 +3293,14 @@ msgstr "Notification en cas de verrouillage"
 msgid "%d IP is currently blocked from trying to log in"
 msgstr "L’adresse IP %d est actuellement bloquée et ne peut plus se connecter"
 
-#: core/LimitLoginAttempts.php:3234
+#: core/LimitLoginAttempts.php:3299
+msgid "Cleared current lockouts"
+msgstr "Verrouillages actuels effacés"
+
+#: core/LimitLoginAttempts.php:3292
 msgid "Reset lockout count"
-msgstr "Nombre de verrouillages réinitialisé"
+msgstr "Réinitialiser le nombre de verrouillages"
 
 #: views/tab-settings.php:237
 msgid "lockouts increase lockout time to"
-msgstr "verrouillages augmentent le temps de verrouillage de"
+msgstr "verrouillages augmentent la durée de verrouillage à"

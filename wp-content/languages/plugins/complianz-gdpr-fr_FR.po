@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Complianz &#8211; GDPR/CCPA Cookie Consent - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-06-17 10:39:12+0000\n"
+"PO-Revision-Date: 2026-07-05 16:41:06+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -3697,6 +3697,10 @@ msgstr "Refuser lors du défilement"
 msgid "Are you sure? This will remove all Complianz data."
 msgstr "Confirmez-vous ? Cela supprimera toutes les données de Complianz."
 
+#: cookiebanner/settings.php:261
+msgid "Dismiss on timeout"
+msgstr "Ignorer quand le délai est dépassé"
+
 #. Plugin URI of the plugin
 #: complianz-gpdr.php
 msgid "https://www.wordpress.org/plugins/complianz-gdpr"
@@ -4634,6 +4638,14 @@ msgctxt "Legal document cookie policy"
 msgid "We have made agreements about the use of cookies with other companies that place cookies. However, we cannot guarantee that these third parties handle your personal data in a reliable or secure manner. Parties such as Google are to be considered as independent data controllers. We recommend that you read the privacy statements of these companies."
 msgstr "Nous avons passé des accords à propos de l’utilisation des cookies avec d’autres entreprises plaçant des cookies. Cependant, nous ne pouvons garantir que ces tierces parties gèrent vos données personnelles de manière fiable ou sécurisée. Certaines parties telles que Google doivent être considérées comme des responsables de traitement des données indépendants. Nous vous recommandons de lire les déclarations de confidentialité de ces entreprises."
 
+#: config/documents/cookie-policy-br.php:124
+#: config/documents/cookie-policy-ca.php:132
+#: config/documents/cookie-policy-eu.php:140
+#: config/documents/cookie-policy-za.php:120
+msgctxt "Legal document cookie policy"
+msgid "When you visit our website for the first time, we will show you a pop-up with an explanation about cookies. As soon as you click on \"%s\", you consent to us using all cookies and plug-ins as described in the pop-up and this Cookie Policy. You can disable the use of cookies via your browser, but please note that our website may no longer work properly."
+msgstr "Lorsque vous visitez notre site web pour la première fois, nous vous montrerons une fenêtre contextuelle avec une explication sur les cookies. Dès que vous cliquez sur « %s », vous consentez à ce que nous utilisions tous les cookies et extensions comme décrit dans la fenêtre contextuelle et la présente politiquede cookies. Vous pouvez désactiver l’utilisation des cookies via votre navigateur, mais veuillez noter que notre site web pourrait ne plus fonctionner correctement."
+
 #: settings/config/menu.php:107 settings/build/7234.d838abdddb6468eb7b46.js:1
 msgid "Consent"
 msgstr "Consentement"
@@ -4673,14 +4685,6 @@ msgstr "Îles Vierges des États-Unis"
 #: config/config-i18n.php:273
 msgid "Virgin Islands, British"
 msgstr "Îles Vierges britanniques"
-
-#: config/documents/cookie-policy-br.php:124
-#: config/documents/cookie-policy-ca.php:132
-#: config/documents/cookie-policy-eu.php:140
-#: config/documents/cookie-policy-za.php:120
-msgctxt "Legal document cookie policy"
-msgid "When you visit our website for the first time, we will show you a pop-up with an explanation about cookies. As soon as you click on \"%s\", you consent to us using all cookies and plug-ins as described in the pop-up and this Cookie Policy. You can disable the use of cookies via your browser, but please note that our website may no longer work properly."
-msgstr "Lorsque vous visitez notre site web pour la première fois, nous vous montrerons une fenêtre contextuelle avec une explication sur les cookies. Dès que vous cliquez sur « %s », vous consentez à ce que nous utilisions tous les cookies et extensions comme décrit dans la fenêtre contextuelle et la présente politiquede cookies. Vous pouvez désactiver l’utilisation des cookies via votre navigateur, mais veuillez noter que notre site web pourrait ne plus fonctionner correctement."
 
 #: config/documents/cookie-policy-br.php:14
 #: config/documents/cookie-policy-ca.php:19

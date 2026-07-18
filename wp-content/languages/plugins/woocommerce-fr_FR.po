@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - WooCommerce - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-07-01 14:33:49+0000\n"
+"PO-Revision-Date: 2026-07-02 10:32:04+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -27103,7 +27103,7 @@ msgstr "Limiter le jeu de résultats aux commandes correspondant partiellement a
 
 #: src/Admin/ReportCSVEmail.php:117
 msgid "[{site_title}]: Your {report_name} Report download is ready"
-msgstr "[{site_title}] : Le téléchargement de votre rapport {report_name} est prêt"
+msgstr "[{site_title}] : Le téléchargement de votre rapport {report_name} est prêt"
 
 #: src/Admin/ReportCSVEmail.php:108
 msgid "Your Report Download"
@@ -29662,7 +29662,7 @@ msgstr "Au plaisir de vous revoir prochainement sur notre boutique."
 #: templates/emails/customer-refunded-order.php:59
 #: templates/emails/plain/customer-refunded-order.php:44
 msgid "Your order on %s has been refunded. There are more details below for your reference:"
-msgstr "Votre commande sur %s a été remboursée. Plus d’information ci-dessous :"
+msgstr "Votre commande sur %s a été remboursée. Vous trouverez plus de détails à ce sujet ci-dessous :"
 
 #. translators: %s: Site title
 #: templates/emails/customer-refunded-order.php:56
@@ -34479,7 +34479,7 @@ msgstr "Nous avons rendu les choses plus simples et plus faciles à gérer. Dés
 
 #: includes/admin/helper/views/html-helper-compat.php:4
 msgid "Looking for the WooCommerce Helper?"
-msgstr "Vous cherchez WooCommerce Helper ?"
+msgstr "Vous cherchez WooCommerce Helper ?"
 
 #. translators: %1$s: helper url, %2$d: number of extensions
 #: includes/admin/helper/class-wc-helper.php:2525
@@ -50299,7 +50299,7 @@ msgstr "j M Y @ G:i"
 #. translators: 1: date 2: product url
 #: includes/admin/class-wc-admin-post-types.php:147
 msgid "Product scheduled for: %1$s. <a target=\"_blank\" href=\"%2$s\">Preview product</a>"
-msgstr "Produit programmé pour le : %1$s. <a target=\"_blank\" href=\"%2$s\">Aperçu du produit</a>"
+msgstr "Produit planifié pour le : %1$s. <a target=\"_blank\" href=\"%2$s\">Prévisualiser le produit</a>"
 
 #. translators: %s: product url
 #: includes/admin/class-wc-admin-post-types.php:144
