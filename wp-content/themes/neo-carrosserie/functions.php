@@ -103,7 +103,7 @@ function neo_localbusiness_schema() {
             array('@type'=>'Offer','itemOffered'=>array('@type'=>'Service','name'=>'Conciergerie automobile')),
             array('@type'=>'Offer','itemOffered'=>array('@type'=>'Service','name'=>'Entretien auto et bateau')),
         ),
-        'sameAs' => array('https://www.instagram.com/neocarrosserie/', 'https://www.tiktok.com/@neocarrosserie', 'https://www.facebook.com/people/Neo-Carrosserie/61591973637361/'),
+        'sameAs' => array('https://www.instagram.com/neocarrosserie/', 'https://www.tiktok.com/@neocarrosserie', 'https://www.facebook.com/neocarrosserie', 'https://www.linkedin.com/company/neo-carrosserie/', 'https://www.pinterest.com/neocarrosserie/'),
     );
     echo "\n<script type=\"application/ld+json\">" . wp_json_encode($schema, JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) . "</script>\n";
 }
