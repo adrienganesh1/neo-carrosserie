@@ -103,7 +103,7 @@ function neo_localbusiness_schema() {
             array('@type'=>'Offer','itemOffered'=>array('@type'=>'Service','name'=>'Conciergerie automobile')),
             array('@type'=>'Offer','itemOffered'=>array('@type'=>'Service','name'=>'Entretien auto et bateau')),
         ),
-        'sameAs' => array('https://www.instagram.com/neocarrosserie/', 'https://www.tiktok.com/@neocarrosserie', 'https://www.facebook.com/neocarrosserie', 'https://www.linkedin.com/company/neo-carrosserie/', 'https://www.pinterest.com/neocarrosserie/'),
+        'sameAs' => array('https://www.instagram.com/neocarrosserie/', 'https://www.tiktok.com/@neocarrosserie', 'https://www.facebook.com/neocarrosserie', 'https://www.linkedin.com/company/neo-carrosserie/', 'https://www.pinterest.com/neocarrosserie/', 'https://x.com/NeoCarrosserie', 'https://www.youtube.com/@NeoCarrosserie', 'https://www.threads.com/@neocarrosserie'),
     );
     echo "\n<script type=\"application/ld+json\">" . wp_json_encode($schema, JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) . "</script>\n";
 }
@@ -371,6 +371,11 @@ add_action('wp_head', function () {
     echo '<meta name="twitter:card" content="summary_large_image">' . "\n";
     echo '<meta name="twitter:image" content="' . esc_url($img) . '">' . "\n";
 }, 6);
+
+// Vérification de propriété du site — Pinterest (ne pas supprimer)
+add_action('wp_head', function () {
+    echo '<meta name="p:domain_verify" content="d332eaf7541cbd6448cefe6923b6e517">' . "\n";
+}, 7);
 
 /* ============================================================
    Performance — décharger les assets WooCommerce hors boutique
