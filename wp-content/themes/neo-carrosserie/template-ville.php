@@ -2,9 +2,14 @@
 /* Template Name: Ville */
 get_header();
 $ville = wp_strip_all_tags( get_the_title() );
-$vowel = preg_match('/^[aeiouyàâéèêAEIOUY]/u', $ville);
-$de = $vowel ? "d'".$ville : "de ".$ville;   // d'Aigle / de Bex
-$a  = "à ".$ville;
+if (preg_match('/^Les\\s+(.*)/u', $ville, $m))      { $a = "aux ".$m[1];  $de = "des ".$m[1]; }
+elseif (preg_match('/^Le\\s+(.*)/u', $ville, $m))   { $a = "au ".$m[1];   $de = "du ".$m[1]; }
+elseif (preg_match('/^La\\s+(.*)/u', $ville, $m))   { $a = "à la ".$m[1]; $de = "de la ".$m[1]; }
+else {
+  $vowel = preg_match('/^[aeiouyàâéèêAEIOUY]/u', $ville);
+  $de = $vowel ? "d'".$ville : "de ".$ville;   // d'Aigle / de Bex
+  $a  = "à ".$ville;
+}
 $mapq = rawurlencode($ville.', Suisse');
 
 // Paragraphe UNIQUE par commune (évite le contenu dupliqué entre pages villes)
@@ -19,6 +24,26 @@ $communes = array(
   'Lausanne'      => "Capitale vaudoise et ville olympique, Lausanne est à une trentaine de minutes par l'autoroute. Pour les Lausannois attachés à la qualité, le déplacement en vaut la peine : un travail de finition soigné, des délais maîtrisés et un accueil personnalisé, loin de l'anonymat des grands garages.",
   'Martigny'      => "Au coude du Rhône, aux portes du Valais central et de la Fondation Gianadda, Martigny est à environ vingt-cinq minutes de notre atelier par l'A9. Nous accueillons les véhicules martignerains pour tous travaux de carrosserie, peinture et esthétique, avec prise en charge de l'assurance et devis sans engagement.",
   'Sion'          => "Capitale du Valais, dominée par les collines de Valère et Tourbillon, Sion est reliée à notre atelier d'Aigle par l'autoroute en une quarantaine de minutes. Pour une carrosserie et une peinture vraiment soignées, les Sédunois peuvent nous confier leur véhicule — nous organisons volontiers la logistique.",
+  'Yvorne' => "Village vigneron accolé à Aigle, Yvorne est à deux minutes de notre atelier. Pour les Yvornands, NEO Carrosserie est le carrossier de proximité par excellence : un impact de gravillon, une éraflure ou un choc de manœuvre se règlent sans détour, avec un devis gratuit.",
+  'Ollon' => "Commune viticole voisine d'Aigle, Ollon s'étend des rives du Rhône jusqu'aux hauts de Villars et Chesières. Nous sommes à quelques minutes du centre par la route de Saint-Triphon et intervenons sur tous les véhicules ollonnais — du break familial au 4×4 de montagne — pour la carrosserie, la peinture et le débosselage.",
+  'Roche' => "Sur l'axe Aigle–Villeneuve, entre plaine du Rhône et lac, Roche est à moins de dix minutes de notre atelier par la cantonale ou l'A9. Emplacement idéal : vous déposez votre véhicule en allant travailler et le récupérez réparé — carrosserie, pare-brise ou esthétique.",
+  'Corbeyrier' => "Village-terrasse au-dessus d'Yvorne, Corbeyrier domine la plaine à une quinzaine de minutes d'Aigle par la route de montagne. Routes étroites et stationnements en pente : nous réparons chocs et rayures des véhicules corbeyrolans et organisons volontiers le déplacement.",
+  'Rennaz' => "Aux portes de l'Hôpital Riviera-Chablais, Rennaz est à une dizaine de minutes d'Aigle par l'autoroute. Pour les Rennauds comme pour les nombreux pendulaires du secteur, nous assurons réparations de carrosserie, remplacement de pare-brise et détaillage, devis gratuit à l'appui.",
+  'Noville' => "Entre la réserve des Grangettes et l'embouchure du Rhône, Noville est un village de plaine à un quart d'heure de notre atelier. Nous prenons en charge les véhicules novillois pour la carrosserie, la peinture et le débosselage, avec véhicule de courtoisie pour rester mobile.",
+  'Leysin' => "Perchée sur son balcon ensoleillé face aux Dents du Midi, Leysin est reliée à Aigle par la route de montagne et le train. Virages serrés, gravillons et hivers rigoureux malmènent les carrosseries : nous réparons chocs, éraflures et dégâts d'hiver, avec organisation du transport si besoin.",
+  'Villars-sur-Ollon' => "Station prisée au-dessus d'Aigle, Villars-sur-Ollon — avec Chesières et Arveyes — met les véhicules à rude épreuve : sel de déneigement, gravillons, chocs de parking en hiver. Nous récupérons votre voiture à la station et lui rendons son éclat, teinte d'origine et traitement anti-corrosion compris, avant de vous la ramener.",
+  'Le Sépey' => "Au carrefour de la vallée des Ormonts (commune d'Ormont-Dessous), Le Sépey est sur la route qui relie Aigle aux Diablerets. Nous y intervenons pour tous travaux de carrosserie et de peinture, avec un devis clair et la prise en charge complète du dossier d'assurance.",
+  'Gryon' => "Village-balcon au-dessus de Bex, Gryon et le secteur de Barboleusaz sont à une vingtaine de minutes de notre atelier. Nous prenons en charge les véhicules gryonnais — souvent des 4×4 et utilitaires de montagne — pour la carrosserie, la peinture et la remise en état après les rigueurs de l'altitude.",
+  'Les Diablerets' => "Au pied du glacier 3000, Les Diablerets (commune d'Ormont-Dessus) sont à une trentaine de minutes d'Aigle par la vallée des Ormonts. Neige, gravillons et parkings serrés en saison : nous redonnons une seconde jeunesse aux carrosseries diableretaines, du polissage au débosselage sans peinture.",
+  'Massongex' => "À la sortie de Saint-Maurice, sur la rive valaisanne du Rhône, Massongex est à une quinzaine de minutes de notre atelier. Nous prenons en charge les véhicules massongérouds de A à Z — carrosserie, peinture en teinte d'origine et esthétique — avec un devis clair et sans engagement.",
+  'Collombey-Muraz' => "Grande commune du Chablais valaisan voisine de Monthey, Collombey-Muraz mêle quartiers résidentiels et pôle commercial. À une quinzaine de minutes de notre atelier par le pont sur le Rhône, nous offrons aux Collombeyrouds une alternative proche et réactive : carrosserie, peinture et débosselage, sans les délais des grands centres.",
+  'Vionnaz' => "Entre plaine et station de Torgon, Vionnaz est un village chablaisien à un quart d'heure de notre atelier par la route du Rhône. Nous réparons chocs, rayures et dégâts d'hiver des véhicules vionnards — plaine ou montagne — et organisons volontiers la logistique depuis Torgon.",
+  'Vérossaz' => "Village-balcon au-dessus de Saint-Maurice, Vérossaz domine la vallée du Rhône à une vingtaine de minutes d'Aigle. Nous intervenons pour les véhicules vérossains, souvent éprouvés par les routes de montagne, en carrosserie, peinture et débosselage, avec transport organisé si nécessaire.",
+  'Vouvry' => "Au cœur du Chablais valaisan, entre plaine du Rhône et hauteurs de Torgon, Vouvry est à une vingtaine de minutes d'Aigle. Nous accueillons les véhicules vouvryens pour la carrosserie, la peinture et l'esthétique, avec un devis gratuit et la prise en charge complète de l'assurance.",
+  'Le Bouveret' => "Au bord du Léman, à l'embouchure du Rhône (commune de Port-Valais), Le Bouveret et Les Évouettes sont à une vingtaine de minutes d'Aigle. Air lacustre et parkings de plage sollicitent les carrosseries : nous redonnons de l'éclat aux véhicules bouverolans, du polissage à la réparation après sinistre.",
+  'La Tour-de-Peilz' => "Entre Vevey et Montreux, « la Tour » borde le lac avec son château et ses quais. À une vingtaine de minutes de notre atelier par l'A9, nous soignons les carrosseries boélandes avec une finition impeccable et des délais courts, du simple impact à la remise en état complète.",
+  'Blonay' => "Sur les hauts de la Riviera, entre vignes et Pléiades, Blonay est à environ vingt-cinq minutes d'Aigle. Pour les Blonaysans, le déplacement vaut la qualité : peinture en teinte d'origine, débosselage et esthétique, avec un devis gratuit avant toute intervention.",
+  'Corsier-sur-Vevey' => "Village de la Riviera cher à Charlie Chaplin, Corsier-sur-Vevey surplombe le lac à une vingtaine de minutes de notre atelier. Nous y intervenons pour tous travaux de carrosserie, peinture et detailing, avec gestion complète du dossier d'assurance.",
 );
 $uniq = isset($communes[$ville]) ? $communes[$ville] : '';
 ?>
