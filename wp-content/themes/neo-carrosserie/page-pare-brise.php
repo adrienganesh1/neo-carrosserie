@@ -31,11 +31,20 @@
     </div>
   </section>
 
+  <!-- VILLES -->
+  <section style="max-width:1280px;margin:6px auto 0;padding:0 44px">
+    <div style="display:flex;flex-wrap:wrap;gap:9px;align-items:center">
+      <span style="font:700 13px Manrope;color:#8a6a26">Pare-brise aussi à :</span>
+      <a href="/pare-brise-monthey/" style="font:700 13px Manrope;background:#FBF3E6;border:1px solid #F2D9A8;color:#8a4b12;padding:9px 16px;border-radius:999px;text-decoration:none">Monthey</a><a href="/pare-brise-bex/" style="font:700 13px Manrope;background:#FBF3E6;border:1px solid #F2D9A8;color:#8a4b12;padding:9px 16px;border-radius:999px;text-decoration:none">Bex</a><a href="/pare-brise-vevey/" style="font:700 13px Manrope;background:#FBF3E6;border:1px solid #F2D9A8;color:#8a4b12;padding:9px 16px;border-radius:999px;text-decoration:none">Vevey</a><a href="/pare-brise-montreux/" style="font:700 13px Manrope;background:#FBF3E6;border:1px solid #F2D9A8;color:#8a4b12;padding:9px 16px;border-radius:999px;text-decoration:none">Montreux</a><a href="/pare-brise-villeneuve/" style="font:700 13px Manrope;background:#FBF3E6;border:1px solid #F2D9A8;color:#8a4b12;padding:9px 16px;border-radius:999px;text-decoration:none">Villeneuve</a>
+    </div>
+  </section>
+
   <!-- CTA -->
   <section style="max-width:1280px;margin:30px auto 60px;padding:0 44px">
-    <div style="background:linear-gradient(115deg,#05192b,#0a3050 55%,#114061);color:#fff;border-radius:24px;padding:50px;display:flex;flex-wrap:wrap;align-items:center;gap:28px;justify-content:space-between">
+    <div class="neo-band-dark" style="background:linear-gradient(115deg,#05192b,#0a3050 55%,#114061);color:#fff;border-radius:24px;padding:50px;display:flex;flex-wrap:wrap;align-items:center;gap:28px;justify-content:space-between">
       <div style="flex:1 1 420px;min-width:300px"><h2 style="font:800 32px/1.1 Archivo;letter-spacing:-.02em;margin:0;max-width:560px">Pare-brise fissuré ? Devis gratuit et sans engagement.</h2></div>
       <a href="/contact/" style="display:inline-flex;align-items:center;gap:10px;text-decoration:none;background:linear-gradient(120deg,#FBB615,#F26A12 55%,#E5390B);color:#fff;font:800 17px Manrope;padding:16px 28px;border-radius:13px">Demander un devis</a>
     </div>
   </section>
+<?php echo neo_tarifs_band(); ?>
 <?php get_footer(); ?>

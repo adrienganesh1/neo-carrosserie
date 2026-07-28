@@ -158,3 +158,6 @@
 .neo-shop .woocommerce-pagination ul li span.current{background:linear-gradient(120deg,#FBB615,#F26A12 55%,#E5390B);border-color:transparent !important;color:#fff !important;box-shadow:0 10px 22px -10px rgba(229,57,11,.6)}
 .neo-shop .woocommerce-pagination ul li .page-numbers.dots{border-color:transparent !important;background:none;min-width:24px;color:#a8a297 !important}
 .neo-shop .woocommerce-pagination ul li .prev.page-numbers,.neo-shop .woocommerce-pagination ul li .next.page-numbers{font-size:18px;font-weight:700}
+
+/* NEO-RESPONSIVE mobile padding */
+@media(max-width:768px){.neo-shop-inner{padding-left:20px !important;padding-right:20px !important}}

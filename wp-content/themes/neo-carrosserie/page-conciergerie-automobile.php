@@ -63,7 +63,7 @@
 
   <!-- CTA -->
   <section style="max-width:1280px;margin:30px auto 60px;padding:0 44px">
-    <div style="background:linear-gradient(115deg,#05192b,#0a3050 55%,#114061);color:#fff;border-radius:24px;padding:50px;display:flex;flex-wrap:wrap;align-items:center;gap:28px;justify-content:space-between">
+    <div class="neo-band-dark" style="background:linear-gradient(115deg,#05192b,#0a3050 55%,#114061);color:#fff;border-radius:24px;padding:50px;display:flex;flex-wrap:wrap;align-items:center;gap:28px;justify-content:space-between">
       <div style="flex:1 1 420px;min-width:300px"><h2 style="font:800 32px/1.1 Archivo;letter-spacing:-.02em;margin:0;max-width:600px">On vient chercher votre véhicule ? Organisez la prise en charge en 2 minutes.</h2></div>
       <div style="display:flex;flex-wrap:wrap;gap:14px">
         <a href="tel:+41215335656" style="display:inline-flex;align-items:center;gap:10px;text-decoration:none;background:linear-gradient(120deg,#FBB615,#F26A12 55%,#E5390B);color:#fff;font:800 17px Manrope;padding:16px 26px;border-radius:13px">021 533 56 56</a>
@@ -71,4 +71,5 @@
       </div>
     </div>
   </section>
+<?php echo neo_tarifs_band(); ?>
 <?php get_footer(); ?>

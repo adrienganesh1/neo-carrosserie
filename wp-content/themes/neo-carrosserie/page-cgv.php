@@ -29,7 +29,6 @@
       <p style="font:400 16px/1.75 Manrope;color:#3d3b36;margin:0 0 14px;text-wrap:pretty">Toute réclamation doit être adressée par écrit dans les jours suivant la restitution du véhicule ou la livraison. Passé ce délai, la prestation est réputée acceptée.</p>
       <h2 style="font:800 26px/1.2 Archivo;letter-spacing:-.02em;margin:38px 0 12px;color:#15140F">8. Droit applicable et for</h2>
       <p style="font:400 16px/1.75 Manrope;color:#3d3b36;margin:0 0 14px;text-wrap:pretty">Les présentes CGV sont soumises au droit suisse. Le for exclusif est à Aigle (VD).</p>
-      <div style="background:#FBF3E6;border:1px solid #F2D9A8;border-radius:12px;padding:16px 18px;font:500 14px/1.6 Manrope;color:#8a6a26;margin:18px 0">Document type à faire valider par votre fiduciaire / conseil juridique avant publication, notamment les délais de réclamation et les conditions de garantie spécifiques à votre activité.</div>
       <p style="font:500 13px Manrope;color:#9a948a;margin:40px 0 0">Dernière mise à jour : janvier 2026.</p>
   </div></div></section>
 

@@ -65,6 +65,7 @@
   </div>
 
   <!-- HEADER -->
+  <div class="neo-header-wrap">
   <header style="position:relative;z-index:5;max-width:1280px;margin:0 auto;padding:26px 44px;display:flex;flex-wrap:wrap;align-items:center;gap:18px 36px">
     <a href="<?php echo esc_url(home_url("/")); ?>" style="display:flex;align-items:center;gap:12px;text-decoration:none">
       <img src="/wp-content/themes/neo-carrosserie/assets/logo-neo.svg" alt="NEO Carrosserie Aigle" style="height:84px;width:auto;display:block">
@@ -84,7 +85,7 @@
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
         <span style="text-align:left;line-height:1.15"><span style="display:block;font:600 10px Manrope;opacity:.9;letter-spacing:.04em" data-i18n="cta.call_label">Appelez-nous</span><span style="display:block;font:800 15px Archivo;letter-spacing:.01em">021 533 56 56</span></span>
       </a>
-      <?php echo function_exists('neo_cart_chip') ? neo_cart_chip() : ''; ?>
+      <?php if ( function_exists('neo_cart_chip') && function_exists('is_shop') && ( is_shop() || is_product_category() || is_product_tag() || is_product() || is_cart() || is_checkout() || is_account_page() ) ) echo neo_cart_chip(); ?>
     </div>
 <?php
       $neo_is_shop = function_exists('is_shop') && ( is_shop() || is_product_category() || is_product_tag() || is_product() || is_cart() || is_checkout() || is_account_page() );
@@ -162,3 +163,4 @@
 <?php endif; ?>
     </nav>
   </header>
+  </div><!-- /neo-header-wrap -->

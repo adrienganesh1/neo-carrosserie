@@ -168,7 +168,7 @@
 
   <!-- CTA BANNER -->
   <section style="max-width:1280px;margin:60px auto;padding:0 44px">
-    <div style="background:linear-gradient(115deg,#05192b,#0a3050 55%,#114061);color:#fff;border-radius:24px;padding:54px 50px;display:flex;flex-wrap:wrap;align-items:center;gap:28px;justify-content:space-between">
+    <div class="neo-band-dark" style="background:linear-gradient(115deg,#05192b,#0a3050 55%,#114061);color:#fff;border-radius:24px;padding:54px 50px;display:flex;flex-wrap:wrap;align-items:center;gap:28px;justify-content:space-between">
       <div style="flex:1 1 420px;min-width:300px">
         <h2 style="font:800 34px/1.1 Archivo;letter-spacing:-.02em;margin:0;max-width:540px" data-i18n="banner.title">Un doute sur les dégâts ? Appelez, on vous conseille.</h2>
         <p style="font:400 17px Manrope;color:#c9c4bb;margin:12px 0 0" data-i18n="banner.sub">Devis gratuit et sans engagement.</p>

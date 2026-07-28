@@ -23,7 +23,6 @@
       <p style="font:400 16px/1.75 Manrope;color:#3d3b36;margin:0 0 14px;text-wrap:pretty">Après réception et contrôle de l’article retourné, le remboursement est effectué sous 14 jours par le moyen de paiement initial.</p>
       <h2 style="font:800 26px/1.2 Archivo;letter-spacing:-.02em;margin:38px 0 12px;color:#15140F">Articles exclus</h2>
       <ul style="font:400 16px/1.75 Manrope;color:#3d3b36;margin:0 0 14px;padding-left:22px"><li style="margin-bottom:6px">Pièces commandées spécialement sur mesure ;</li><li style="margin-bottom:6px">Produits ouverts, utilisés ou endommagés ;</li><li style="margin-bottom:6px">Prestations de service déjà réalisées.</li></ul>
-      <div style="background:#FBF3E6;border:1px solid #F2D9A8;border-radius:12px;padding:16px 18px;font:500 14px/1.6 Manrope;color:#8a6a26;margin:18px 0">À adapter selon le fonctionnement réel de votre E-Shop (transporteur, frais, délais, conditions de retour).</div>
       <p style="font:500 13px Manrope;color:#9a948a;margin:40px 0 0">Dernière mise à jour : janvier 2026.</p>
   </div></div></section>
 

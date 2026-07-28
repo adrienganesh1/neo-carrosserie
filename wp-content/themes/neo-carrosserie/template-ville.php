@@ -45,6 +45,56 @@ $communes = array(
   'Blonay' => "Sur les hauts de la Riviera, entre vignes et Pléiades, Blonay est à environ vingt-cinq minutes d'Aigle. Pour les Blonaysans, le déplacement vaut la qualité : peinture en teinte d'origine, débosselage et esthétique, avec un devis gratuit avant toute intervention.",
   'Corsier-sur-Vevey' => "Village de la Riviera cher à Charlie Chaplin, Corsier-sur-Vevey surplombe le lac à une vingtaine de minutes de notre atelier. Nous y intervenons pour tous travaux de carrosserie, peinture et detailing, avec gestion complète du dossier d'assurance.",
 );
+
+// Communes voisines — maillage interne géographiquement cohérent
+$voisins = array(
+  'Aigle'=>array('Yvorne','Ollon','Roche'),
+  'Yvorne'=>array('Aigle','Corbeyrier','Ollon'),
+  'Ollon'=>array('Aigle','Villars-sur-Ollon','Bex'),
+  'Roche'=>array('Aigle','Villeneuve','Rennaz'),
+  'Corbeyrier'=>array('Yvorne','Aigle','Leysin'),
+  'Leysin'=>array('Aigle','Le Sépey','Corbeyrier'),
+  'Villars-sur-Ollon'=>array('Ollon','Gryon','Les Diablerets'),
+  'Le Sépey'=>array('Leysin','Les Diablerets','Aigle'),
+  'Les Diablerets'=>array('Le Sépey','Villars-sur-Ollon','Gryon'),
+  'Bex'=>array('Ollon','Gryon','Saint-Maurice'),
+  'Gryon'=>array('Bex','Villars-sur-Ollon','Les Diablerets'),
+  'Monthey'=>array('Collombey-Muraz','Saint-Maurice','Massongex'),
+  'Saint-Maurice'=>array('Massongex','Monthey','Bex'),
+  'Massongex'=>array('Saint-Maurice','Monthey','Vérossaz'),
+  'Collombey-Muraz'=>array('Monthey','Vionnaz','Vouvry'),
+  'Vionnaz'=>array('Vouvry','Collombey-Muraz','Le Bouveret'),
+  'Vérossaz'=>array('Saint-Maurice','Massongex','Monthey'),
+  'Vouvry'=>array('Vionnaz','Le Bouveret','Collombey-Muraz'),
+  'Le Bouveret'=>array('Vouvry','Vionnaz','Noville'),
+  'Villeneuve'=>array('Rennaz','Noville','Roche'),
+  'Rennaz'=>array('Villeneuve','Noville','Roche'),
+  'Noville'=>array('Villeneuve','Le Bouveret','Rennaz'),
+  'Montreux'=>array('La Tour-de-Peilz','Vevey','Villeneuve'),
+  'Vevey'=>array('La Tour-de-Peilz','Corsier-sur-Vevey','Montreux'),
+  'La Tour-de-Peilz'=>array('Vevey','Montreux','Corsier-sur-Vevey'),
+  'Blonay'=>array('Vevey','Corsier-sur-Vevey','La Tour-de-Peilz'),
+  'Corsier-sur-Vevey'=>array('Vevey','Blonay','La Tour-de-Peilz'),
+  'Lausanne'=>array('Vevey','Montreux','La Tour-de-Peilz'),
+  'Martigny'=>array('Sion','Saint-Maurice','Monthey'),
+  'Sion'=>array('Martigny','Monthey','Saint-Maurice'),
+);
+
+// Liens directs vers les pages prestations (maillage transactionnel)
+$services_liens = array(
+  'Réparation de pare-brise'  => '/pare-brise/',
+  'Débosselage sans peinture' => '/debosselage/',
+  'Nettoyage & esthétique'    => '/nettoyage/',
+  'Conciergerie automobile'   => '/conciergerie-automobile/',
+);
+
+// 2e paragraphe : 3 variantes tournantes (évite la duplication 100 % entre pages)
+$intro2 = array(
+  "Carrosserie et débosselage, peinture automobile, remplacement de pare-brise, réparation après grêle, entretien et mécanique : nous prenons en charge votre véhicule de A à Z, avec un devis gratuit et sans engagement.",
+  "Réparation de chocs et de rayures, peinture en teinte d'origine, débosselage sans peinture, remplacement de pare-brise et remise en état après grêle : votre véhicule est traité de A à Z, devis gratuit à l'appui.",
+  "Du simple impact au sinistre complet — carrosserie, peinture, pare-brise, débosselage, réparation après grêle et esthétique — nous nous occupons de tout, assurance comprise, avec un devis clair et sans engagement.",
+);
+$p2 = $intro2[ strlen($ville) % 3 ];
 $uniq = isset($communes[$ville]) ? $communes[$ville] : '';
 ?>
   <!-- HERO -->
@@ -72,9 +122,14 @@ $uniq = isset($communes[$ville]) ? $communes[$ville] : '';
       <div style="flex:1 1 440px;min-width:320px">
         <h2 style="font:800 30px/1.1 Archivo;letter-spacing:-.02em;margin:0 0 16px">Votre carrossier de confiance, proche <?php echo esc_html($de); ?></h2>
         <p style="font:400 17px/1.7 Manrope;color:#5E5C57;margin:0 0 14px"><?php echo $uniq ? esc_html($uniq) : 'Situés au Chemin de St-Triphon 22 à Aigle, à quelques minutes '.esc_html($de).', nous intervenons sur tous types de véhicules : réparation de chocs, débosselage, peinture, esthétique et entretien auto et bateau.'; ?></p>
-        <p style="font:400 17px/1.7 Manrope;color:#5E5C57;margin:0">Carrosserie et débosselage, peinture automobile, remplacement de pare-brise, réparation après grêle, entretien et mécanique : nous prenons en charge votre véhicule de A à Z, avec un devis gratuit et sans engagement.</p>
+        <p style="font:400 17px/1.7 Manrope;color:#5E5C57;margin:0"><?php echo esc_html($p2); ?></p>
         <div style="display:flex;flex-wrap:wrap;gap:9px;margin-top:24px">
-          <a href="/services/" style="font:700 13px Manrope;background:#15140F;color:#fff;padding:9px 16px;border-radius:999px;text-decoration:none">Voir nos services</a>
+          <?php foreach ( $services_liens as $lbl => $url ) : ?>
+          <a href="<?php echo esc_url($url); ?>" style="font:700 13px Manrope;background:#fff;border:1px solid #e0dbd2;color:#3d3b36;padding:9px 16px;border-radius:999px;text-decoration:none"><?php echo esc_html($lbl); ?></a>
+          <?php endforeach; ?>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:9px;margin-top:12px">
+          <a href="/services/" style="font:700 13px Manrope;background:#15140F;color:#fff;padding:9px 16px;border-radius:999px;text-decoration:none">Voir tous nos services</a>
           <a href="/contact/" style="font:700 13px Manrope;background:#fff;border:1px solid #e0dbd2;color:#3d3b36;padding:9px 16px;border-radius:999px;text-decoration:none">Nous contacter</a>
           <a href="/zone-intervention/" style="font:700 13px Manrope;background:#fff;border:1px solid #e0dbd2;color:#3d3b36;padding:9px 16px;border-radius:999px;text-decoration:none">Zone d'intervention</a>
         </div>
@@ -85,9 +140,21 @@ $uniq = isset($communes[$ville]) ? $communes[$ville] : '';
     </div>
   </section>
 
+  <!-- COMMUNES VOISINES (maillage interne) -->
+  <?php if ( ! empty($voisins[$ville]) ) : ?>
+  <section style="max-width:1280px;margin:0 auto;padding:6px 44px 22px">
+    <h2 style="font:800 22px/1.15 Archivo;letter-spacing:-.02em;margin:0 0 14px">Carrosserie dans les environs <?php echo esc_html($de); ?></h2>
+    <div style="display:flex;flex-wrap:wrap;gap:10px">
+      <?php foreach ( $voisins[$ville] as $v ) : ?>
+      <a href="/zone-intervention/<?php echo sanitize_title($v); ?>/" style="font:700 14px Manrope;background:#FBF3E6;border:1px solid #F2D9A8;color:#8a4b12;padding:10px 18px;border-radius:999px;text-decoration:none">Carrosserie <?php echo esc_html($v); ?> &rarr;</a>
+      <?php endforeach; ?>
+    </div>
+  </section>
+  <?php endif; ?>
+
   <!-- CTA BANNER -->
   <section style="max-width:1280px;margin:30px auto 60px;padding:0 44px">
-    <div style="background:linear-gradient(115deg,#05192b,#0a3050 55%,#114061);color:#fff;border-radius:24px;padding:50px;display:flex;flex-wrap:wrap;align-items:center;gap:28px;justify-content:space-between">
+    <div class="neo-band-dark" style="background:linear-gradient(115deg,#05192b,#0a3050 55%,#114061);color:#fff;border-radius:24px;padding:50px;display:flex;flex-wrap:wrap;align-items:center;gap:28px;justify-content:space-between">
       <div style="flex:1 1 420px;min-width:300px">
         <h2 style="font:800 32px/1.1 Archivo;letter-spacing:-.02em;margin:0;max-width:560px">Un dégât <?php echo esc_html($a); ?> ? Appelez, on vous conseille.</h2>
         <p style="font:400 17px Manrope;color:#c9c4bb;margin:12px 0 0">Devis gratuit et sans engagement.</p>

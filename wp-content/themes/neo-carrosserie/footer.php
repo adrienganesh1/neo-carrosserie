@@ -4,7 +4,7 @@ $neo_is_shopctx = function_exists('is_woocommerce') && ( is_shop() || is_product
 if ( ! $neo_is_shopctx ) : ?>
   <!-- BOUTIQUE PROMO -->
   <section style="max-width:1280px;margin:0 auto;padding:20px 44px 74px">
-    <div style="position:relative;overflow:hidden;background:linear-gradient(115deg,#05192b,#0a3050 55%,#114061);border-radius:26px;padding:52px 50px;display:flex;flex-wrap:wrap;align-items:center;gap:44px;justify-content:space-between;color:#fff">
+    <div class="neo-band-dark" style="position:relative;overflow:hidden;background:linear-gradient(115deg,#05192b,#0a3050 55%,#114061);border-radius:26px;padding:52px 50px;display:flex;flex-wrap:wrap;align-items:center;gap:44px;justify-content:space-between;color:#fff">
       <div style="flex:1 1 380px;min-width:300px">
         <div style="display:inline-flex;align-items:center;gap:8px;font:700 13px Manrope;letter-spacing:.16em;text-transform:uppercase;color:#F2A23F">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F2A23F" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l-1 11.5a1 1 0 0 1-1 .9H8a1 1 0 0 1-1-.9L6 8z"/><path d="M9 9V6.5a3 3 0 0 1 6 0V9"/></svg>Notre e-shop
@@ -38,13 +38,13 @@ if ( ! $neo_is_shopctx ) : ?>
         <p style="font:400 14px/1.6 Manrope;color:#a8a39a;max-width:280px;margin:0;text-wrap:pretty" data-i18n="foot.tag">On redonne des ailes à votre auto, depuis&nbsp;Aigle.</p>
         <div style="display:flex;flex-direction:column;gap:12px;align-items:stretch;margin-top:18px;max-width:280px">
           <span style="display:flex;align-items:center;justify-content:center;gap:11px;font:800 15px Manrope;color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:13px 18px;border-radius:14px" data-i18n="swiss"><svg width="22" height="22" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="5" fill="#D52B1E"></rect><rect x="13.5" y="6" width="5" height="20" fill="#fff"></rect><rect x="6" y="13.5" width="20" height="5" fill="#fff"></rect></svg>Entreprise suisse</span>
-          <a href="tel:+41215335656" style="display:flex;align-items:center;gap:13px;text-decoration:none;background:linear-gradient(120deg,#FBB615,#F26A12 55%,#E5390B);color:#fff;padding:14px 20px;border-radius:14px">
+          <a href="tel:+41215335656" style="display:flex;align-items:center;justify-content:center;gap:13px;text-decoration:none;background:linear-gradient(120deg,#FBB615,#F26A12 55%,#E5390B);color:#fff;padding:14px 20px;border-radius:14px">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
-            <span><span style="display:block;font:600 11px Manrope;opacity:.85">Appeler maintenant</span><span style="display:block;font:800 19px Archivo">021 533 56 56</span></span>
+            <span style="text-align:center"><span style="display:block;font:600 11px Manrope;opacity:.85">Appeler maintenant</span><span style="display:block;font:800 19px Archivo">021 533 56 56</span></span>
           </a>
-          <a href="https://wa.me/41789545003" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:13px;text-decoration:none;background:#25D366;color:#fff;padding:14px 20px;border-radius:14px">
+          <a href="https://wa.me/41789545003" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:13px;text-decoration:none;background:#25D366;color:#fff;padding:14px 20px;border-radius:14px">
             <svg width="22" height="22" viewBox="0 0 32 32" fill="#fff" aria-hidden="true"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.3.7 4.5 1.9 6.4L4 29l7.9-1.8c1.8 1 3.9 1.5 6.1 1.5h.1c6.6 0 11.9-5.3 11.9-11.9C30 8.3 24.6 3 18 3h-2zm.1 2.2c5.5 0 9.8 4.4 9.8 9.7s-4.4 9.7-9.8 9.7c-2 0-3.9-.6-5.5-1.6l-.4-.2-4 .9.9-3.9-.3-.4c-1.1-1.7-1.7-3.6-1.7-5.5 0-5.3 4.4-9.7 9.8-9.7z"/></svg>
-            <span><span style="display:block;font:600 11px Manrope;opacity:.9">Écrire sur WhatsApp</span><span style="display:block;font:800 19px Archivo">+41 78 954 50 03</span></span>
+            <span style="text-align:center"><span style="display:block;font:600 11px Manrope;opacity:.9">Écrire sur WhatsApp</span><span style="display:block;font:800 19px Archivo">+41 78 954 50 03</span></span>
           </a>
         </div>
         <div style="margin-top:22px">

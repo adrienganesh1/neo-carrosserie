@@ -18,7 +18,10 @@ function neo_theme_assets() {
     $dir = get_template_directory();
     wp_enqueue_style('neo-base', $u . '/assets/base.css', array(), @filemtime($dir . '/assets/base.css') ?: '0.1');
     // Scripts fonctionnels (avant/après)
-    wp_enqueue_script('neo-image-slot', $u . '/assets/image-slot.js', array(), @filemtime($dir . '/assets/image-slot.js') ?: '0.1', true);
+    // Composant avant/après : uniquement sur la page Services (evite ~650 lignes de JS inutiles ailleurs)
+    if ( is_page('services') ) {
+        wp_enqueue_script('neo-image-slot', $u . '/assets/image-slot.js', array(), @filemtime($dir . '/assets/image-slot.js') ?: '0.1', true);
+    }
     // Ancien widget chat maison retiré (on utilise Tawk.to)
     // wp_enqueue_script('neo-chat', $u . '/assets/chat-widget.js', array(), '0.1', true);
     // i18n client-side retiré : la traduction est gérée par TranslatePress (URLs /de/)
@@ -65,7 +68,7 @@ function neo_localbusiness_schema() {
         'url'      => $home,
         'telephone'=> '+41215335656',
         'email'    => 'info@neo-carrosserie.ch',
-        'priceRange' => 'CHF',
+        'priceRange' => '$$',
         'address'  => array(
             '@type' => 'PostalAddress',
             'streetAddress'   => 'Chem. de St-Triphon 22',
@@ -102,12 +105,39 @@ function neo_localbusiness_schema() {
             array('@type'=>'Offer','itemOffered'=>array('@type'=>'Service','name'=>'Nettoyage et detailing auto et bateau')),
             array('@type'=>'Offer','itemOffered'=>array('@type'=>'Service','name'=>'Conciergerie automobile')),
             array('@type'=>'Offer','itemOffered'=>array('@type'=>'Service','name'=>'Entretien auto et bateau')),
+            array('@type'=>'Offer','itemOffered'=>array('@type'=>'Service','name'=>'Réparation et peinture de jantes')),
+            array('@type'=>'Offer','itemOffered'=>array('@type'=>'Service','name'=>'Pose de vitres teintées')),
+            array('@type'=>'Offer','itemOffered'=>array('@type'=>'Service','name'=>'Recharge et entretien de climatisation')),
         ),
-        'sameAs' => array('https://www.instagram.com/neocarrosserie/', 'https://www.tiktok.com/@neocarrosserie', 'https://www.facebook.com/neocarrosserie', 'https://www.linkedin.com/company/neo-carrosserie/', 'https://www.pinterest.com/neocarrosserie/', 'https://x.com/NeoCarrosserie', 'https://www.youtube.com/@NeoCarrosserie', 'https://www.threads.com/@neocarrosserie'),
+        'sameAs' => array('https://maps.google.com/?cid=10573694802309393209', 'https://www.instagram.com/neocarrosserie/', 'https://www.tiktok.com/@neocarrosserie', 'https://www.facebook.com/neocarrosserie', 'https://www.linkedin.com/company/neo-carrosserie/', 'https://www.pinterest.com/neocarrosserie/', 'https://x.com/NeoCarrosserie', 'https://www.youtube.com/@NeoCarrosserie', 'https://www.threads.com/@neocarrosserie'),
     );
     echo "\n<script type=\"application/ld+json\">" . wp_json_encode($schema, JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) . "</script>\n";
 }
 add_action('wp_head', 'neo_localbusiness_schema', 20);
+
+// Bande "Tarifs" réutilisable sur les pages services (honnête : plancher + devis sur place)
+function neo_tarifs_band( $from = 'CHF 50.–' ) {
+    ob_start(); ?>
+  <!-- TARIFS -->
+  <section style="max-width:1280px;margin:14px auto 0;padding:0 44px">
+    <div style="background:#FBF3E6;border:1px solid #F2D9A8;border-radius:24px;padding:34px 40px;display:flex;flex-wrap:wrap;align-items:center;gap:26px;justify-content:space-between">
+      <div style="flex:1 1 360px;min-width:280px">
+        <div style="font:700 14px Manrope;letter-spacing:.16em;text-transform:uppercase;color:#F26A12">Tarifs</div>
+        <div style="display:flex;align-items:baseline;gap:10px;margin-top:8px">
+          <span style="font:600 18px Manrope;color:#8a6a26">dès</span>
+          <span style="font:800 44px/1 Archivo;color:#15140F"><?php echo esc_html( $from ); ?></span>
+        </div>
+        <p style="font:400 16px/1.6 Manrope;color:#5E5C57;margin:12px 0 0;max-width:540px">Devis gratuit et sans engagement, établi sur place en quelques minutes. Le prix final dépend du véhicule et de l'étendue des dégâts. Prise en charge assurance possible.</p>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:12px">
+        <a href="tel:+41215335656" style="display:flex;align-items:center;gap:10px;text-decoration:none;background:linear-gradient(120deg,#FBB615,#F26A12 55%,#E5390B);color:#fff;padding:15px 24px;border-radius:13px;box-shadow:0 12px 30px rgba(229,57,11,.28)"><span style="font:800 18px Archivo">021 533 56 56</span></a>
+        <a href="/contact/" style="display:inline-flex;align-items:center;text-decoration:none;background:linear-gradient(115deg,#05192b,#0a3050 55%,#114061);color:#fff;font:700 16px Manrope;padding:15px 24px;border-radius:12px;box-shadow:0 10px 26px rgba(5,25,43,.32)">Devis gratuit</a>
+      </div>
+    </div>
+  </section>
+<?php return ob_get_clean();
+}
+
 
 // Sélection de produits aléatoires sur la page boutique (sous les catégories)
 function neo_shop_random_products() {
@@ -242,8 +272,10 @@ add_action('wp_footer', function () {
 <script>
 (function(){
   var b=document.getElementById('neo-top'); if(!b) return;
-  function upd(){ var on=window.pageYOffset>420; b.style.opacity=on?'1':'0'; b.style.visibility=on?'visible':'hidden'; b.style.transform=on?'translateY(0)':'translateY(10px)'; }
-  window.addEventListener('scroll',upd,{passive:true}); upd();
+  function bannerShown(){ var cb=document.querySelector('.cmplz-cookiebanner'); return !!(cb && cb.offsetParent!==null && getComputedStyle(cb).display!=='none' && getComputedStyle(cb).visibility!=='hidden'); }
+  function upd(){ var on=window.pageYOffset>420 && !bannerShown(); b.style.opacity=on?'1':'0'; b.style.visibility=on?'visible':'hidden'; b.style.transform=on?'translateY(0)':'translateY(10px)'; }
+  window.addEventListener('scroll',upd,{passive:true});
+  document.addEventListener('click',upd); document.addEventListener('cmplz_status_change',upd); setTimeout(upd,1500); upd();
   b.addEventListener('click',function(){ window.scrollTo({top:0,behavior:'smooth'}); });
 })();
 </script>
@@ -266,6 +298,30 @@ add_action('wp_footer', function () {
 </script>
     <?php
 }, 102);
+
+// Selecteur de langue : ouverture au clic (fallback tactile iOS, en plus du :hover)
+add_action('wp_footer', function () {
+    ?>
+<script>
+(function(){
+  var w=document.querySelector('.neo-lang'); if(!w) return;
+  var t=w.querySelector('.neo-lang-trigger'); if(!t) return;
+  t.addEventListener('click',function(e){ e.preventDefault(); e.stopPropagation(); var o=w.classList.toggle('is-open'); t.setAttribute('aria-expanded',o?'true':'false'); });
+  document.addEventListener('click',function(e){ if(!w.contains(e.target)) w.classList.remove('is-open'); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') w.classList.remove('is-open'); });
+})();
+</script>
+    <?php
+}, 103);
+
+// En-tete sticky : ombre + reduction au defilement
+add_action('wp_footer', function () {
+    ?>
+<script>
+(function(){ var w=document.querySelector('.neo-header-wrap'); if(!w) return; function u(){ w.classList.toggle('is-stuck', window.pageYOffset>8); } window.addEventListener('scroll',u,{passive:true}); u(); })();
+</script>
+    <?php
+}, 104);
 
 /* ============================================================
    Upload client sécurisé — carte grise + photos des dégâts
