@@ -57,19 +57,6 @@ Options -Indexes
 # END Neo Security
 
 
-# BEGIN Neo Shop Gone (boutique supprimee - 410 Gone)
-<IfModule mod_rewrite.c>
-RewriteEngine On
-# Produits / categories produits / etiquettes (fr = defaut, de+it via TranslatePress)
-RewriteRule ^(?:(?:de|it)/)?(?:produit|produits|product|product-tag|product-category)(?:/|$) - [G,L]
-# Pages WooCommerce
-RewriteRule ^(?:(?:de|it)/)?(?:boutique|panier|commande|mon-compte)(?:/|$) - [G,L]
-# Sitemaps WooCommerce residuels
-RewriteRule ^(?:(?:de|it)/)?product(?:_cat|_tag|_brand)?-sitemap[0-9]*\.xml$ - [G,L]
-# Ancienne page Plesk par defaut
-RewriteRule ^index\.html$ - [G,L]
-</IfModule>
-# END Neo Shop Gone
 # BEGIN WordPress
 # Les directives (lignes) entre « BEGIN WordPress » et « END WordPress » sont générées
 # dynamiquement, et doivent être modifiées uniquement via les filtres WordPress.
