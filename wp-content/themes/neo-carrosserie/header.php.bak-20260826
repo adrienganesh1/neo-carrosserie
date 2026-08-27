@@ -138,7 +138,6 @@
             <a href="/services/" data-i18n="nav.allservices" style="display:block;text-decoration:none;color:#15140F;font:700 14px Manrope;padding:9px 12px;border-radius:8px">Tous nos services</a>
             <a href="/pare-brise/" data-i18n="nav.parebrise" style="display:block;text-decoration:none;color:#3d3b36;font:600 14px Manrope;padding:9px 12px;border-radius:8px">Remplacement de pare-brise</a>
             <a href="/debosselage/" data-i18n="nav.debosselage" style="display:block;text-decoration:none;color:#3d3b36;font:600 14px Manrope;padding:9px 12px;border-radius:8px">Débosselage sans peinture</a>
-            <a href="/pose-pneus/" data-i18n="nav.posepneus" style="display:block;text-decoration:none;color:#3d3b36;font:600 14px Manrope;padding:9px 12px;border-radius:8px">Pose de pneus</a>
           </div>
         </div>
       </div>

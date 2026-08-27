@@ -53,35 +53,6 @@ $D = array(
     'cta'     => 'Clim à recharger ? Devis gratuit et sans engagement.',
     'offer'   => 'Recharge et entretien de climatisation',
   ),
-  'pose-pneus' => array(
-    'eyebrow' => 'Prestation',
-    'h1'      => 'Pose de pneus à Aigle',
-    'intro'   => "Pneus neufs, changement de saison ou permutation : nous montons, équilibrons et posons vos pneus à Aigle — dès CHF 30.– par roue, rapide et sans rendez-vous compliqué.",
-    'h2'      => "Montage et équilibrage soignés",
-    'bullets' => array(
-      array("Démontage et montage", "sur jante alu ou acier, toutes dimensions courantes."),
-      array("Équilibrage électronique", "roulage stable, sans vibrations."),
-      array("Valve neuve incluse", "remplacée à chaque montage pour éviter les fuites lentes."),
-      array("Permutation et changement saisonnier", "été / hiver, avec conseils de pression et d'usure."),
-      array("Tarif clair", "dès CHF 30.– par pneu monté et équilibré."),
-    ),
-    'local'   => "Que vos pneus proviennent de chez nous ou d'ailleurs, nous les montons et les équilibrons à l'atelier du Chem. de St-Triphon 22 à Aigle. Comptez dès CHF 30.– par roue — le tarif exact dépend de la dimension et de l'état de la jante. Devis gratuit et sans engagement.",
-    'cta'     => 'Pneus à monter ? Dès CHF 30.– par roue.',
-    'offer'   => 'Pose de pneus',
-    'from'    => 'CHF 30.–',
-    'image'   => 'https://www.neo-carrosserie.ch/wp-content/uploads/2026/08/pose-pneus-hero.jpg',
-    'gardiennage' => array(
-      'h2'    => "Gardiennage de vos pneus l'hiver",
-      'intro' => "Pas envie de stocker un train de pneus complet à la cave ou au garage ? Confiez-nous vos roues été ou hiver entre deux saisons : elles restent chez nous, montées et prêtes, jusqu'au prochain changement.",
-      'bullets' => array(
-        array("Roues montées et étiquetées", "identifiées à votre nom, aucune confusion au retour."),
-        array("Stockage à l'abri à l'atelier", "local sec, à l'abri de la lumière et des variations de température."),
-        array("Changement de saison sans y penser", "un appel suffit, rendez-vous rapide pour remonter le train stocké."),
-        array("Contrôle à chaque dépose", "pression et usure vérifiées avant le remontage."),
-      ),
-      'image' => 'https://www.neo-carrosserie.ch/wp-content/uploads/2026/08/gardiennage-hero.jpg',
-    ),
-  ),
 );
 
 $d = isset($D[$slug]) ? $D[$slug] : null;
@@ -91,21 +62,14 @@ $imgbase = get_template_directory_uri() . '/assets/';
   <!-- HERO -->
   <section style="position:relative;overflow:hidden;max-width:1280px;margin:0 auto;padding:46px 44px 20px">
     <img src="<?php echo $imgbase; ?>mark.svg" alt="" aria-hidden="true" style="position:absolute;right:-40px;top:-10px;width:360px;opacity:.07;pointer-events:none;user-select:none">
-    <div style="position:relative;display:flex;flex-wrap:wrap;gap:44px;align-items:center">
-      <div style="flex:1 1 420px;min-width:300px;max-width:780px">
-        <div style="font:700 16px Manrope;letter-spacing:.18em;text-transform:uppercase;color:#F26A12"><?php echo esc_html($d['eyebrow']); ?></div>
-        <h1 style="font:800 50px/1.04 Archivo;letter-spacing:-.025em;margin:16px 0 0"><?php echo esc_html($d['h1']); ?></h1>
-        <p style="font:400 19px/1.6 Manrope;color:#5E5C57;margin:20px 0 0"><?php echo esc_html($d['intro']); ?></p>
-        <div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:28px">
-          <a href="tel:+41215335656" style="display:flex;align-items:center;gap:12px;text-decoration:none;background:linear-gradient(120deg,#FBB615,#F26A12 55%,#E5390B);color:#fff;padding:15px 24px;border-radius:13px;box-shadow:0 12px 30px rgba(229,57,11,.32)"><span style="font:800 18px Archivo">021 533 56 56</span></a>
-          <a href="/contact/" style="display:inline-flex;align-items:center;gap:10px;text-decoration:none;background:linear-gradient(115deg,#05192b,#0a3050 55%,#114061);color:#fff;font:700 16px Manrope;padding:14px 24px;border-radius:12px">Devis gratuit</a>
-        </div>
+    <div style="position:relative;max-width:780px">
+      <div style="font:700 16px Manrope;letter-spacing:.18em;text-transform:uppercase;color:#F26A12"><?php echo esc_html($d['eyebrow']); ?></div>
+      <h1 style="font:800 50px/1.04 Archivo;letter-spacing:-.025em;margin:16px 0 0"><?php echo esc_html($d['h1']); ?></h1>
+      <p style="font:400 19px/1.6 Manrope;color:#5E5C57;margin:20px 0 0"><?php echo esc_html($d['intro']); ?></p>
+      <div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:28px">
+        <a href="tel:+41215335656" style="display:flex;align-items:center;gap:12px;text-decoration:none;background:linear-gradient(120deg,#FBB615,#F26A12 55%,#E5390B);color:#fff;padding:15px 24px;border-radius:13px;box-shadow:0 12px 30px rgba(229,57,11,.32)"><span style="font:800 18px Archivo">021 533 56 56</span></a>
+        <a href="/contact/" style="display:inline-flex;align-items:center;gap:10px;text-decoration:none;background:linear-gradient(115deg,#05192b,#0a3050 55%,#114061);color:#fff;font:700 16px Manrope;padding:14px 24px;border-radius:12px">Devis gratuit</a>
       </div>
-<?php   if ( ! empty($d['image']) ): ?>
-      <div style="flex:1 1 360px;min-width:280px;max-width:460px">
-        <img src="<?php echo esc_url($d['image']); ?>" alt="<?php echo esc_attr($d['h1']); ?>" style="display:block;width:100%;height:360px;object-fit:cover;border-radius:20px;box-shadow:0 20px 50px rgba(5,25,43,.16)">
-      </div>
-<?php   endif; ?>
     </div>
   </section>
 
@@ -124,33 +88,7 @@ $imgbase = get_template_directory_uri() . '/assets/';
     </div>
   </section>
 
-<?php if ( ! empty($d['gardiennage']) ): $g = $d['gardiennage']; ?>
-  <!-- GARDIENNAGE -->
-  <section style="max-width:1280px;margin:20px auto 0;padding:0 44px">
-    <div style="background:#F4F6F8;border:1px solid #e3e7ec;border-radius:24px;padding:44px;display:flex;flex-wrap:wrap;gap:36px;align-items:center">
-      <div style="flex:2 1 460px;min-width:300px">
-        <div style="font:700 14px Manrope;letter-spacing:.16em;text-transform:uppercase;color:#F26A12">Service complémentaire</div>
-        <h2 style="font:800 30px/1.1 Archivo;letter-spacing:-.02em;margin:10px 0 0;max-width:640px"><?php echo esc_html($g['h2']); ?></h2>
-        <p style="font:400 16px/1.7 Manrope;color:#5E5C57;margin:16px 0 0;max-width:760px"><?php echo esc_html($g['intro']); ?></p>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px 32px;max-width:1000px;margin-top:26px">
-          <?php foreach ($g['bullets'] as $b): ?>
-          <div style="display:flex;gap:12px;align-items:flex-start"><span style="color:#F26A12;flex:none;margin-top:2px">✔</span><div style="font:400 15px/1.55 Manrope;color:#3d3b36"><b><?php echo esc_html($b[0]); ?></b> — <?php echo esc_html($b[1]); ?></div></div>
-          <?php endforeach; ?>
-        </div>
-        <div style="margin-top:24px">
-          <a href="/contact/" style="display:inline-flex;font:700 14px Manrope;background:#15140F;color:#fff;padding:11px 20px;border-radius:999px;text-decoration:none">Demander le gardiennage</a>
-        </div>
-      </div>
-<?php   if ( ! empty($g['image']) ): ?>
-      <div style="flex:1 1 260px;min-width:220px;max-width:340px;align-self:stretch">
-        <img src="<?php echo esc_url($g['image']); ?>" alt="<?php echo esc_attr($g['h2']); ?>" style="display:block;width:100%;height:100%;min-height:280px;object-fit:cover;border-radius:16px;box-shadow:0 16px 40px rgba(5,25,43,.14)">
-      </div>
-<?php   endif; ?>
-    </div>
-  </section>
-<?php endif; ?>
-
-<?php echo neo_tarifs_band( isset($d['from']) ? $d['from'] : 'CHF 50.–' ); ?>
+<?php echo neo_tarifs_band(); ?>
 
   <!-- CTA -->
   <section style="max-width:1280px;margin:26px auto 60px;padding:0 44px">
