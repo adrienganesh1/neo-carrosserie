@@ -70,6 +70,11 @@
     <a href="<?php echo esc_url(home_url("/")); ?>" style="display:flex;align-items:center;gap:12px;text-decoration:none">
       <img src="/wp-content/themes/neo-carrosserie/assets/logo-neo.svg" alt="NEO Carrosserie Aigle" style="height:84px;width:auto;display:block">
     </a>
+    <button type="button" class="neo-search-trigger neo-search-bar" aria-label="Rechercher un produit">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg>
+      <span>Rechercher un produit, une marque…</span>
+    </button>
+    <button type="button" class="neo-search-trigger neo-search-mobile" aria-label="Rechercher un produit" title="Rechercher"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button>
     <button id="neo-burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><svg id="neo-burger-open" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#15140F" stroke-width="2.2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg><svg id="neo-burger-close" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#15140F" stroke-width="2.2" stroke-linecap="round" style="display:none"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></button>
     <div class="neo-util" style="margin-left:auto;display:flex;flex-wrap:wrap;gap:12px;align-items:center;order:1">
       <a href="https://wa.me/41789545003" target="_blank" rel="noopener" aria-label="Message WhatsApp +41 78 954 50 03" title="WhatsApp +41 78 954 50 03" style="display:flex;align-items:center;gap:9px;padding:0 16px;height:50px;border-radius:11px;background:#25D366;flex:none;text-decoration:none;box-shadow:0 8px 20px rgba(37,211,102,.35)">
@@ -80,8 +85,52 @@
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
         <span style="text-align:left;line-height:1.15"><span style="display:block;font:600 10px Manrope;opacity:.9;letter-spacing:.04em" data-i18n="cta.call_label">Appelez-nous</span><span style="display:block;font:800 15px Archivo;letter-spacing:.01em">021 533 56 56</span></span>
       </a>
+      <?php if ( function_exists('neo_cart_chip') && function_exists('is_shop') && ( is_shop() || is_product_category() || is_product_tag() || is_product() || is_cart() || is_checkout() || is_account_page() ) ) echo neo_cart_chip(); ?>
     </div>
-    <nav id="neo-nav" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-start;gap:12px 15px;flex-basis:100%;order:2">
+<?php
+      $neo_is_shop = function_exists('is_shop') && ( is_shop() || is_product_category() || is_product_tag() || is_product() || is_cart() || is_checkout() || is_account_page() );
+?>
+    <nav id="neo-nav" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:<?php echo $neo_is_shop ? 'space-between' : 'flex-start'; ?>;gap:12px 15px;flex-basis:100%;order:2">
+<?php
+      if ($neo_is_shop):
+        $neo_nav_cats = get_terms(array('taxonomy'=>'product_cat','hide_empty'=>true,'orderby'=>'name'));
+?>
+<?php
+      // Icône SVG commune
+      $neo_ico = function ($paths) {
+        return '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#F26A12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none">'.$paths.'</svg>';
+      };
+?>
+      <a href="/boutique/" style="display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:#3d3b36;font:600 15px Manrope"><?php echo $neo_ico('<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>'); ?>Toute la boutique</a>
+<?php
+      // Méga-menu boutique : rubriques + icône + sous-catégories (inspiré mamm.ch)
+      $neo_shop_menu = array(
+        array('Lavage & nettoyage', '/produits/lavage/',             $neo_ico('<path d="M12 3s6 6.5 6 10.5a6 6 0 0 1-12 0C6 9.5 12 3 12 3z"/>'), array('lavage','nettoyants-degraissants','vitres-optiques')),
+        array('Roues & pneus',      '/produits/roues-pneus/',        $neo_ico('<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/>'), array()),
+        array('Polissage',          '/produits/polissage-machines/', $neo_ico('<path d="M12 3l2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/>'), array('polissage-machines','detailing-rapide')),
+        array('Protection',         '/produits/protection-cires/',   $neo_ico('<path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6z"/>'), array('protection-cires','parfums-desodorisants')),
+        array('Intérieur',          '/produits/interieur/',          $neo_ico('<path d="M7 11V6a2 2 0 0 1 2-2h4"/><path d="M6 11h10a2 2 0 0 1 2 2v4H6z"/><path d="M8 17v3M16 17v3"/>'), array()),
+        array('Accessoires',        '/produits/accessoires-materiel/',$neo_ico('<path d="M9 8h5l1 3v8a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-8z"/><path d="M10 8V5h3V3"/><path d="M15 5h3M15 8h3"/>'), array('applicateurs-microfibres','accessoires-materiel','coffrets-kits')),
+      );
+      foreach ($neo_shop_menu as $neo_mi):
+        list($neo_mlabel,$neo_mlink,$neo_mico,$neo_mkids) = $neo_mi;
+        if (empty($neo_mkids)):
+?>
+      <a href="<?php echo esc_url($neo_mlink); ?>" style="display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:#3d3b36;font:600 15px Manrope"><?php echo $neo_mico; ?><?php echo esc_html($neo_mlabel); ?></a>
+<?php   else: ?>
+      <div class="neo-hasdrop" style="position:relative;display:inline-block">
+        <a href="<?php echo esc_url($neo_mlink); ?>" style="display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:#3d3b36;font:600 15px Manrope"><?php echo $neo_mico; ?><?php echo esc_html($neo_mlabel); ?> <span style="font-size:11px;color:#F26A12">▾</span></a>
+        <div class="neo-drop" style="position:absolute;top:100%;left:0;padding-top:12px;z-index:20;display:none">
+          <div style="background:#fff;border:1px solid #ece7de;border-radius:12px;box-shadow:0 16px 40px rgba(5,25,43,.14);padding:8px;min-width:240px">
+<?php       foreach ($neo_mkids as $neo_ks): $neo_kt = get_term_by('slug',$neo_ks,'product_cat'); if(!$neo_kt) continue; ?>
+            <a href="<?php echo esc_url(get_term_link($neo_kt)); ?>" style="display:flex;justify-content:space-between;gap:14px;text-decoration:none;color:#3d3b36;font:600 14px Manrope;padding:9px 12px;border-radius:8px"><?php echo esc_html($neo_kt->name); ?> <span style="color:#b3afa6;font-weight:700"><?php echo (int)$neo_kt->count; ?></span></a>
+<?php       endforeach; ?>
+          </div>
+        </div>
+      </div>
+<?php   endif; endforeach; ?>
+      <a class="neo-back-site" href="<?php echo esc_url(home_url('/')); ?>" style="display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:#5E5C57;font:700 13px Manrope;background:#fff;border:1px solid #e7e2d8;padding:7px 14px 7px 11px;border-radius:999px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="11 18 5 12 11 6"/></svg>Retour au site</a>
+<?php else: ?>
       <div class="neo-hasdrop" style="position:relative;display:inline-block">
         <a href="/services/" style="text-decoration:none;color:#3d3b36;font:600 17px Manrope"><span data-i18n="nav.services">Services</span> <span style="font-size:11px;color:#F26A12">▾</span></a>
         <div class="neo-drop" style="position:absolute;top:100%;left:0;padding-top:12px;z-index:20;display:none">
@@ -99,6 +148,20 @@
       <a href="/realisations/" style="text-decoration:none;color:#3d3b36;font:600 17px Manrope" data-i18n="nav.real">Réalisations</a>
       <a href="/rapporteur/" style="display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:#3d3b36;font:600 17px Manrope"><span style="flex:none;display:inline-flex;align-items:center;justify-content:center;height:20px;padding:0 5px;border-radius:6px;background:linear-gradient(120deg,#FBB615,#F26A12 60%,#E5390B);color:#fff;font:800 9px Archivo;letter-spacing:.02em">CHF</span><span data-i18n="nav.referrer">Rapporteur d'affaires</span></a>
       <a href="/contact/" style="text-decoration:none;color:#3d3b36;font:600 17px Manrope" data-i18n="nav.contact">Contact</a>
+      <div class="neo-hasdrop" style="position:relative;margin-left:auto">
+        <a href="/boutique/" class="neo-eshop-badge" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:#F26A12;font:800 15px Manrope;background:rgba(242,106,18,.09);border:1.5px solid rgba(242,106,18,.38);padding:9px 16px;border-radius:999px;transition:background .2s ease,color .2s ease,border-color .2s ease,box-shadow .2s ease"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M6 8h12l-1 11.5a1 1 0 0 1-1 .9H8a1 1 0 0 1-1-.9L6 8z"/><path d="M9 9V6.5a3 3 0 0 1 6 0V9"/></svg><span data-i18n="nav.shop">E-Shop</span> <span style="font-size:11px">▾</span></a>
+        <div class="neo-drop" style="position:absolute;top:100%;right:0;padding-top:12px;z-index:20;display:none">
+          <div style="background:#fff;border:1px solid #ece7de;border-radius:12px;box-shadow:0 16px 40px rgba(5,25,43,.14);padding:8px;min-width:230px">
+            <a href="/boutique/" style="display:block;text-decoration:none;color:#15140F;font:700 14px Manrope;padding:9px 12px;border-radius:8px">Toute la boutique</a>
+<?php
+            $neo_shop_cats = function_exists('get_terms') ? get_terms(array('taxonomy'=>'product_cat','hide_empty'=>true,'orderby'=>'name')) : array();
+            if (!is_wp_error($neo_shop_cats)) { foreach ($neo_shop_cats as $neo_c) { if ($neo_c->slug === 'uncategorized') continue; ?>
+            <a href="<?php echo esc_url(get_term_link($neo_c)); ?>" style="display:block;text-decoration:none;color:#3d3b36;font:600 14px Manrope;padding:9px 12px;border-radius:8px"><?php echo esc_html($neo_c->name); ?></a>
+<?php } } ?>
+          </div>
+        </div>
+      </div>
+<?php endif; ?>
     </nav>
   </header>
   </div><!-- /neo-header-wrap -->

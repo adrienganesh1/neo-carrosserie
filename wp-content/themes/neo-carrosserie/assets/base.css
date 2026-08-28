@@ -320,14 +320,13 @@ html,body{overflow-x:clip}
 .neo-header-wrap header a img{transition:height .2s ease}
 .neo-header-wrap.is-stuck header{padding-top:14px !important;padding-bottom:14px !important}
 .neo-header-wrap.is-stuck header a img{height:56px !important}
-@media(max-width:1024px){.neo-header-wrap.is-stuck header{padding-top:10px !important;padding-bottom:10px !important}.neo-header-wrap.is-stuck header a img{height:46px !important}}
+@media(max-width:1024px){.neo-header-wrap.is-stuck header{padding-top:10px !important;padding-bottom:10px !important}.neo-header-wrap.is-stuck header a img{height:54px !important}}
 
 /* NEO mobile header compact */
 @media(max-width:1024px){
   header{gap:12px !important}
-  header a img{height:54px !important}
-  .neo-search-mobile{margin-left:auto !important}
-  #neo-burger{margin-left:0 !important}
+  header a img{height:68px !important}
+  #neo-burger{margin-left:auto !important}
 }
 
 
