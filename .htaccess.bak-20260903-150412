@@ -70,13 +70,6 @@ RewriteRule ^(?:(?:de|it)/)?product(?:_cat|_tag|_brand)?-sitemap[0-9]*\.xml$ - [
 RewriteRule ^index\.html$ - [G,L]
 </IfModule>
 # END Neo Shop Gone
-# BEGIN Neo Analytics Proxy (contourne les bloqueurs de pub, relais first-party GA4)
-<IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteRule ^g/collect$ /ga-collect.php [L,QSA]
-</IfModule>
-# END Neo Analytics Proxy
-
 # BEGIN WordPress
 # Les directives (lignes) entre « BEGIN WordPress » et « END WordPress » sont générées
 # dynamiquement, et doivent être modifiées uniquement via les filtres WordPress.

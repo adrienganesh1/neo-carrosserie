@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Neo Analytics (GA4)
- * Description: Tag Google Analytics 4 (gtag.js) avec valeurs de consentement par defaut refusees (Google Consent Mode v2), en attendant la ceremonie de consentement Complianz.
+ * Description: Tag Google Analytics 4 (gtag.js) avec valeurs de consentement par defaut refusees (Google Consent Mode v2), et relais first-party (transport_url) vers /g/collect pour contourner les bloqueurs de pub cote navigateur.
  */
 
 add_action('wp_head', function () {
@@ -22,7 +22,10 @@ gtag('consent', 'default', {
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q0ENCY292Y"></script>
 <script>
 gtag('js', new Date());
-gtag('config', 'G-Q0ENCY292Y');
+gtag('config', 'G-Q0ENCY292Y', {
+  transport_url: 'https://www.neo-carrosserie.ch',
+  first_party_collection: true
+});
 </script>
     <?php
 }, 1);
