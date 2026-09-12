@@ -253,6 +253,10 @@ class LimitLoginAttempts implements OptionsPageUriProvider
 			'name'          => 'Micro Cloud',
 			'rate'          => 20,
 		),
+		'personal'      => array(
+			'name'          => 'Personal',
+			'rate'          => 25,
+		),
 		'premium'       => array(
 			'name'          => 'Premium',
 			'rate'          => 30,
@@ -264,6 +268,10 @@ class LimitLoginAttempts implements OptionsPageUriProvider
 		'pro'           => array(
 			'name'          => 'Professional',
 			'rate'          => 50,
+		),
+		'business'      => array(
+			'name'          => 'Business',
+			'rate'          => 55,
 		),
 		'agency_pro'    => array(
 			'name'          => 'Agency',
@@ -732,9 +740,8 @@ class LimitLoginAttempts implements OptionsPageUriProvider
 
 		$mfa_return_message = __( '<strong>ERROR</strong>: Incorrect username or password.', 'limit-login-attempts-reloaded' );
 		if ( ( $limit_login_nonempty_credentials && ( $is_wp_login_page || $is_custom_login_page || $um_limit_login_failed ) ) || $show_mfa_return_error ) :
-            ?>
-
-            <script>
+			ob_start();
+			?>
                 ;( function( $ ) {
                     let ajaxUrlObj = new URL( `<?php echo admin_url( 'admin-ajax.php' ); ?>` );
                     let um_limit_login_failed = `<?php echo esc_js( isset( $um_limit_login_failed ) ? $um_limit_login_failed : '' ); ?>`;
@@ -819,8 +826,13 @@ class LimitLoginAttempts implements OptionsPageUriProvider
                     }
 
                 } )(jQuery)
-            </script>
-		<?php endif;
+			<?php
+			$script = ob_get_clean();
+
+			echo function_exists( 'wp_get_inline_script_tag' )
+				? wp_get_inline_script_tag( $script )
+				: '<script>' . $script . '</script>';
+		endif;
 	}
 
 	public function add_action_links( $actions )
