@@ -23,19 +23,29 @@ if (function_exists('fastcgi_finish_request')) {
 }
 
 $query = $_SERVER['QUERY_STRING'] ?? '';
+$method = $_SERVER['REQUEST_METHOD'] ?? 'GET';
 $body = file_get_contents('php://input');
 $ua = $_SERVER['HTTP_USER_AGENT'] ?? '';
 $ip = $_SERVER['REMOTE_ADDR'] ?? '';
 
+$headers = [
+    'User-Agent: ' . $ua,
+    'X-Forwarded-For: ' . $ip,
+];
+
 $ch = curl_init('https://region1.google-analytics.com/g/collect?' . $query);
+
+if ($method === 'POST') {
+    $headers[] = 'Content-Type: text/plain;charset=UTF-8';
+    $headers[] = 'Content-Length: ' . strlen($body);
+    curl_setopt($ch, CURLOPT_POST, true);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $body);
+} else {
+    curl_setopt($ch, CURLOPT_HTTPGET, true);
+}
+
 curl_setopt_array($ch, [
-    CURLOPT_POST => true,
-    CURLOPT_POSTFIELDS => $body,
-    CURLOPT_HTTPHEADER => [
-        'User-Agent: ' . $ua,
-        'X-Forwarded-For: ' . $ip,
-        'Content-Type: text/plain;charset=UTF-8',
-    ],
+    CURLOPT_HTTPHEADER => $headers,
     CURLOPT_TIMEOUT => 3,
     CURLOPT_CONNECTTIMEOUT => 2,
     CURLOPT_RETURNTRANSFER => true,
