@@ -68,7 +68,7 @@
   <div class="neo-header-wrap">
   <header style="position:relative;z-index:5;max-width:1280px;margin:0 auto;padding:26px 44px;display:flex;flex-wrap:wrap;align-items:center;gap:18px 36px">
     <a href="<?php echo esc_url(home_url("/")); ?>" style="display:flex;align-items:center;gap:12px;text-decoration:none">
-      <img src="/wp-content/themes/neo-carrosserie/assets/logo-neo.svg" alt="NEO Carrosserie Aigle" width="517" height="169" style="height:84px;width:auto;display:block">
+      <img src="/wp-content/themes/neo-carrosserie/assets/logo-neo.svg" alt="NEO Carrosserie Aigle" style="height:84px;width:auto;display:block">
     </a>
     <button id="neo-burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><svg id="neo-burger-open" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#15140F" stroke-width="2.2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg><svg id="neo-burger-close" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#15140F" stroke-width="2.2" stroke-linecap="round" style="display:none"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></button>
     <div class="neo-util" style="margin-left:auto;display:flex;flex-wrap:wrap;gap:12px;align-items:center;order:1">

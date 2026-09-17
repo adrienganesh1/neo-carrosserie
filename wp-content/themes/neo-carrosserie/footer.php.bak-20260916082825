@@ -2,7 +2,7 @@
     <div class="neo-foot-grid" style="max-width:1280px;margin:0 auto;padding:64px 44px 30px">
       <div style="flex:1 1 280px;min-width:260px">
         <div style="margin-bottom:18px">
-          <img src="/wp-content/themes/neo-carrosserie/assets/logo-neo-white.svg" alt="NEO Carrosserie Aigle" width="517" height="169" style="height:66px;width:auto;display:block">
+          <img src="/wp-content/themes/neo-carrosserie/assets/logo-neo-white.svg" alt="NEO Carrosserie Aigle" style="height:66px;width:auto;display:block">
         </div>
         <p style="font:400 14px/1.6 Manrope;color:#a8a39a;max-width:280px;margin:0;text-wrap:pretty" data-i18n="foot.tag">On redonne des ailes à votre auto, depuis&nbsp;Aigle.</p>
         <div style="display:flex;flex-direction:column;gap:12px;align-items:stretch;margin-top:18px;max-width:280px">

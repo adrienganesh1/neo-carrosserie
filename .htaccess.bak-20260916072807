@@ -1,13 +1,4 @@
 # BEGIN Neo Performance (cache navigateur + compression)
-<IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteCond %{HTTP_ACCEPT} image/webp
-RewriteCond %{REQUEST_FILENAME}\.webp -f
-RewriteRule ^(.+)\.(jpe?g|png)$ $1.$2.webp [T=image/webp,E=accept:1,L]
-</IfModule>
-<IfModule mod_headers.c>
-Header append Vary Accept env=REDIRECT_accept
-</IfModule>
 <IfModule mod_expires.c>
   ExpiresActive On
   ExpiresByType text/css "access plus 1 year"
