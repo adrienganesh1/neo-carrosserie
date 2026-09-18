@@ -289,7 +289,7 @@ add_action('wp_footer', function () {
 (function(){
   var b=document.getElementById('neo-burger'); if(!b) return;
   var oi=document.getElementById('neo-burger-open'), ci=document.getElementById('neo-burger-close');
-  function set(open){ document.body.classList.toggle('neo-nav-open',open); b.setAttribute('aria-expanded',open?'true':'false'); if(oi)oi.style.display=open?'none':'block'; if(ci)ci.style.display=open?'block':'none'; }
+  function set(open){ document.body.classList.toggle('neo-nav-open',open); b.setAttribute('aria-expanded',open?'true':'false'); b.setAttribute('aria-label',open?'Fermer le menu':'Ouvrir le menu'); if(oi)oi.style.display=open?'none':'block'; if(ci)ci.style.display=open?'block':'none'; }
   b.addEventListener('click',function(){ set(!document.body.classList.contains('neo-nav-open')); });
   var nav=document.getElementById('neo-nav');
   if(nav) nav.addEventListener('click',function(e){ if(e.target.closest('a')) set(false); });

@@ -80,6 +80,8 @@ html{scroll-behavior:smooth}
 /* Menu burger (mobile / tablette) */
 #neo-burger{display:none;order:1;margin-left:auto;align-items:center;justify-content:center;width:48px;height:48px;border:1px solid #e7e2d8;border-radius:12px;background:#fff;cursor:pointer;padding:0;flex:none;transition:transform .12s ease}
 #neo-burger:active{transform:scale(.95)}
+/* Menu mobile ouvert : on bloque le scroll de la page derrière le panneau plein écran */
+body.neo-nav-open{overflow:hidden}
 @media(max-width:1024px){
   /* logo à gauche, menu (burger) à droite */
   header{justify-content:flex-start}
@@ -87,6 +89,11 @@ html{scroll-behavior:smooth}
   .neo-util{display:none !important;order:3;flex-basis:100%;margin-left:0 !important;justify-content:center;margin-top:14px}
   #neo-nav{display:none !important;order:2}
   body.neo-nav-open .neo-util{display:flex !important}
+  /* Panneau menu ouvert = recouvrement plein écran opaque (au lieu d'un simple agrandissement
+     sticky) : évite que le contenu de la page (hero, texte) ne transparaisse sous les liens
+     pendant le défilement. On garde le header existant comme panneau, on le rend scrollable
+     lui-même et on bloque le scroll de la page derrière. */
+  body.neo-nav-open .neo-header-wrap{position:fixed !important;inset:0;overflow-y:auto;-webkit-overflow-scrolling:touch}
   /* numéros (tél + WhatsApp) hors du burger : ils sont dans le footer. On garde le panier. */
   body.neo-nav-open .neo-util a[href^="tel:"],
   body.neo-nav-open .neo-util a[href*="wa.me"]{display:none !important}
@@ -252,13 +259,18 @@ html,body{overflow-x:clip}
   .neo-rapp-badge span:last-child{font-size:10.5px !important;padding:0 16px !important;margin-top:5px !important}
 }
 
-/* Bandeau haut : avis à gauche (tronqué), langue à droite sur la même ligne (mobile) */
+/* Bandeau haut : avis à gauche (lisible en entier), langue à droite sur la même ligne (mobile) */
 @media(max-width:680px){
-  .neo-topbar-bar{flex-wrap:nowrap !important;gap:10px}
+  .neo-topbar-bar{flex-wrap:nowrap !important;gap:10px;padding-left:16px !important;padding-right:16px !important}
   .neo-topbar-left{flex:1 1 auto;min-width:0}
   .neo-topbar-left > span{min-width:0}
   .neo-topbar-left [data-i18n="topbar.reviews"]{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .neo-topbar-right{flex:none;margin-left:auto}
+}
+/* En dessous de 400px (iPhone SE etc.), le sélecteur de langue garde juste le drapeau pour laisser toute la place au message d'avis */
+@media(max-width:400px){
+  .neo-lang-trigger span:not(.neo-flag){display:none !important}
+  .neo-lang-trigger{gap:0 !important}
 }
 
 /* Banniere cookies (Complianz) — version discrète, charte Neo */
