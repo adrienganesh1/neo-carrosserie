@@ -44,9 +44,24 @@ $captions = array(
   <section style="max-width:1280px;margin:0 auto;padding:34px 44px 10px">
     <div style="display:flex;align-items:center;gap:11px;margin-bottom:22px"><span style="font:700 13px Manrope;letter-spacing:.16em;text-transform:uppercase;color:#F26A12">Galerie</span><span style="flex:1;height:1px;background:#ece7de"></span></div>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px">
-<?php foreach ($photos as $p): $bn = basename($p); $u = $rurl . '/' . rawurlencode($bn); $cap = isset($captions[$bn]) ? $captions[$bn] : 'Réalisation · NEO Carrosserie Aigle'; ?>
+<?php foreach ($photos as $p):
+  $bn = basename($p); $u = $rurl . '/' . rawurlencode($bn); $cap = isset($captions[$bn]) ? $captions[$bn] : 'Réalisation · NEO Carrosserie Aigle';
+  // Variantes redimensionnées (générées à côté de l'original, ex. r01-480w.jpg) : servies en
+  // priorité via srcset pour éviter de télécharger le fichier plein format (~1600px) sur mobile
+  // alors que la vignette ne s'affiche qu'à 280-330px. On retombe sur l'original si une variante
+  // manque (ex. photo ajoutée depuis sans être redimensionnée).
+  $ext  = strtolower(pathinfo($bn, PATHINFO_EXTENSION));
+  $stem = substr($bn, 0, -(strlen($ext) + 1));
+  $full_w = 1600; $dims = @getimagesize($p); if ($dims) $full_w = $dims[0];
+  $srcset = array();
+  foreach (array(480, 900) as $w) {
+    $variant = $stem . '-' . $w . 'w.' . $ext;
+    if ($w < $full_w && file_exists($rbase . '/' . $variant)) $srcset[] = $rurl . '/' . rawurlencode($variant) . ' ' . $w . 'w';
+  }
+  $srcset[] = $u . ' ' . $full_w . 'w';
+?>
       <a class="neo-gallery-item" href="<?php echo esc_url($u); ?>" data-caption="<?php echo esc_attr($cap); ?>" style="display:block;position:relative;border-radius:16px;overflow:hidden;border:1px solid #ece7de;background:#faf8f4;aspect-ratio:4/3;cursor:pointer">
-        <img src="<?php echo esc_url($u); ?>" loading="lazy" alt="<?php echo esc_attr($cap); ?>" style="display:block;width:100%;height:100%;object-fit:cover;transition:transform .4s ease">
+        <img src="<?php echo esc_url($u); ?>" srcset="<?php echo esc_attr(implode(', ', $srcset)); ?>" sizes="(max-width:650px) 90vw, (max-width:1000px) 45vw, 300px" loading="lazy" alt="<?php echo esc_attr($cap); ?>" style="display:block;width:100%;height:100%;object-fit:cover;transition:transform .4s ease">
         <span style="position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,rgba(21,20,15,.85));color:#fff;font:700 13px Manrope;padding:26px 14px 12px"><?php echo esc_html($cap); ?></span>
       </a>
 <?php endforeach; ?>

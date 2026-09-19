@@ -245,6 +245,14 @@ html,body{overflow-x:clip}
 @media(max-width:860px){.neo-atouts{grid-template-columns:repeat(2,auto);gap:16px 36px !important}}
 @media(max-width:600px){.neo-atouts{grid-template-columns:max-content;justify-content:center;justify-items:start;gap:14px !important}}
 
+/* Boutons flottants (chat Tawk.to, retour en haut #neo-top) : en bout de page, plus rien
+   ne peut pousser le dernier contenu (formulaire, légendes) au-dessus d'eux puisqu'on ne
+   peut plus scroller. On réserve donc une marge de sécurité en haut du footer (partagé par
+   toutes les pages) pour que ce dernier contenu reste toujours dégagé des deux boutons. */
+@media(max-width:1024px){
+  .neo-foot-grid{padding-top:104px !important}
+}
+
 /* Page rapporteur : centrer les boutons en responsive */
 @media(max-width:820px){
   .neo-rapp-call{text-align:center}

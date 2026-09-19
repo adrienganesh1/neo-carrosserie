@@ -110,6 +110,15 @@ function neo_localbusiness_schema() {
             array('@type'=>'Offer','itemOffered'=>array('@type'=>'Service','name'=>'Recharge et entretien de climatisation')),
         ),
         'sameAs' => array('https://maps.google.com/?cid=10573694802309393209', 'https://www.instagram.com/neocarrosserie/', 'https://www.tiktok.com/@neocarrosserie', 'https://www.facebook.com/neocarrosserie', 'https://www.linkedin.com/company/neo-carrosserie/', 'https://www.pinterest.com/neocarrosserie/', 'https://x.com/NeoCarrosserie', 'https://www.youtube.com/@NeoCarrosserie', 'https://www.threads.com/@neocarrosserie'),
+        // Note maintenance : reflète la note Google Business Profile réelle (vérifiée manuellement,
+        // le plugin d'avis installé ne synchronise que 2 avis sur son offre gratuite). À mettre à
+        // jour de temps en temps pour rester fidèle au nombre d'avis réel affiché sur la fiche Google.
+        'aggregateRating' => array(
+            '@type' => 'AggregateRating',
+            'ratingValue' => '4.9',
+            'reviewCount' => '42',
+            'bestRating' => '5',
+        ),
     );
     echo "\n<script type=\"application/ld+json\">" . wp_json_encode($schema, JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) . "</script>\n";
 }

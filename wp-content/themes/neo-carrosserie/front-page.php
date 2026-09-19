@@ -51,11 +51,11 @@
       <div style="border-radius:18px;overflow:hidden;border:1px solid #ece7de;background:#fff;padding:6px">
         <div style="display:flex;gap:6px">
           <div style="flex:1;position:relative">
-            <img src="/wp-content/themes/neo-carrosserie/assets/real/idr3-avant.jpeg" alt="VW ID.3 accidentée avant réparation" width="1600" height="1200" style="display:block;width:100%;height:240px;object-fit:cover;border-radius:13px">
+            <img src="/wp-content/themes/neo-carrosserie/assets/real/idr3-avant.jpeg" srcset="/wp-content/themes/neo-carrosserie/assets/real/idr3-avant-480w.jpeg 480w, /wp-content/themes/neo-carrosserie/assets/real/idr3-avant-900w.jpeg 900w, /wp-content/themes/neo-carrosserie/assets/real/idr3-avant.jpeg 1600w" sizes="(max-width:820px) 45vw, 300px" alt="VW ID.3 accidentée avant réparation" width="1600" height="1200" style="display:block;width:100%;height:240px;object-fit:cover;border-radius:13px">
             <span style="position:absolute;top:10px;left:10px;font:800 10px Manrope;letter-spacing:.12em;background:#15140F;color:#fff;padding:5px 9px;border-radius:6px;z-index:2" data-i18n="ba.before">AVANT</span>
           </div>
           <div style="flex:1;position:relative">
-            <img src="/wp-content/themes/neo-carrosserie/assets/real/idr3-apres.jpeg" alt="VW ID.3 réparée" width="1600" height="900" style="display:block;width:100%;height:240px;object-fit:cover;border-radius:13px">
+            <img src="/wp-content/themes/neo-carrosserie/assets/real/idr3-apres.jpeg" srcset="/wp-content/themes/neo-carrosserie/assets/real/idr3-apres-480w.jpeg 480w, /wp-content/themes/neo-carrosserie/assets/real/idr3-apres-900w.jpeg 900w, /wp-content/themes/neo-carrosserie/assets/real/idr3-apres.jpeg 1600w" sizes="(max-width:820px) 45vw, 300px" alt="VW ID.3 réparée" width="1600" height="900" style="display:block;width:100%;height:240px;object-fit:cover;border-radius:13px">
             <span style="position:absolute;top:10px;right:10px;font:800 10px Manrope;letter-spacing:.12em;background:#F26A12;color:#fff;padding:5px 9px;border-radius:6px;z-index:2" data-i18n="ba.after">APRÈS</span>
           </div>
         </div>
@@ -64,11 +64,11 @@
       <div style="border-radius:18px;overflow:hidden;border:1px solid #ece7de;background:#fff;padding:6px">
         <div style="display:flex;gap:6px">
           <div style="flex:1;position:relative">
-            <img src="/wp-content/themes/neo-carrosserie/assets/real/jazz-avant.jpeg" alt="Honda Jazz choc arrière avant réparation" width="1600" height="739" style="display:block;width:100%;height:240px;object-fit:cover;border-radius:13px">
+            <img src="/wp-content/themes/neo-carrosserie/assets/real/jazz-avant.jpeg" srcset="/wp-content/themes/neo-carrosserie/assets/real/jazz-avant-480w.jpeg 480w, /wp-content/themes/neo-carrosserie/assets/real/jazz-avant-900w.jpeg 900w, /wp-content/themes/neo-carrosserie/assets/real/jazz-avant.jpeg 1600w" sizes="(max-width:820px) 45vw, 300px" alt="Honda Jazz choc arrière avant réparation" width="1600" height="739" style="display:block;width:100%;height:240px;object-fit:cover;border-radius:13px">
             <span style="position:absolute;top:10px;left:10px;font:800 10px Manrope;letter-spacing:.12em;background:#15140F;color:#fff;padding:5px 9px;border-radius:6px;z-index:2" data-i18n="ba.before">AVANT</span>
           </div>
           <div style="flex:1;position:relative">
-            <img src="/wp-content/themes/neo-carrosserie/assets/real/jazz-apres.jpeg" alt="Honda Jazz repeinte" width="1600" height="739" style="display:block;width:100%;height:240px;object-fit:cover;border-radius:13px">
+            <img src="/wp-content/themes/neo-carrosserie/assets/real/jazz-apres.jpeg" srcset="/wp-content/themes/neo-carrosserie/assets/real/jazz-apres-480w.jpeg 480w, /wp-content/themes/neo-carrosserie/assets/real/jazz-apres-900w.jpeg 900w, /wp-content/themes/neo-carrosserie/assets/real/jazz-apres.jpeg 1600w" sizes="(max-width:820px) 45vw, 300px" alt="Honda Jazz repeinte" width="1600" height="739" style="display:block;width:100%;height:240px;object-fit:cover;border-radius:13px">
             <span style="position:absolute;top:10px;right:10px;font:800 10px Manrope;letter-spacing:.12em;background:#F26A12;color:#fff;padding:5px 9px;border-radius:6px;z-index:2" data-i18n="ba.after">APRÈS</span>
           </div>
         </div>
@@ -82,19 +82,19 @@
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px">
       <div style="position:relative;border-radius:16px;overflow:hidden;border:1px solid #ece7de">
-        <img src="/wp-content/themes/neo-carrosserie/assets/real/traction.jpeg" alt="Citroën Traction Avant restaurée" width="1600" height="739" style="display:block;width:100%;height:230px;object-fit:cover">
+        <img src="/wp-content/themes/neo-carrosserie/assets/real/traction.jpeg" srcset="/wp-content/themes/neo-carrosserie/assets/real/traction-480w.jpeg 480w, /wp-content/themes/neo-carrosserie/assets/real/traction-900w.jpeg 900w, /wp-content/themes/neo-carrosserie/assets/real/traction.jpeg 1600w" sizes="(max-width:820px) 90vw, 300px" alt="Citroën Traction Avant restaurée" width="1600" height="739" style="display:block;width:100%;height:230px;object-fit:cover">
         <span style="position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,rgba(21,20,15,.82));color:#fff;font:700 13px Manrope;padding:26px 14px 12px" data-i18n="real.g1">Citroën Traction Avant · restauration complète</span>
       </div>
       <div style="position:relative;border-radius:16px;overflow:hidden;border:1px solid #ece7de">
-        <img src="/wp-content/themes/neo-carrosserie/assets/real/alfa.jpeg" alt="Alfa Romeo Giulia en restauration" width="1600" height="739" style="display:block;width:100%;height:230px;object-fit:cover">
+        <img src="/wp-content/themes/neo-carrosserie/assets/real/alfa.jpeg" srcset="/wp-content/themes/neo-carrosserie/assets/real/alfa-480w.jpeg 480w, /wp-content/themes/neo-carrosserie/assets/real/alfa-900w.jpeg 900w, /wp-content/themes/neo-carrosserie/assets/real/alfa.jpeg 1600w" sizes="(max-width:820px) 90vw, 300px" alt="Alfa Romeo Giulia en restauration" width="1600" height="739" style="display:block;width:100%;height:230px;object-fit:cover">
         <span style="position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,rgba(21,20,15,.82));color:#fff;font:700 13px Manrope;padding:26px 14px 12px" data-i18n="real.g2">Alfa Romeo Giulia · carrosserie & apprêt</span>
       </div>
       <div style="position:relative;border-radius:16px;overflow:hidden;border:1px solid #ece7de">
-        <img src="/wp-content/themes/neo-carrosserie/assets/real/bateau.jpeg" alt="Bateau peinture & polissage" width="1600" height="739" style="display:block;width:100%;height:230px;object-fit:cover">
+        <img src="/wp-content/themes/neo-carrosserie/assets/real/bateau.jpeg" srcset="/wp-content/themes/neo-carrosserie/assets/real/bateau-480w.jpeg 480w, /wp-content/themes/neo-carrosserie/assets/real/bateau-900w.jpeg 900w, /wp-content/themes/neo-carrosserie/assets/real/bateau.jpeg 1600w" sizes="(max-width:820px) 90vw, 300px" alt="Bateau peinture & polissage" width="1600" height="739" style="display:block;width:100%;height:230px;object-fit:cover">
         <span style="position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,rgba(21,20,15,.82));color:#fff;font:700 13px Manrope;padding:26px 14px 12px" data-i18n="real.g3">Bateau · peinture & polissage de coque</span>
       </div>
       <div style="position:relative;border-radius:16px;overflow:hidden;border:1px solid #ece7de">
-        <img src="/wp-content/themes/neo-carrosserie/assets/real/traction-arriere.jpeg" alt="Citroën Traction Avant détail arrière" width="1600" height="845" style="display:block;width:100%;height:230px;object-fit:cover">
+        <img src="/wp-content/themes/neo-carrosserie/assets/real/traction-arriere.jpeg" srcset="/wp-content/themes/neo-carrosserie/assets/real/traction-arriere-480w.jpeg 480w, /wp-content/themes/neo-carrosserie/assets/real/traction-arriere-900w.jpeg 900w, /wp-content/themes/neo-carrosserie/assets/real/traction-arriere.jpeg 1600w" sizes="(max-width:820px) 90vw, 300px" alt="Citroën Traction Avant détail arrière" width="1600" height="845" style="display:block;width:100%;height:230px;object-fit:cover">
         <span style="position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,rgba(21,20,15,.82));color:#fff;font:700 13px Manrope;padding:26px 14px 12px" data-i18n="real.g4">Citroën Traction Avant · finition impeccable</span>
       </div>
     </div>

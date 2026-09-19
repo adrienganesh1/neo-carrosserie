@@ -46,6 +46,10 @@
           <a href="/services/" style="font:500 14px Manrope;color:#d8d3ca;text-decoration:none">Tous nos services</a>
           <a href="/pare-brise/" style="font:500 14px Manrope;color:#d8d3ca;text-decoration:none">Remplacement de pare-brise</a>
           <a href="/debosselage/" style="font:500 14px Manrope;color:#d8d3ca;text-decoration:none">Débosselage sans peinture</a>
+          <a href="/climatisation/" style="font:500 14px Manrope;color:#d8d3ca;text-decoration:none">Freins, vidanges & climatisation</a>
+          <a href="/reparation-jantes/" style="font:500 14px Manrope;color:#d8d3ca;text-decoration:none">Jantes, polish & lustrage</a>
+          <a href="/vitres-teintees/" style="font:500 14px Manrope;color:#d8d3ca;text-decoration:none">Vitres teintées</a>
+          <a href="/pose-pneus/" style="font:500 14px Manrope;color:#d8d3ca;text-decoration:none">Pneus & gardiennage</a>
           <a href="/zone-intervention/" style="font:500 14px Manrope;color:#d8d3ca;text-decoration:none">Zone d'intervention</a>
         </div>
       </div>
