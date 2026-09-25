@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the Limit Login Attempts Reloaded plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Limit Login Attempts Reloaded 3.3.9\n"
+"Project-Id-Version: Limit Login Attempts Reloaded 3.3.10\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/limit-login-attempts-reloaded\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-09-17T08:59:30+00:00\n"
+"POT-Creation-Date: 2026-09-23T11:16:13+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: limit-login-attempts-reloaded\n"
@@ -17,7 +17,7 @@ msgstr ""
 #. Plugin Name of the plugin
 #. Author of the plugin
 #: limit-login-attempts-reloaded.php
-#: core/LimitLoginAttempts.php:485
+#: core/LimitLoginAttempts.php:503
 #: views/emails/footer.php:9
 #: views/emails/header.php:37
 msgid "Limit Login Attempts Reloaded"
@@ -33,53 +33,54 @@ msgstr ""
 msgid "https://www.limitloginattempts.com/"
 msgstr ""
 
-#: core/AdminNoticesController.php:148
+#: core/AdminNoticesController.php:162
 #: views/admin-dashboard-widgets.php:43
 #, php-format
 msgid "⚠️ Action required: Your existing 2FA recovery links are no longer valid. On the <a href=\"%s\">2FA settings page</a>, turn 2FA off and then back on, then follow the prompts to download the new recovery links."
 msgstr ""
 
 #: core/AdminUiController.php:116
-#: core/LimitLoginAttempts.php:841
-#: views/options-page.php:214
+#: core/LimitLoginAttempts.php:856
+#: views/options-page.php:228
 msgid "Dashboard"
 msgstr ""
 
 #: core/AdminUiController.php:121
-#: core/LimitLoginAttempts.php:842
-#: views/options-page.php:218
+#: core/LimitLoginAttempts.php:857
+#: views/options-page.php:232
 msgid "Settings"
 msgstr ""
 
 #: core/AdminUiController.php:126
-#: views/options-page.php:222
+#: views/options-page.php:236
+#: views/tab-debug.php:79
 msgid "2FA"
 msgstr ""
 
 #: core/AdminUiController.php:132
 #: resources/compare-plans-data.php:85
-#: views/options-page.php:228
+#: views/options-page.php:242
 msgid "Login Firewall"
 msgstr ""
 
 #: core/AdminUiController.php:137
-#: views/options-page.php:234
+#: views/options-page.php:248
 msgid "Logs"
 msgstr ""
 
 #: core/AdminUiController.php:142
-#: views/options-page.php:240
+#: views/options-page.php:254
 msgid "Debug"
 msgstr ""
 
 #: core/AdminUiController.php:147
-#: views/options-page.php:244
+#: views/options-page.php:258
 #: views/tab-dashboard.php:136
 msgid "Help"
 msgstr ""
 
 #: core/AdminUiController.php:155
-#: core/LimitLoginAttempts.php:852
+#: core/LimitLoginAttempts.php:870
 msgid "Free Upgrade"
 msgstr ""
 
@@ -119,98 +120,98 @@ msgstr ""
 msgid "Please enter a valid admin notification email."
 msgstr ""
 
-#: core/Ajax.php:172
+#: core/Ajax.php:185
 msgid "Please specify the Setup Code"
 msgstr ""
 
-#: core/Ajax.php:356
-#: core/Ajax.php:659
+#: core/Ajax.php:397
+#: core/Ajax.php:721
 msgid "No events yet."
 msgstr ""
 
-#: core/Ajax.php:448
+#: core/Ajax.php:501
 msgid "Today at "
 msgstr ""
 
-#: core/Ajax.php:535
+#: core/Ajax.php:593
 #, php-format
 msgid "Login details could not be populated due to insufficient cloud resources.<br>Please <a class=\"link__style_unlink llar_turquoise\" href=\"%s\" target=\"_blank\">upgrade to Premium</a> to access this data."
 msgstr ""
 
-#: core/Ajax.php:546
+#: core/Ajax.php:605
 msgid "Continent: "
 msgstr ""
 
-#: core/Ajax.php:555
+#: core/Ajax.php:615
 msgid "Country: "
 msgstr ""
 
-#: core/Ajax.php:561
+#: core/Ajax.php:621
 msgid "State/Province: "
 msgstr ""
 
-#: core/Ajax.php:567
+#: core/Ajax.php:627
 msgid "District: "
 msgstr ""
 
-#: core/Ajax.php:573
+#: core/Ajax.php:633
 msgid "City: "
 msgstr ""
 
-#: core/Ajax.php:579
+#: core/Ajax.php:639
 msgid "Zipcode: "
 msgstr ""
 
-#: core/Ajax.php:585
+#: core/Ajax.php:645
 msgid "Latitude, Longitude: "
 msgstr ""
 
-#: core/Ajax.php:604
+#: core/Ajax.php:665
 msgid "Timezone: "
 msgstr ""
 
-#: core/Ajax.php:633
+#: core/Ajax.php:695
 msgid "Internet Provider: "
 msgstr ""
 
-#: core/Ajax.php:640
+#: core/Ajax.php:702
 msgid "Connection Type: "
 msgstr ""
 
-#: core/Ajax.php:708
+#: core/Ajax.php:775
 msgid "No lockouts yet."
 msgstr ""
 
-#: core/Ajax.php:726
+#: core/Ajax.php:796
 #, php-format
 msgid "Meanwhile, the app falls over to the <a href=\"%s\">default functionality</a>."
 msgstr ""
 
-#: core/Ajax.php:777
+#: core/Ajax.php:853
 msgid "No rules yet."
 msgstr ""
 
-#: core/Ajax.php:988
+#: core/Ajax.php:1102
 #, php-format
 msgid "<strong>%d</strong> attempt remaining."
 msgid_plural "<strong>%d</strong> attempts remaining."
 msgstr[0] ""
 msgstr[1] ""
 
-#: core/Ajax.php:1055
-#: core/Ajax.php:1074
-#: core/Ajax.php:1080
-#: core/Ajax.php:1086
-#: core/Ajax.php:1093
+#: core/Ajax.php:1173
+#: core/Ajax.php:1196
+#: core/Ajax.php:1204
+#: core/Ajax.php:1212
+#: core/Ajax.php:1221
 #: views/micro-cloud-modal.php:81
 msgid "The server is not working, try again later"
 msgstr ""
 
-#: core/Ajax.php:1144
+#: core/Ajax.php:1274
 msgid "Wrong email format."
 msgstr ""
 
-#: core/Ajax.php:1148
+#: core/Ajax.php:1279
 #: views/emails/test-notification-content.php:6
 msgid "LLAR Security Notifications [TEST]"
 msgstr ""
@@ -364,14 +365,14 @@ msgstr ""
 msgid "Registration is currently disabled."
 msgstr ""
 
-#: core/LimitLoginAttempts.php:741
+#: core/LimitLoginAttempts.php:756
 #: core/LoginErrorPresenter.php:141
 #: core/LoginErrorPresenter.php:190
 #: core/LoginErrorPresenter.php:195
 msgid "<strong>ERROR</strong>: Incorrect username or password."
 msgstr ""
 
-#: core/LimitLoginAttempts.php:859
+#: core/LimitLoginAttempts.php:880
 #: views/tab-dashboard.php:105
 #: views/tab-dashboard.php:263
 msgid "Upgrade to Premium"
@@ -402,90 +403,114 @@ msgid_plural "Please try again in %d minutes."
 msgstr[0] ""
 msgstr[1] ""
 
-#: core/LockoutNotificationService.php:96
+#: core/LockoutEmailPresenter.php:77
+msgid "Limit Login Attempts Reloaded temporarily blocked this IP after unsuccessful login attempts."
+msgstr ""
+
+#: core/LockoutEmailPresenter.php:82
+msgid "Hello,"
+msgstr ""
+
+#. translators: %s: site domain
+#: core/LockoutEmailPresenter.php:86
+#, php-format
+msgid "Limit Login Attempts Reloaded detected unsuccessful login attempts on <strong>%s</strong>."
+msgstr ""
+
+#: core/LockoutEmailPresenter.php:90
+msgid "Login activity"
+msgstr ""
+
+#. translators: %d: failed attempts count
+#: core/LockoutEmailPresenter.php:94
+#, php-format
+msgid "Failed attempts: <strong>%d</strong>"
+msgstr ""
+
+#. translators: %s: IP address
+#: core/LockoutEmailPresenter.php:100
+#, php-format
+msgid "IP address: <strong>%s</strong>"
+msgstr ""
+
+#. translators: %s: username
+#: core/LockoutEmailPresenter.php:106
+#, php-format
+msgid "Username attempted: <strong>%s</strong>"
+msgstr ""
+
+#. translators: %s: lockout duration label
+#: core/LockoutEmailPresenter.php:112
+#, php-format
+msgid "Action taken: <strong>IP blocked for %s</strong>"
+msgstr ""
+
+#. translators: %s: login page label
+#: core/LockoutEmailPresenter.php:118
+#, php-format
+msgid "Login page: <strong>%s</strong>"
+msgstr ""
+
+#: core/LockoutEmailPresenter.php:122
+msgid "No action is required unless you recognize this activity or would like to review additional details."
+msgstr ""
+
+#: core/LockoutEmailPresenter.php:127
+msgid "Review Login Activity"
+msgstr ""
+
+#: core/LockoutEmailPresenter.php:129
+msgid "You can view recent login attempts, adjust your settings, and review blocked IP addresses from your WordPress dashboard."
+msgstr ""
+
+#: core/LockoutEmailPresenter.php:134
+msgid "Want additional protection?"
+msgstr ""
+
+#: core/LockoutEmailPresenter.php:136
+msgid "If your site receives frequent login attempts, additional protection options are available within Limit Login Attempts Security. These options can help identify and block suspicious traffic before it reaches your login page."
+msgstr ""
+
+#: core/LockoutEmailPresenter.php:142
+msgid "Learn about additional protection"
+msgstr ""
+
+#: core/LockoutEmailPresenter.php:144
+msgid "About this notification"
+msgstr ""
+
+#. translators: %s: site domain
+#: core/LockoutEmailPresenter.php:148
+#, php-format
+msgid "You received this message because login notifications are enabled for <strong>%s</strong>."
+msgstr ""
+
+#: core/LockoutEmailPresenter.php:152
+msgid "Manage notification settings"
+msgstr ""
+
+#: core/LockoutEmailPresenter.php:183
+msgid "This alert was sent by your website where Limit Login Attempts Reloaded free version is installed and you are listed as the admin."
+msgstr ""
+
+#: core/LockoutNotificationService.php:95
 #, php-format
 msgid "%d hour"
 msgid_plural "%d hours"
 msgstr[0] ""
 msgstr[1] ""
 
-#: core/LockoutNotificationService.php:101
+#: core/LockoutNotificationService.php:100
 #, php-format
 msgid "%d minute"
 msgid_plural "%d minutes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: core/LockoutNotificationService.php:138
+#. translators: 1: site domain, 2: IP address
+#: core/LockoutNotificationService.php:113
 #, php-format
-msgid "Failed login by IP %1$s %2$s"
-msgstr ""
-
-#. translators: %s: admin display name
-#: core/LockoutNotificationService.php:159
-#, php-format
-msgid "Hello %s,"
-msgstr ""
-
-#: core/LockoutNotificationService.php:162
-msgid "Hello,"
-msgstr ""
-
-#: core/LockoutNotificationService.php:164
-msgid "This notification was sent automatically via Limit Login Attempts Reloaded Plugin."
-msgstr ""
-
-#. translators: %s: site domain
-#: core/LockoutNotificationService.php:168
-#, php-format
-msgid "This is installed on your <strong>%s</strong> WordPress site."
-msgstr ""
-
-#: core/LockoutNotificationService.php:172
-msgid "The failed login details include:"
-msgstr ""
-
-#. translators: 1: attempts count, 2: lockouts count, 3: IP lookup URL, 4: IP address
-#: core/LockoutNotificationService.php:176
-#, php-format
-msgid "%1$d failed login attempts (%2$d lockout(s)) from IP <strong><a href=\"%3$s\" target=\"_blank\" rel=\"noopener\">%4$s</a></strong>"
-msgstr ""
-
-#. translators: %s: username
-#: core/LockoutNotificationService.php:185
-#, php-format
-msgid "Last user attempted: <strong>%s</strong>"
-msgstr ""
-
-#. translators: %s: lockout duration label
-#: core/LockoutNotificationService.php:191
-#, php-format
-msgid "IP was blocked for %s"
-msgstr ""
-
-#. translators: 1: login URL, 2: login URL label
-#: core/LockoutNotificationService.php:197
-#, php-format
-msgid "Login address: <strong><a href=\"%1$s\" target=\"_blank\" rel=\"noopener\">%2$s</a></strong>"
-msgstr ""
-
-#: core/LockoutNotificationService.php:202
-msgid "Please visit your WordPress dashboard for additional details, investigation options, and help articles."
-msgstr ""
-
-#: core/LockoutNotificationService.php:203
-#: views/emails/digest-dashboard-button.php:8
-msgid "Go to Dashboard"
-msgstr ""
-
-#. translators: %s: premium upgrade URL
-#: core/LockoutNotificationService.php:207
-#, php-format
-msgid "Experiencing frequent attacks or degraded performance? For only USD $1.25/month, you can join thousands of WordPress users who have upgraded to LLAR premium for advanced IP intelligence and cloud protection. Only takes 5 minutes to set up and leave the rest to us. <a href=\"%s\" target=\"_blank\" rel=\"noopener\">Join</a>"
-msgstr ""
-
-#: core/LockoutNotificationService.php:212
-msgid "This alert was sent by your website where Limit Login Attempts Reloaded free version is installed and you are listed as the admin."
+msgid "%1$s - Login blocked from %2$s"
 msgstr ""
 
 #: core/LoginErrorPresenter.php:104
@@ -1792,6 +1817,21 @@ msgstr ""
 msgid "Leave a review"
 msgstr ""
 
+#: views/admin-notice-login-cache.php:18
+#: views/admin-notice-login-cache.php:34
+msgid "Limit Login Attempts Reloaded:"
+msgstr ""
+
+#. translators: %d: age of the cached login page copy, in minutes.
+#: views/admin-notice-login-cache.php:23
+#, php-format
+msgid "Your login page appears to be served from a page cache (cached copy is about %d minutes old). A cached login page can break the email code (MFA) login flow with the \"session expired\" error. Please exclude your login URL from page caching (for example, Evercache, Perfmatters or other caching solutions). If the page was simply opened a long time ago, no action is needed."
+msgstr ""
+
+#: views/admin-notice-login-cache.php:37
+msgid "The cache-detection script embedded in your login page could not be found when the page was checked. This usually means a JavaScript optimizer is delaying or removing inline scripts, which can also break the email code (MFA) login flow. Please review JavaScript optimization settings (Perfmatters \"Delay JavaScript\" / \"Remove Unused JS\", WP Rocket \"Delay JS Execution\", FlyingPress) and make sure they do not affect the login page."
+msgstr ""
+
 #: views/app-widgets/acl-rules.php:10
 msgid "Login Access Rules"
 msgstr ""
@@ -2080,6 +2120,10 @@ msgstr ""
 msgid "No targeted usernames in this period."
 msgstr ""
 
+#: views/emails/digest-dashboard-button.php:8
+msgid "Go to Dashboard"
+msgstr ""
+
 #: views/emails/digest-next-steps.php:6
 msgid "What you should do next"
 msgstr ""
@@ -2135,7 +2179,7 @@ msgid " for more information on our premium services, which can automatically bl
 msgstr ""
 
 #: views/emails/failed-login.php:6
-msgid "Failed login attempt detected"
+msgid "Login blocked"
 msgstr ""
 
 #: views/emails/footer-verification-text.php:10
@@ -2478,34 +2522,34 @@ msgstr ""
 msgid "Micro Cloud: %1$s of %2$s requests used - cloud protection pauses at %2$s. <a href=\"%3$s\" class=\"link__style_color_inherit\" target=\"_blank\">Keep it running for $1.25/mo →</a>"
 msgstr ""
 
-#: views/options-page.php:100
+#: views/options-page.php:101
 #, php-format
 msgid "You have exhausted your monthly quota of free Micro Cloud requests. The plugin has now reverted to the free version. <a href=\"%s\" class=\"link__style_color_inherit\" target=\"_blank\">Upgrade to the premium</a> version today to maintain cloud protection and advanced features."
 msgstr ""
 
 #. translators: 1: requests used, 2: monthly quota, 3: upgrade URL
-#: views/options-page.php:117
+#: views/options-page.php:119
 #, php-format
 msgid "Micro Cloud: %1$s of %2$s requests used this month. <a href=\"%3$s\" class=\"link__style_color_inherit\" target=\"_blank\">Upgrade to Personal for $1.25/mo for 50k requests.</a>"
 msgstr ""
 
-#: views/options-page.php:187
+#: views/options-page.php:200
 msgid "Account Login"
 msgstr ""
 
-#: views/options-page.php:197
+#: views/options-page.php:210
 msgid "Customer ID:"
 msgstr ""
 
-#: views/options-page.php:248
+#: views/options-page.php:262
 msgid "Premium / Extensions"
 msgstr ""
 
-#: views/options-page.php:253
+#: views/options-page.php:267
 msgid "Failover"
 msgstr ""
 
-#: views/options-page.php:258
+#: views/options-page.php:272
 msgid "Automatic switch to free version when premium stops working (usually due to non-payment or exceeding monthly resource budget)."
 msgstr ""
 
@@ -2656,6 +2700,48 @@ msgstr ""
 
 #: views/tab-debug.php:58
 msgid "Reset"
+msgstr ""
+
+#: views/tab-debug.php:68
+msgid "Compatibility"
+msgstr ""
+
+#: views/tab-debug.php:69
+msgid "Compatibility of LLAR features with third-party plugins."
+msgstr ""
+
+#: views/tab-debug.php:75
+msgid "Plugin"
+msgstr ""
+
+#: views/tab-debug.php:76
+msgid "Login protection"
+msgstr ""
+
+#: views/tab-debug.php:77
+msgid "Registration protection"
+msgstr ""
+
+#: views/tab-debug.php:78
+msgid "Password recovery protection"
+msgstr ""
+
+#: views/tab-debug.php:80
+msgid "Custom GDPR message"
+msgstr ""
+
+#: views/tab-debug.php:81
+msgid "Custom error message"
+msgstr ""
+
+#: views/tab-debug.php:96
+#: views/tab-debug.php:109
+msgid "Compatible"
+msgstr ""
+
+#: views/tab-debug.php:98
+#: views/tab-debug.php:110
+msgid "Compatible in Cloud mode only"
 msgstr ""
 
 #: views/tab-help.php:20
