@@ -132,7 +132,120 @@ $D = array(
       array("Faut-il remplacer les 4 pneus en même temps ?", "Pas obligatoirement, mais toujours par paire sur un même essieu, avec une usure et une marque comparables — un déséquilibre avant/arrière nuit à la tenue de route."),
     ),
   ),
+  'reparation-carrosserie-aigle' => array(
+    'eyebrow' => 'Carrosserie',
+    'h1'      => "Carrosserie à Aigle : réparation après accident, toutes marques",
+    'intro'   => "Un choc, une rayure, un sinistre ? NEO Carrosserie remet votre véhicule en état à Aigle, au cœur du Chablais. Nous réparons toutes les marques et nous nous occupons de votre dossier d'assurance, du devis jusqu'à la remise du véhicule.",
+    'h2'      => "Ce que nous réparons",
+    'bullets' => array(
+      array("Chocs et accidents", "pare-chocs, ailes, portières et capots."),
+      array("Rayures et éraflures", "remises en état proprement, toutes marques."),
+      array("Débosselage", "avec ou sans peinture, selon l'état de la tôle."),
+      array("Pièces de carrosserie", "remplacement de pièces et réparation de plastiques."),
+      array("Peinture en cabine", "remise en peinture après réparation."),
+      array("Dossier d'assurance", "nous vous aidons à le préparer et à échanger avec l'assurance."),
+      array("Véhicule de courtoisie", "sur demande et selon disponibilité, pendant la réparation."),
+    ),
+    'local'   => "Devis gratuit et sans engagement : par téléphone, WhatsApp, formulaire ou directement à l'atelier du Chem. de St-Triphon 22 à Aigle. Quelques photos des dégâts suffisent pour une première estimation. Réparation de carrosserie dès CHF 50.– ; le prix final dépend du véhicule et de l'ampleur des dégâts. Délai habituel : environ 2 jours ouvrés, selon l'ampleur des dégâts. Atelier ouvert du lundi au vendredi, de 8h à 17h30. Note de 4,9 sur 5 sur Google.",
+    'faq'     => array(
+      array("Combien coûte une réparation de carrosserie ?", "Nos réparations commencent dès CHF 50.–. Le prix dépend du véhicule et de l'étendue des dégâts : demandez un devis gratuit."),
+      array("Mon assurance prend-elle en charge la réparation ?", "Dans de nombreux cas, oui, selon votre contrat. Nous vous aidons à préparer le dossier et à échanger avec l'assurance."),
+      array("Combien de temps dure une réparation ?", "Le délai habituel est d'environ 2 jours ouvrés, selon l'ampleur des dégâts. Le devis indique le délai prévu pour votre véhicule."),
+      array("Avez-vous un véhicule de courtoisie ?", "Oui, sur demande et selon disponibilité, pendant la durée de la réparation."),
+      array("Travaillez-vous sur toutes les marques ?", "Oui, nous réparons toutes les marques."),
+      array("Comment prendre rendez-vous ?", "Appelez le 021 533 56 56 ou écrivez-nous sur WhatsApp au +41 78 954 50 03, du lundi au vendredi de 8h à 17h30. Vous pouvez aussi remplir le formulaire de devis."),
+    ),
+    'cta'     => 'Accident ou rayure ? Devis gratuit et sans engagement.',
+    'offer'   => 'Réparation de carrosserie',
+    'from'    => 'CHF 50.–',
+  ),
+  'peinture-automobile-aigle' => array(
+    'eyebrow' => 'Peinture',
+    'h1'      => "Peinture automobile à Aigle, en cabine",
+    'intro'   => "Une rayure, un éclat, un panneau à refaire après un choc : NEO Carrosserie peint votre véhicule en cabine, à Aigle, avec une teinte fidèle à l'origine et une finition professionnelle.",
+    'h2'      => "Nos prestations de peinture et d'esthétique",
+    'bullets' => array(
+      array("Mise en peinture et retouches", "d'un élément complet ou retouches localisées."),
+      array("Teinte d'origine", "ajustée à votre véhicule pour un raccord discret."),
+      array("Vernis de protection", "finition brillante et durable."),
+      array("Polissage et lustrage", "traitement des rayures et remise en éclat."),
+      array("Optiques de phares et jantes", "rénovation des optiques, réparation et polissage de jantes."),
+      array("Traitement céramique", "protection durable de la peinture."),
+      array("Véhicules anciens et bateaux", "restauration, peinture et polissage de coque."),
+    ),
+    'local'   => "Devis gratuit et sans engagement, sur photos ou directement à l'atelier du Chem. de St-Triphon 22 à Aigle. Le prix dépend de la surface à peindre et de la teinte. Délai habituel : environ 2 jours ouvrés, selon la surface à peindre. Atelier ouvert du lundi au vendredi, de 8h à 17h30.",
+    'faq'     => array(
+      array("La teinte sera-t-elle identique à celle de ma voiture ?", "Nous partons de la teinte d'origine et l'ajustons à votre véhicule pour que le raccord soit le plus discret possible."),
+      array("Peut-on retoucher une petite zone sans repeindre tout le panneau ?", "Dans certains cas, oui. Nous regardons les dégâts à l'atelier et nous vous disons ce qui est possible avant de commencer."),
+      array("Combien de temps dure une peinture ?", "Le délai habituel est d'environ 2 jours ouvrés, selon la surface à peindre. Le devis précise le délai pour votre véhicule."),
+      array("Combien ça coûte ?", "Le prix dépend de la surface et de la teinte. Le devis est gratuit et sans engagement."),
+      array("Peignez-vous des bateaux ?", "Nous proposons la peinture et le polissage de coque. Contactez-nous avec le type de bateau pour un devis."),
+    ),
+    'cta'     => 'Une peinture à refaire ? Devis gratuit et sans engagement.',
+    'offer'   => 'Peinture automobile',
+    'from'    => 'CHF 50.–',
+  ),
+  'garage-mecanique-aigle' => array(
+    'eyebrow' => 'Mécanique',
+    'h1'      => "Entretien et mécanique à Aigle : freins, vidange, climatisation",
+    'intro'   => "NEO Carrosserie s'occupe aussi de l'entretien courant de votre véhicule à Aigle. Un seul atelier pour la carrosserie et la mécanique : vous gagnez du temps, et nous gardons un œil sur l'ensemble de votre voiture.",
+    'h2'      => "Nos prestations d'entretien",
+    'bullets' => array(
+      array("Freins", "contrôle, plaquettes et disques, avec devis avant d'intervenir."),
+      array("Vidange", "entretien courant selon le carnet d'entretien de votre véhicule."),
+      array("Climatisation", "contrôle du circuit et recharge du système."),
+      array("Préparation à l'expertise", "pour passer le contrôle dans de bonnes conditions."),
+      array("Pneus", "pose, équilibrage et gardiennage, dès CHF 80.– par roue."),
+      array("Véhicule de courtoisie", "sur demande et selon disponibilité."),
+    ),
+    'local'   => "Prestations d'entretien dès CHF 40.– ; le prix final dépend du véhicule et de l'intervention. Devis gratuit. Prenez rendez-vous à l'atelier du Chem. de St-Triphon 22 à Aigle, par téléphone ou WhatsApp, du lundi au vendredi de 8h à 17h30.",
+    'faq'     => array(
+      array("Quand faut-il changer les plaquettes de frein ?", "Quand elles sont usées : bruit de frottement, freinage moins efficace ou voyant d'usure. Un contrôle à l'atelier permet de le savoir avec certitude."),
+      array("À quelle fréquence faire la vidange ?", "Selon le carnet d'entretien de votre véhicule. En cas de doute, apportez-le-nous : nous vous indiquons l'échéance."),
+      array("Quand recharger la climatisation ?", "Quand l'air soufflé est moins froid ou que le système met longtemps à refroidir."),
+      array("Puis-je profiter d'un véhicule de courtoisie ?", "Oui, sur demande et selon disponibilité."),
+      array("Comment prendre rendez-vous ?", "Appelez le 021 533 56 56 ou écrivez sur WhatsApp au +41 78 954 50 03, du lundi au vendredi de 8h à 17h30."),
+    ),
+    'guide'   => array(
+      'label' => "Climatisation : recharge et entretien",
+      'text'  => "Gaz, recherche de fuite, désinfection du circuit : le détail de notre service climatisation.",
+      'link'  => '/climatisation/',
+      'cta'   => 'Voir la page',
+    ),
+    'cta'     => 'Entretien à prévoir ? Devis gratuit, dès CHF 40.–.',
+    'offer'   => "Entretien et mécanique automobile",
+    'from'    => 'CHF 40.–',
+  ),
+  'reparation-grele-aigle' => array(
+    'eyebrow' => 'Grêle',
+    'h1'      => "Réparation de grêle à Aigle, sans repeindre",
+    'intro'   => "Après un orage, votre carrosserie est couverte de petites bosses ? Le débosselage sans peinture supprime les bosses sans repeindre : c'est plus rapide et plus économique qu'une remise en peinture.",
+    'h2'      => "Le débosselage sans peinture, étape par étape",
+    'bullets' => array(
+      array("Sans repeindre", "la tôle est redressée de l'intérieur, bosse par bosse, en gardant la peinture d'origine."),
+      array("Quand la peinture est intacte", "la technique convient lorsque la peinture n'est pas endommagée."),
+      array("Si la peinture est abîmée", "fissurée, écaillée ou tôle trop déformée : une remise en peinture en cabine peut être nécessaire, nous vous le disons dès le devis."),
+      array("Grêle et assurance", "les dégâts de grêle sont en général couverts par la casco partielle : vérifiez votre contrat, nous vous aidons pour le dossier."),
+      array("Après un orage", "contactez-nous avec quelques photos : nous estimons les dégâts et vous proposons un rendez-vous."),
+    ),
+    'local'   => "Devis gratuit et sans engagement à l'atelier du Chem. de St-Triphon 22 à Aigle. Le prix dépend du nombre et de la taille des bosses. Délai habituel : environ 2 jours ouvrés, selon le nombre de bosses. Atelier ouvert du lundi au vendredi, de 8h à 17h30.",
+    'faq'     => array(
+      array("La réparation de grêle abîme-t-elle la peinture ?", "Non, le débosselage sans peinture conserve la peinture d'origine lorsqu'elle est intacte."),
+      array("Combien coûte une réparation de grêle ?", "Le prix dépend du nombre et de la taille des bosses. Le devis est gratuit et sans engagement."),
+      array("Combien de temps faut-il ?", "Le délai habituel est d'environ 2 jours ouvrés, selon le nombre de bosses. Le devis précise le délai pour votre véhicule."),
+      array("Mon assurance prend-elle en charge la grêle ?", "En général, la casco partielle couvre la grêle. Consultez votre contrat ; nous vous aidons pour le dossier."),
+    ),
+    'cta'     => 'Dégâts de grêle ? Devis gratuit et sans engagement.',
+    'offer'   => 'Réparation de grêle sans peinture',
+    'from'    => 'CHF 50.–',
+  ),
+
 );
+
+// Traductions DE/IT des pages ajoutees en octobre 2026
+global $TRP_LANGUAGE;
+$neo_lc = isset($TRP_LANGUAGE) ? substr($TRP_LANGUAGE, 0, 2) : "fr";
+if ($neo_lc !== "fr") { $neo_tr = @include get_template_directory() . "/svc-i18n-new.php"; if (is_array($neo_tr) && isset($neo_tr[$neo_lc][$slug]) && isset($D[$slug])) { $D[$slug] = array_merge($D[$slug], $neo_tr[$neo_lc][$slug]); } }
 
 $d = isset($D[$slug]) ? $D[$slug] : null;
 if ( ! $d ) { echo '<section style="max-width:900px;margin:60px auto;padding:0 44px"><p>Page en préparation.</p></section>'; get_footer(); return; }
