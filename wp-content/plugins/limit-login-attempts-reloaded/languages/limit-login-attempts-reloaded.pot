@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the Limit Login Attempts Reloaded plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Limit Login Attempts Reloaded 3.4.0\n"
+"Project-Id-Version: Limit Login Attempts Reloaded 3.4.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/limit-login-attempts-reloaded\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-29T16:08:52+00:00\n"
+"POT-Creation-Date: 2026-11-04T11:58:22+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: limit-login-attempts-reloaded\n"
@@ -17,7 +17,7 @@ msgstr ""
 #. Plugin Name of the plugin
 #. Author of the plugin
 #: limit-login-attempts-reloaded.php
-#: core/LimitLoginAttempts.php:515
+#: core/LimitLoginAttempts.php:517
 #: views/emails/footer.php:9
 #: views/emails/header.php:37
 msgid "Limit Login Attempts Reloaded"
@@ -33,54 +33,54 @@ msgstr ""
 msgid "https://www.limitloginattempts.com/"
 msgstr ""
 
-#: core/AdminNoticesController.php:162
+#: core/AdminNoticesController.php:168
 #: views/admin-dashboard-widgets.php:43
 #, php-format
 msgid "⚠️ Action required: Your existing 2FA recovery links are no longer valid. On the <a href=\"%s\">2FA settings page</a>, turn 2FA off and then back on, then follow the prompts to download the new recovery links."
 msgstr ""
 
 #: core/AdminUiController.php:112
-#: core/LimitLoginAttempts.php:890
-#: views/options-page.php:280
+#: core/LimitLoginAttempts.php:894
+#: views/options-page.php:285
 msgid "Dashboard"
 msgstr ""
 
 #: core/AdminUiController.php:117
-#: core/LimitLoginAttempts.php:891
-#: views/options-page.php:284
+#: core/LimitLoginAttempts.php:895
+#: views/options-page.php:289
 msgid "Settings"
 msgstr ""
 
 #: core/AdminUiController.php:122
-#: views/options-page.php:288
+#: views/options-page.php:293
 #: views/tab-debug.php:79
 msgid "2FA"
 msgstr ""
 
 #: core/AdminUiController.php:128
 #: resources/compare-plans-data.php:111
-#: views/options-page.php:294
+#: views/options-page.php:299
 msgid "Login Firewall"
 msgstr ""
 
 #: core/AdminUiController.php:133
-#: views/options-page.php:300
+#: views/options-page.php:305
 msgid "Logs"
 msgstr ""
 
 #: core/AdminUiController.php:138
-#: views/options-page.php:306
+#: views/options-page.php:311
 msgid "Debug"
 msgstr ""
 
 #: core/AdminUiController.php:143
 #: core/dashboard/DashboardRiskRenderer.php:478
-#: views/options-page.php:310
+#: views/options-page.php:315
 msgid "Help"
 msgstr ""
 
 #: core/AdminUiController.php:154
-#: core/LimitLoginAttempts.php:906
+#: core/LimitLoginAttempts.php:910
 msgid "Free Upgrade"
 msgstr ""
 
@@ -374,7 +374,7 @@ msgstr ""
 
 #: core/dashboard/DashboardRiskRenderer.php:424
 #: core/dashboard/DashboardRiskRenderer.php:464
-#: core/LimitLoginAttempts.php:916
+#: core/LimitLoginAttempts.php:920
 msgid "Upgrade to Premium"
 msgstr ""
 
@@ -492,27 +492,20 @@ msgstr ""
 msgid "Registration is currently disabled."
 msgstr ""
 
-#: core/LimitLoginAttempts.php:790
-#: core/LoginErrorPresenter.php:141
-#: core/LoginErrorPresenter.php:190
-#: core/LoginErrorPresenter.php:195
-msgid "<strong>ERROR</strong>: Incorrect username or password."
-msgstr ""
-
 #. translators: %d: trial length in days.
-#: core/LimitLoginAttempts.php:1542
+#: core/LimitLoginAttempts.php:1546
 #, php-format
 msgid "%d Day Trial"
 msgstr ""
 
-#: core/LocalLockoutManager.php:310
+#: core/LocalLockoutManager.php:348
 #: core/LoginAuthenticationHandler.php:295
 #: core/LoginErrorPresenter.php:32
 #: core/LoginErrorPresenter.php:96
 msgid "<strong>ERROR</strong>: Too many failed login attempts."
 msgstr ""
 
-#: core/LocalLockoutManager.php:316
+#: core/LocalLockoutManager.php:354
 #: core/LoginErrorPresenter.php:37
 #: core/LoginErrorPresenter.php:116
 #, php-format
@@ -521,7 +514,7 @@ msgid_plural "Please try again in %d hours."
 msgstr[0] ""
 msgstr[1] ""
 
-#: core/LocalLockoutManager.php:318
+#: core/LocalLockoutManager.php:356
 #: core/LoginErrorPresenter.php:39
 #: core/LoginErrorPresenter.php:119
 #, php-format
@@ -691,12 +684,24 @@ msgstr ""
 msgid "Please try again later."
 msgstr ""
 
-#: core/LoginErrorPresenter.php:187
+#: core/LoginErrorPresenter.php:189
 msgid "<strong>ERROR</strong>: Incorrect email address or password."
 msgstr ""
 
-#: core/LoginErrorPresenter.php:214
+#: core/LoginErrorPresenter.php:192
+msgid "<strong>ERROR</strong>: Incorrect username or password."
+msgstr ""
+
+#: core/LoginErrorPresenter.php:216
 msgid "WC Error"
+msgstr ""
+
+#: core/mfa-flow/MfaFlowLoginHandler.php:106
+msgid "<strong>ERROR</strong>: Two-factor verification is required for this account and could not be completed. Please try again."
+msgstr ""
+
+#: core/mfa-flow/MfaFlowLoginHandler.php:174
+msgid "<strong>ERROR</strong>: Two-factor verification is required for this account and cannot be completed over XML-RPC."
 msgstr ""
 
 #: core/mfa-flow/Providers/Email/LlarMfaProvider.php:49
@@ -2684,23 +2689,23 @@ msgstr ""
 msgid "Micro Cloud: %1$s of %2$s requests used this month. <a href=\"%3$s\" class=\"link__style_color_inherit\" target=\"_blank\">Upgrade to Personal for $1.25/mo for 50k requests.</a>"
 msgstr ""
 
-#: views/options-page.php:252
+#: views/options-page.php:257
 msgid "Account Login"
 msgstr ""
 
-#: views/options-page.php:262
+#: views/options-page.php:267
 msgid "Customer ID:"
 msgstr ""
 
-#: views/options-page.php:314
+#: views/options-page.php:319
 msgid "Premium / Extensions"
 msgstr ""
 
-#: views/options-page.php:319
+#: views/options-page.php:324
 msgid "Failover"
 msgstr ""
 
-#: views/options-page.php:324
+#: views/options-page.php:329
 msgid "Automatic switch to free version when premium stops working (usually due to non-payment or exceeding monthly resource budget)."
 msgstr ""
 
