@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the Limit Login Attempts Reloaded plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Limit Login Attempts Reloaded 3.4.1\n"
+"Project-Id-Version: Limit Login Attempts Reloaded 3.4.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/limit-login-attempts-reloaded\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-04T11:58:22+00:00\n"
+"POT-Creation-Date: 2026-11-05T13:46:46+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: limit-login-attempts-reloaded\n"
@@ -207,42 +207,46 @@ msgstr ""
 msgid "LLAR Security Notifications [TEST]"
 msgstr ""
 
-#: core/CloudApp.php:175
-#: core/CloudApp.php:184
+#: core/CloudApp.php:155
+msgid "The Setup Code points to a destination this site cannot contact. Setup codes are issued by your app provider and always point to a public HTTPS address."
+msgstr ""
+
+#: core/CloudApp.php:178
+#: core/CloudApp.php:187
 msgid "The endpoint is not responding. Please contact your app provider to settle that."
 msgstr ""
 
-#: core/CloudApp.php:246
+#: core/CloudApp.php:248
 msgid "The settings could not be saved due to an error on this site. Possible causes include a corrupted database or a PHP error. Please check the error logs, verify the database integrity, fix any issues found, and then try again."
 msgstr ""
 
-#: core/CloudApp.php:256
+#: core/CloudApp.php:258
 msgid "The app has been successfully imported."
 msgstr ""
 
 #. translators: %s: comma-separated list of missing config fields.
-#: core/CloudApp.php:409
+#: core/CloudApp.php:403
 #, php-format
 msgid "The Cloud App configuration is incomplete (missing field(s): %s). Please re-enter your Setup Code on the Settings tab to re-import the app configuration."
 msgstr ""
 
 #. translators: %d: HTTP response code.
-#: core/CloudApp.php:426
+#: core/CloudApp.php:419
 #, php-format
 msgid "Code: %d"
 msgstr ""
 
 #. translators: %s: technical error reason.
-#: core/CloudApp.php:434
+#: core/CloudApp.php:427
 #, php-format
 msgid "Reason: %s"
 msgstr ""
 
-#: core/CloudApp.php:439
+#: core/CloudApp.php:432
 msgid "Oops, it looks like the site is having a temporary network issue."
 msgstr ""
 
-#: core/CloudApp.php:445
+#: core/CloudApp.php:438
 msgid "Click here to refresh the page"
 msgstr ""
 
