@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the Limit Login Attempts Reloaded plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Limit Login Attempts Reloaded 3.4.4\n"
+"Project-Id-Version: Limit Login Attempts Reloaded 3.4.5\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/limit-login-attempts-reloaded\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-16T18:41:54+00:00\n"
+"POT-Creation-Date: 2026-11-17T18:31:02+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: limit-login-attempts-reloaded\n"
@@ -55,53 +55,53 @@ msgstr ""
 
 #: core/AdminUiController.php:123
 #: core/LimitLoginAttempts.php:895
-#: views/options-page.php:285
+#: views/options-page.php:288
 msgid "Dashboard"
 msgstr ""
 
 #: core/AdminUiController.php:128
 #: core/LimitLoginAttempts.php:896
-#: views/options-page.php:289
+#: views/options-page.php:292
 msgid "Settings"
 msgstr ""
 
 #: core/AdminUiController.php:133
-#: views/options-page.php:293
+#: views/options-page.php:296
 #: views/tab-debug.php:79
 msgid "2FA"
 msgstr ""
 
 #: core/AdminUiController.php:139
 #: resources/compare-plans-data.php:111
-#: views/options-page.php:299
+#: views/options-page.php:302
 msgid "Login Firewall"
 msgstr ""
 
 #: core/AdminUiController.php:144
-#: views/options-page.php:305
+#: views/options-page.php:308
 msgid "Logs"
 msgstr ""
 
 #: core/AdminUiController.php:149
-#: views/options-page.php:311
+#: views/options-page.php:314
 msgid "Debug"
 msgstr ""
 
 #: core/AdminUiController.php:154
 #: core/dashboard/DashboardRiskRenderer.php:479
-#: views/options-page.php:315
+#: views/options-page.php:318
 msgid "Help"
 msgstr ""
 
 #: core/AdminUiController.php:161
-#: views/options-page.php:319
+#: views/options-page.php:322
 #: views/tab-extensions.php:45
 msgid "Extensions"
 msgstr ""
 
 #: core/AdminUiController.php:168
 #: views/emails/digest-next-steps.php:9
-#: views/options-page.php:323
+#: views/options-page.php:326
 msgid "Premium"
 msgstr ""
 
@@ -109,30 +109,30 @@ msgstr ""
 msgid "LLAR"
 msgstr ""
 
-#: core/AdminUiController.php:736
+#: core/AdminUiController.php:695
 msgid "Cleared IP log"
 msgstr ""
 
-#: core/AdminUiController.php:743
+#: core/AdminUiController.php:702
 msgid "Reset lockout count"
 msgstr ""
 
-#: core/AdminUiController.php:750
+#: core/AdminUiController.php:709
 msgid "Cleared current lockouts"
 msgstr ""
 
-#: core/AdminUiController.php:795
+#: core/AdminUiController.php:754
 #, php-format
 msgid "The %s IP range is invalid"
 msgstr ""
 
-#: core/AdminUiController.php:822
-#: core/AdminUiController.php:902
-#: core/AdminUiController.php:913
+#: core/AdminUiController.php:781
+#: core/AdminUiController.php:861
+#: core/AdminUiController.php:872
 msgid "Settings saved."
 msgstr ""
 
-#: core/AdminUiController.php:850
+#: core/AdminUiController.php:809
 msgid "Please enter a valid admin notification email."
 msgstr ""
 
@@ -562,7 +562,7 @@ msgid "Free Upgrade"
 msgstr ""
 
 #. translators: %d: trial length in days.
-#: core/LimitLoginAttempts.php:1548
+#: core/LimitLoginAttempts.php:1533
 #, php-format
 msgid "%d Day Trial"
 msgstr ""
@@ -2687,42 +2687,42 @@ msgstr ""
 msgid "Upgrade"
 msgstr ""
 
-#. translators: 1: trial label, 2: requests used, 3: monthly quota, 4: upgrade URL
+#. translators: 1: trial label, 2: requests used, 3: monthly quota, 4: upgrade URL, 5: plan price
 #: views/options-page.php:102
 #, php-format
-msgid "%1$s: %2$s of %3$s requests used this month. <a href=\"%4$s\" class=\"link__style_color_inherit\" target=\"_blank\">Upgrade to Personal for $1.25/mo for 50k requests.</a>"
+msgid "%1$s: %2$s of %3$s requests used this month. <a href=\"%4$s\" class=\"link__style_color_inherit\" target=\"_blank\">Upgrade to Personal for $%5$s/mo for 50k requests.</a>"
 msgstr ""
 
-#. translators: 1: requests used, 2: monthly quota, 3: upgrade URL
-#: views/options-page.php:123
+#. translators: 1: requests used, 2: monthly quota, 3: upgrade URL, 4: plan price
+#: views/options-page.php:124
 #, php-format
-msgid "Micro Cloud: %1$s of %2$s requests used - cloud protection pauses at %2$s. <a href=\"%3$s\" class=\"link__style_color_inherit\" target=\"_blank\">Keep it running for $1.25/mo →</a>"
+msgid "Micro Cloud: %1$s of %2$s requests used - cloud protection pauses at %2$s. <a href=\"%3$s\" class=\"link__style_color_inherit\" target=\"_blank\">Keep it running for $%4$s/mo →</a>"
 msgstr ""
 
-#: views/options-page.php:147
+#: views/options-page.php:149
 #, php-format
 msgid "You have exhausted your monthly quota of free Micro Cloud requests. The plugin has now reverted to the free version. <a href=\"%s\" class=\"link__style_color_inherit\" target=\"_blank\">Upgrade to the premium</a> version today to maintain cloud protection and advanced features."
 msgstr ""
 
-#. translators: 1: requests used, 2: monthly quota, 3: upgrade URL
-#: views/options-page.php:165
+#. translators: 1: requests used, 2: monthly quota, 3: upgrade URL, 4: plan price
+#: views/options-page.php:167
 #, php-format
-msgid "Micro Cloud: %1$s of %2$s requests used this month. <a href=\"%3$s\" class=\"link__style_color_inherit\" target=\"_blank\">Upgrade to Personal for $1.25/mo for 50k requests.</a>"
+msgid "Micro Cloud: %1$s of %2$s requests used this month. <a href=\"%3$s\" class=\"link__style_color_inherit\" target=\"_blank\">Upgrade to Personal for $%4$s/mo for 50k requests.</a>"
 msgstr ""
 
-#: views/options-page.php:257
+#: views/options-page.php:260
 msgid "Account Login"
 msgstr ""
 
-#: views/options-page.php:267
+#: views/options-page.php:270
 msgid "Customer ID:"
 msgstr ""
 
-#: views/options-page.php:328
+#: views/options-page.php:331
 msgid "Failover"
 msgstr ""
 
-#: views/options-page.php:333
+#: views/options-page.php:336
 msgid "Automatic switch to free version when premium stops working (usually due to non-payment or exceeding monthly resource budget)."
 msgstr ""
 
@@ -3261,7 +3261,8 @@ msgid "Limit Login Attempts Reloaded <strong>Premium</strong>"
 msgstr ""
 
 #: views/tab-premium.php:67
-msgid "Upgrade to Personal – $1.25/mo"
+#, php-format
+msgid "Upgrade to Personal – $%s/mo"
 msgstr ""
 
 #: views/tab-premium.php:74
