@@ -65,7 +65,7 @@
         </div>
       </div>
     </div>
-    <div style="border-top:1px solid rgba(255,255,255,.1)"><div style="max-width:1280px;margin:0 auto;padding:20px 44px;font:500 12px Manrope;color:#8a857c" data-i18n="foot.copy">© 2026 NEO Carrosserie Aigle. Tous droits réservés.</div></div>
+    <div style="border-top:1px solid rgba(255,255,255,.1)"><div style="max-width:1280px;margin:0 auto;padding:20px 44px;font:500 12px Manrope;color:#8a857c" data-i18n="foot.copy">© 2026 NEO Carrosserie Aigle. Tous droits réservés.</div><div style="max-width:1280px;margin:0 auto;padding:0 44px 20px;font:500 12px Manrope;color:#8a857c;text-align:center">neo carrosserie Sàrl · CHE-196.016.356 · Chemin de St-Triphon 22, 1860 Aigle</div></div>
   </footer>
 
 </div>
