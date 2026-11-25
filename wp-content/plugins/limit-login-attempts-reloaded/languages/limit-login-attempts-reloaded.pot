@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the Limit Login Attempts Reloaded plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Limit Login Attempts Reloaded 3.4.5\n"
+"Project-Id-Version: Limit Login Attempts Reloaded 3.4.6\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/limit-login-attempts-reloaded\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-17T18:31:02+00:00\n"
+"POT-Creation-Date: 2026-11-19T12:56:03+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: limit-login-attempts-reloaded\n"
@@ -194,70 +194,66 @@ msgstr ""
 msgid "Connection Type: "
 msgstr ""
 
-#: core/Ajax.php:817
-msgid "No lockouts yet."
-msgstr ""
-
-#: core/Ajax.php:838
+#: core/Ajax.php:822
 #, php-format
 msgid "Meanwhile, the app falls over to the <a href=\"%s\">default functionality</a>."
 msgstr ""
 
-#: core/Ajax.php:895
+#: core/Ajax.php:879
 msgid "No rules yet."
 msgstr ""
 
-#: core/Ajax.php:1149
+#: core/Ajax.php:1133
 #, php-format
 msgid "<strong>%d</strong> attempt remaining."
 msgid_plural "<strong>%d</strong> attempts remaining."
 msgstr[0] ""
 msgstr[1] ""
 
-#: core/Ajax.php:1238
+#: core/Ajax.php:1222
 msgid "Wrong email format."
 msgstr ""
 
-#: core/Ajax.php:1243
+#: core/Ajax.php:1227
 #: views/emails/test-notification-content.php:6
 msgid "LLAR Security Notifications [TEST]"
 msgstr ""
 
-#: core/Ajax.php:1334
+#: core/Ajax.php:1318
 msgid "Invalid request."
 msgstr ""
 
-#: core/Ajax.php:1353
-#: core/Ajax.php:1361
+#: core/Ajax.php:1337
+#: core/Ajax.php:1345
 msgid "Unknown extension."
 msgstr ""
 
-#: core/Ajax.php:1390
+#: core/Ajax.php:1374
 msgid "The installed files do not match the WordPress.org extension. Remove them manually, then try again."
 msgstr ""
 
-#: core/Ajax.php:1401
+#: core/Ajax.php:1385
 msgid "You do not have permission to activate plugins."
 msgstr ""
 
-#: core/Ajax.php:1425
+#: core/Ajax.php:1409
 msgid "You do not have permission to install plugins."
 msgstr ""
 
-#: core/Ajax.php:1431
+#: core/Ajax.php:1415
 msgid "Plugin installation is disabled on this site."
 msgstr ""
 
-#: core/Ajax.php:1458
+#: core/Ajax.php:1442
 msgid "Could not connect to the WordPress.org plugin directory. Please try again later."
 msgstr ""
 
-#: core/Ajax.php:1484
+#: core/Ajax.php:1468
 msgid "The extension could not be installed. Please try again later."
 msgstr ""
 
-#: core/Ajax.php:1506
-#: core/Ajax.php:1513
+#: core/Ajax.php:1490
+#: core/Ajax.php:1497
 msgid "Could not remove the existing extension files. Remove them manually, then try again."
 msgstr ""
 
@@ -552,7 +548,7 @@ msgstr ""
 msgid "Monthly digest of lockouts, top IPs, and what to review next."
 msgstr ""
 
-#: core/integrations/WooCommerceIntegration.php:244
+#: core/integrations/WooCommerceIntegration.php:278
 #: core/RegistrationLimiter.php:105
 msgid "Registration is currently disabled."
 msgstr ""
@@ -773,7 +769,7 @@ msgstr ""
 msgid "<strong>ERROR</strong>: Two-factor verification is required for this account and could not be completed. Please try again."
 msgstr ""
 
-#: core/mfa-flow/MfaFlowLoginHandler.php:174
+#: core/mfa-flow/MfaFlowLoginHandler.php:182
 msgid "<strong>ERROR</strong>: Two-factor verification is required for this account and cannot be completed over XML-RPC."
 msgstr ""
 
@@ -2295,6 +2291,11 @@ msgstr ""
 
 #: views/app-widgets/acl-rules.php:59
 msgid "IP Access Rules"
+msgstr ""
+
+#: views/app-widgets/active-lockouts-rows.php:18
+#: views/app-widgets/active-lockouts.php:47
+msgid "No lockouts yet."
 msgstr ""
 
 #: views/app-widgets/active-lockouts.php:8
